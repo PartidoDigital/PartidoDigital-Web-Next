@@ -1,0 +1,36 @@
+{
+  "name": "partidodigital-web-next",
+  "version": "1.0.0",
+  "description": "Nueva web del Partido Digital de Uruguay",
+  "main": "index.md",
+  "dependencies": {
+    "@tailwindcss/ui": "^0.3.1",
+    "alpinejs": "^2.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.27",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.5.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PartidoDigital/PartidoDigital-Web-Next.git"
+  },
+  "keywords": [
+    "partido",
+    "digital",
+    "web",
+    "uruguay"
+  ],
+  "author": "Leo Giovanetti <hello@leog.me>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/PartidoDigital/PartidoDigital-Web-Next/issues"
+  },
+  "homepage": "https://github.com/PartidoDigital/PartidoDigital-Web-Next#readme"
+}

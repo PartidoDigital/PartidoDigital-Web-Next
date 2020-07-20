@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    {% seo %}
+    <link rel="stylesheet" href="/assets/style/site.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    <script src="/assets/scripts/site.js" defer></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  </head>
+  <body class="antialiased font-sans bg-gray-200">
+    {% include _header.html %}
+
+    <section>
+      {{ content }}
+    </section>
+
+    {% if jekyll.environment == 'production' %}
+      {% include _analytics.html %}
+    {% endif %}
+  </body>
+</html>

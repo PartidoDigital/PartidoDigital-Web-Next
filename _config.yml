@@ -1,0 +1,34 @@
+baseurl: 
+url: http://localhost:4000
+permalink: /blog/:categories/:year/:month/:day/:title
+excerpt_separator: "<!--more-->"
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-postcss
+  - jekyll-sitemap
+
+collections:
+  documentos:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: documentos
+    values:
+      layout: page
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - postcss.config.js
+  - purgecss.config.js
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - .gitignore
