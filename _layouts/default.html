@@ -11,9 +11,7 @@
   <body class="antialiased font-sans bg-gray-200">
     {% include _header.html %}
 
-    <section>
-      {{ content }}
-    </section>
+    {{ content }}
 
     {% if jekyll.environment == 'production' %}
       {% include _analytics.html %}
