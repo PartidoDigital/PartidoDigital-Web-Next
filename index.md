@@ -2,6 +2,6 @@
 layout: default
 ---
 
-{% include _features.html %}
+{% include _trasparencia.html %}
 
-{% include _tiers.html %}
+{% include _participacion.html %}
