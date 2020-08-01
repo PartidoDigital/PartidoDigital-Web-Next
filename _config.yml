@@ -32,4 +32,4 @@ exclude:
   - package-lock.json
   - tailwind.config.js
   - .gitignore
-  - vendor
+  - vendor/bundle
