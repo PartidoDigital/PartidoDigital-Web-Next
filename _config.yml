@@ -1,5 +1,4 @@
-baseurl: 
-url: http://localhost:4000
+url: https://partidodigital.github.io/PartidoDigital-Web-Next
 permalink: /blog/:categories/:year/:month/:day/:title
 excerpt_separator: "<!--more-->"
 
@@ -32,4 +31,3 @@ exclude:
   - package-lock.json
   - tailwind.config.js
   - .gitignore
-  - vendor
