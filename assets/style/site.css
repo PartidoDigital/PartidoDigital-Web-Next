@@ -11,7 +11,6 @@
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
 
@@ -35,4 +34,14 @@
 nav.scrolled {
     @apply shadow-2xl;
     border-bottom: 0px;
+}
+
+.loading {
+    animation: blinker 1s linear infinite;
+}
+  
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }

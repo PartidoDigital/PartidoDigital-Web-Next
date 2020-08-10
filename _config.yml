@@ -2,6 +2,7 @@ url: https://partidodigital.github.io/PartidoDigital-Web-Next
 permalink: /blog/:categories/:year/:month/:day/:title
 excerpt_separator: "<!--more-->"
 
+timezone: America/Montevideo
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
@@ -18,6 +19,10 @@ defaults:
       type: documentos
     values:
       layout: page
+
+typescript:
+  tsc: "npx tsc"
+  js_dest: "assets/scripts"
 
 exclude:
   - CNAME
