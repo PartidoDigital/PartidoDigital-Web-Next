@@ -34,8 +34,6 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-tsc (0.0.2)
-      jekyll (~> 3.8)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.3.0)
@@ -70,7 +68,6 @@ DEPENDENCIES
   jekyll-postcss
   jekyll-seo-tag
   jekyll-sitemap
-  jekyll-tsc
   kramdown-parser-gfm
 
 BUNDLED WITH
