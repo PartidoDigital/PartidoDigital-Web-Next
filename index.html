@@ -15,106 +15,156 @@
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-32x32.png" sizes="32x32">
     <link rel="stylesheet" href="https://partidodigital.github.io/PartidoDigital-Web-Next/assets/style/site.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
     <script src="https://partidodigital.github.io/PartidoDigital-Web-Next/assets/scripts/site.js" defer></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
-  <body class="antialiased font-sans bg-gray-200">
-    
-    <div x-data="{ show: JSON.parse(localStorage.getItem('PD_notice_show')) === null }" x-show="show" class="relative bg-blue-900">
-    <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-      <div class="pr-16 sm:text-center sm:px-16">
-        <p class="font-medium text-white">
-          <span class="md:hidden">
-            Caso Sr. Daniel Goldman Pérez
-          </span>
-          <span class="hidden md:inline">
-            Trasparencia: Cronología de hechos del caso Sr. Daniel Goldman Pérez
-          </span>
-          <span class="block sm:ml-2 sm:inline-block">
-            <a href="#" class="text-white font-bold underline">
-              Leer →
-            </a>
-          </span>
-        </p>
-      </div>
-      <div class="absolute inset-y-0 right-0 pt-1 pr-1 flex items-start sm:pt-1 sm:pr-2 sm:items-start">
-        <button @click="show = false; localStorage.setItem('PD_notice_show', false)" type="button" class="flex p-2 rounded-md hover:bg-orange-dark focus:outline-none focus:bg-orange-dark transition ease-in-out duration-150" aria-label="Dismiss">
-          <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-</svg>
-        </button>
-      </div>
+  <body class="antialiased font-sans bg-white" x-data="{ modalOpen: false }" x-init="
+    $watch('modalOpen', value => {
+      if (value !== false) { document.body.classList.add('overflow-hidden') } 
+      else { document.body.classList.remove('overflow-hidden') }
+    });" x-on:keydown.escape="modalOpen = false">
+    <section>
+    <div x-data="{ show: JSON.parse(localStorage.getItem('PD_notice_show')) === null }" x-show="show" class="relative bg-orange-900">
+  <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
+    <div class="pr-16 sm:text-center sm:px-16">
+      <p class="font-medium text-white">
+        <span class="md:hidden">
+          Caso Sr. Daniel Goldman Pérez
+        </span>
+        <span class="hidden md:inline">
+          Blog: Cronología de hechos del caso Sr. Daniel Goldman Pérez
+        </span>
+        <span class="block sm:ml-2 sm:inline-block">
+          <a href="#" class="text-white font-bold underline">
+            Leer →
+          </a>
+        </span>
+      </p>
+    </div>
+    <div class="absolute inset-y-0 right-0 pr-1 flex items-start sm:pr-2 sm:items-start">
+      <button x-on:click="show= false; localStorage.setItem('PD_notice_show', false)" type="button" class="flex p-2 rounded-md hover:bg-orange-700 focus:outline-none focus:bg-orange-700 transition ease-in-out duration-150" aria-label="Dismiss">
+        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
     </div>
   </div>
+</div>
 
-    <div x-data="{ open: false }" class="relative bg-white overflow-hidden">
-      <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full z-10">
-        <div class="relative max-w-screen-xl mx-auto">
-          <div class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" style="width: 404px; height: 784px; background-image: url(https://partidodigital.github.io/PartidoDigital-Web-Next/assets/img/binary_pattern.png)"></div>
-          <div class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2" style="width: 404px; height: 784px; background-image: url(https://partidodigital.github.io/PartidoDigital-Web-Next/assets/img/binary_pattern.png)"></div>
-        </div>
-      </div>
-      <div class="max-w-screen-xl mx-auto">
-        <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">  
-          <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-            <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start">
-              <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                <div class="flex items-center justify-between w-full md:w-auto">
-                  <a href="#" aria-label="Home">
-                    <img class="h-8 w-auto sm:h-10" src="https://recursos.partidodigital.org.uy/assets/img/logo_at_naranja.svg" alt="Logo">
-                  </a>
-                  <div class="-mr-2 flex items-center md:hidden">
-                    <button @click="open = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true" x-bind:aria-expanded="open">
-                      <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
+<div x-data="{ open: false }" class="relative bg-white overflow-hidden">
+  <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full z-10">
+    <div class="relative max-w-screen-xl mx-auto">
+      <div class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" style="width: 404px; height: 784px; background-image: url(https://partidodigital.github.io/PartidoDigital-Web-Next/assets/img/binary_pattern.png)"></div>
+      <div class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2" style="width: 404px; height: 784px; background-image: url(https://partidodigital.github.io/PartidoDigital-Web-Next/assets/img/binary_pattern.png)"></div>
+    </div>
+  </div>
+  <div class="max-w-screen-xl mx-auto">
+    <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-3xl lg:w-full lg:pb-28 xl:pb-32">  
+      <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+        <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start">
+          <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+            <div class="flex items-center justify-between w-full md:w-auto">
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" aria-label="Home">
+                <img class="h-8 w-auto sm:h-10" src="https://recursos.partidodigital.org.uy/assets/img/logo_at_naranja.svg" alt="Logo" />
+              </a>
+              <div class="-mr-2 flex items-center md:hidden">
+                <button x-on:click="open = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true" x-bind:aria-expanded="open">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </button>
               </div>
-              <div class="hidden md:block md:ml-10 md:pr-4">
-                <a href="#" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Trasparencia</a>
-                <a href="#" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Participación</a>
-                <a href="#" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Sobre nosotros</a>
-                <a href="#" class="ml-8 font-medium text-orange-dark hover:underline transition duration-150 ease-in-out">Entrar</a>
-              </div>
-            </nav>
+            </div>
           </div>
-  
-          <div x-show="open" x-description="Mobile menu, show/hide based on menu open state." x-transition:enter="duration-150 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" style="display: none;">
-            <div class="rounded-lg shadow-md">
-              <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
-                <div class="px-5 pt-4 flex items-center justify-between">
-                  <div>
-                    <img class="h-8 w-auto" src="https://recursos.partidodigital.org.uy/assets/img/logo_at_naranja.svg" alt="">
+          <div class="hidden md:block md:ml-10 md:pr-4">
+            <a href="#" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Trasparencia</a>
+            <a href="#" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Participación</a>
+            <a href="/sobre-nosotros" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Sobre nosotros</a>
+            <div x-data="{ flyoutMenuOpen: false }" x-on:click.away="flyoutMenuOpen = false" class="relative ml-8 inline-block">
+              <button type="button" x-on:click="flyoutMenuOpen = !flyoutMenuOpen" x-state:on="Item active" x-state:off="Item inactive" x-bind:class="{ 'text-gray-900': flyoutMenuOpen, 'text-white': !flyoutMenuOpen }" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-500 transition ease-in-out duration-150">
+                <span>Entrar</span>
+                <svg x-state:on="Item active" x-state:off="Item inactive" class="h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150 text-white" x-bind:class="{ 'text-gray-600': flyoutMenuOpen, 'text-white': !flyoutMenuOpen }" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+              <div x-description="'More' flyout menu, show/hide based on flyout menu state." x-show="flyoutMenuOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0" style="display: none;">
+                <div class="rounded-lg shadow-xl">
+                  <div class="rounded-lg shadow-xs overflow-hidden">
+                    <div class="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      <a href="#" class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="flag w-6 h-6 text-orange-500">
+                          <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="space-y-1">
+                          <p class="text-base leading-6 font-medium text-gray-900">
+                            MiVoz
+                          </p>
+                          <p class="text-sm leading-5 text-gray-500">
+                            Espacio de colaboración para todos los uruguayos.
+                          </p>
+                        </div>
+                      </a>
+                      <a href="#" class="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                        <svg viewBox="0 0 20 20" fill="currentColor" class="user-group w-6 h-6 flex-shrink-0 text-orange-500">
+                          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
+                          </path>
+                        </svg>
+                        <div class="space-y-1">
+                          <p class="text-base leading-6 font-medium text-gray-900">
+                            Comunidad
+                          </p>
+                          <p class="text-sm leading-5 text-gray-500">
+                            Espacio de trabajo y contrucción del Partido Digital.
+                          </p>
+                          <p class="text-sm text-gray-400">
+                            Reservado para autoridades, convencionales, afiliados y equipos de trabajo.
+                          </p>
+                        </div>
+                      </a>
+                    </div>
                   </div>
-                  <div class="-mr-2">
-                    <button @click="open = false" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Cerrar menu">
-                      <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div class="px-2 pt-2 pb-3">
-                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Transparencia</a>
-                  <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Participación</a>
-                  <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Sobre nosotros</a>
-                </div>
-                <div>
-                  <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out" role="menuitem">
-                    Entrar
-                  </a>
                 </div>
               </div>
             </div>
           </div>
-  
-          <main class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        </nav>
+      </div>
+
+      <div x-show="open" x-description="Mobile menu, show/hide based on menu open state." x-transition:enter="duration-150 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" style="display: none;">
+        <div class="rounded-lg shadow-md">
+          <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+            <div class="px-5 pt-4 flex items-center justify-between">
+              <div>
+                <img class="h-8 w-auto" src="https://recursos.partidodigital.org.uy/assets/img/logo_at_naranja.svg" alt="" />
+              </div>
+              <div class="-mr-2">
+                <button x-on:click="open = false" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Cerrar menu">
+                  <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="px-2 pt-2 pb-3">
+              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Transparencia</a>
+              <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Participación</a>
+              <a href="/sobre-nosotros" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Sobre nosotros</a>
+            </div>
+            <div>
+              <a href="#" class="block w-full px-5 py-3 text-center font-medium text-orange-700 bg-gray-50 hover:bg-gray-100 hover:text-orange-700 focus:outline-none focus:bg-gray-100 focus:text-orange-700 transition duration-150 ease-in-out" role="menuitem">
+                Entrar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
   <div class="sm:text-center lg:text-left">
     <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
       Política de 
-      <br>
+      <br />
       cercanía <span class="text-gradient bg-orange-full bg-animation">digital</span>
     </h2>
     <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
@@ -122,28 +172,26 @@
     </p>
     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
       <div class="rounded-md shadow">
-        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange hover:bg-orange-dark focus:outline-none focus:border-orange-dark focus:shadow-outline-orange-dark transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange-700 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
           Convertirme en afiliado
         </a>
       </div>
       <div class="mt-3 sm:mt-0 sm:ml-3">
-        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-orange-dark bg-orange-lightest hover:bg-opacity-50 focus:outline-none focus:shadow-outline-orange focus:border-orange-light transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+        <a href="#" class="shadow-md block w-full text-center rounded-lg border border-transparent bg-white px-8 py-3 text-base leading-6 font-medium text-orange-700 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 md:py-4 md:text-lg md:px-10" aria-describedby="tier-hobby">
           Doná
         </a>
       </div>
     </div>
   </div>
 </main>
-        </div>
-      </div>
-      <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="assets/img/convencion2019_2_filtered_cut.jpg" alt="">
-      </div>
     </div>
-  
-  </div><div style="clear: both; display: block; height: 0px;"></div>
+  </div>
+  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="assets/img/convencion2019_2_filtered_cut.jpg" alt="" />
+  </div>
+</div>
 
-    <div class="py-12 bg-white">
+<div class="py-12 bg-white">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="lg:text-center">
       <h2 class="text-lg leading-6 font-semibold text-gray-700 uppercase tracking-wider">
@@ -162,22 +210,23 @@
         <div class="bg-white overflow-hidden shadow-2xl rounded-lg">
           <div class="px-4 py-5 sm:p-6">
             <div class="flex items-center">
-              <div class="flex-shrink-0 bg-orange rounded-md p-3">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
-                  </path>
+              <div class="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <line x1="18" y1="1" x2="6" y2="13" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+                  <polyline points="15 13 6 13 6 4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <text x="50%" y="65%" stroke="#fff" text-anchor="middle" letter-spacing="1" dy=".9em" class="font-sans" font-size="0.5em" font-weight="normal">UYU</text>
                 </svg>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
                   <dt class="text-sm leading-5 font-medium text-gray-500 truncate">
-                    Total Subscribers
+                    Ingresos en pesos
                   </dt>
                   <dd class="flex items-baseline">
-                    <div class="text-2xl leading-8 font-semibold text-gray-900">
-                      71,897
+                    <div class="text-2xl leading-8 font-semibold text-gray-900 loading" id="ingresos-uyu">
+                      Cargando...
                     </div>
-                    <div class="ml-2 flex items-baseline text-sm leading-5 font-semibold text-green-600">
+                    <div class="d-none ml-2 flex items-baseline text-sm leading-5 font-semibold text-green-600 hidden" id="stat-ingresos-uyu">
                       <svg class="self-center flex-shrink-0 h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                       </svg>
@@ -193,8 +242,8 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6">
             <div class="text-sm leading-5">
-              <a href="#" class="font-medium text-orange hover:text-indigo-500 transition ease-in-out duration-150">
-                View all
+              <a href="#" class="font-medium text-orange-500 hover:text-gray-400 transition ease-in-out duration-150">
+                Ver todo
               </a>
             </div>
           </div>
@@ -202,22 +251,23 @@
         <div class="bg-white overflow-hidden shadow-2xl rounded-lg">
           <div class="px-4 py-5 sm:p-6">
             <div class="flex items-center">
-              <div class="flex-shrink-0 bg-orange rounded-md p-3">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76">
-                  </path>
+              <div class="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <line x1="6" y1="13" x2="18" y2="1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+                  <polyline points="9 1 18 1 18 10" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <text x="50%" y="65%" stroke="#fff" text-anchor="middle" letter-spacing="1" dy=".9em" class="font-sans" font-size="0.5em" font-weight="normal">UYU</text>
                 </svg>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
                   <dt class="text-sm leading-5 font-medium text-gray-500 truncate">
-                    Avg. Open Rate.
+                    Egresos en pesos
                   </dt>
                   <dd class="flex items-baseline">
-                    <div class="text-2xl leading-8 font-semibold text-gray-900">
-                      58.16%
+                    <div class="text-2xl leading-8 font-semibold text-gray-900 loading" id="egresos-uyu">
+                      Cargando...
                     </div>
-                    <div class="ml-2 flex items-baseline text-sm leading-5 font-semibold text-green-600">
+                    <div class="d-none ml-2 flex items-baseline text-sm leading-5 font-semibold text-green-600 hidden" id="stat-egresos-uyu">
                       <svg class="self-center flex-shrink-0 h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                       </svg>
@@ -233,8 +283,8 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6">
             <div class="text-sm leading-5">
-              <a href="#" class="font-medium text-orange hover:text-indigo-500 transition ease-in-out duration-150">
-                View all
+              <a href="#" class="font-medium text-orange-500 hover:text-gray-400 transition ease-in-out duration-150">
+                Ver todo
               </a>
             </div>
           </div>
@@ -242,22 +292,23 @@
         <div class="bg-white overflow-hidden shadow-2xl rounded-lg">
           <div class="px-4 py-5 sm:p-6">
             <div class="flex items-center">
-              <div class="flex-shrink-0 bg-orange rounded-md p-3">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                  </path>
+              <div class="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <line x1="18" y1="1" x2="6" y2="13" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+                  <polyline points="15 13 6 13 6 4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <text x="50%" y="65%" stroke="#fff" text-anchor="middle" letter-spacing="1" dy=".9em" class="font-sans" font-size="0.5em" font-weight="normal">USD</text>
                 </svg>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
                   <dt class="text-sm leading-5 font-medium text-gray-500 truncate">
-                    Avg. Click Rate
+                    Ingresos en dólares
                   </dt>
                   <dd class="flex items-baseline">
-                    <div class="text-2xl leading-8 font-semibold text-gray-900">
-                      24.57
+                    <div class="text-2xl leading-8 font-semibold text-gray-900 loading" id="ingresos-usd">
+                      Cargando...
                     </div>
-                    <div class="ml-2 flex items-baseline text-sm leading-5 font-semibold text-red-600">
+                    <div class="d-none ml-2 flex items-baseline text-sm leading-5 font-semibold text-red-600 hidden" id="stat-ingresos-usd">
                       <svg class="self-center flex-shrink-0 h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
@@ -273,8 +324,8 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6">
             <div class="text-sm leading-5">
-              <a href="#" class="font-medium text-orange hover:text-indigo-500 transition ease-in-out duration-150">
-                View all
+              <a href="#" class="font-medium text-orange-500 hover:text-gray-400 transition ease-in-out duration-150">
+                Ver todo
               </a>
             </div>
           </div>
@@ -282,22 +333,23 @@
         <div class="bg-white overflow-hidden shadow-2xl rounded-lg">
           <div class="px-4 py-5 sm:p-6">
             <div class="flex items-center">
-              <div class="flex-shrink-0 bg-orange rounded-md p-3">
-                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                  </path>
+              <div class="flex-shrink-0 bg-orange-500 rounded-md p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <line x1="6" y1="13" x2="18" y2="1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+                  <polyline points="9 1 18 1 18 10" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <text x="50%" y="65%" stroke="#fff" text-anchor="middle" letter-spacing="1" dy=".9em" class="font-sans" font-size="0.5em" font-weight="normal">USD</text>
                 </svg>
               </div>
               <div class="ml-5 w-0 flex-1">
                 <dl>
                   <dt class="text-sm leading-5 font-medium text-gray-500 truncate">
-                    Avg. Click Rate
+                    Egresos en dólares
                   </dt>
                   <dd class="flex items-baseline">
-                    <div class="text-2xl leading-8 font-semibold text-gray-900">
-                      24.57
+                    <div class="text-2xl leading-8 font-semibold text-gray-900 loading" id="egresos-usd">
+                      Cargando...
                     </div>
-                    <div class="ml-2 flex items-baseline text-sm leading-5 font-semibold text-red-600">
+                    <div class="d-none ml-2 flex items-baseline text-sm leading-5 font-semibold text-red-600 hidden" id="stat-egresos-usd">
                       <svg class="self-center flex-shrink-0 h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                       </svg>
@@ -313,8 +365,8 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6">
             <div class="text-sm leading-5">
-              <a href="#" class="font-medium text-orange hover:text-indigo-500 transition ease-in-out duration-150">
-                View all
+              <a href="#" class="font-medium text-orange-500 hover:text-gray-400 transition ease-in-out duration-150">
+                Ver todo
               </a>
             </div>
           </div>
@@ -330,15 +382,16 @@
       <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
         Participación
       </h2>
-      <p class="mt-2 text-3xl leading-9 font-extrabold text-gradient bg-orange-full bg-animation sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+      <p class="mt- text-3xl leading-9 font-extrabold text-gradient bg-orange-full bg-animation sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
         Existen dos maneras de poder participar<br /> en las iniciativas del Partido Digital.
       </p>
-      <p class="mt-2 max-w-4xl mx-auto text-xl leading-7 text-gray-300 sm:mt-5 sm:text-2xl sm:leading-8">
+      <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-gray-300 sm:mt-5 sm:text-2xl sm:leading-8">
         La participación es uno de nuestros pilares fundamentales, por lo que de una forma u otra, vas a poder
-        participar y ser parte de este movimiento de cambio en la política de Uruguay.
+          participar y ser parte de este movimiento de cambio en la política de Uruguay.
       </p>
     </div>
   </div>
+
   <div class="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
     <div class="relative z-0">
       <div class="absolute inset-0 h-5/6 bg-blue-900 lg:h-2/3"></div>
@@ -347,21 +400,21 @@
           <div class="mx-auto max-w-md lg:mx-0 lg:max-w-none lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3">
             <div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-l-lg">
               <div class="flex-1 flex flex-col">
-                <div class="bg-white px-6 py-6">
-                  <div class="text-center">
-                    <h3 class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-orange-lightest text-orange-dark" id="participacion-mivoz">
-                      MiVoz
+                <div class="bg-white px-6 py-6 text-center">
+                  <div>
+                    <h3 class="text-center text-2xl leading-8 font-medium text-blue-900" id="tier-scale">
+                      Simpatizante
                     </h3>
                     <div class="mt-4 flex items-center justify-center">
-                      <span class="px-3 flex items-start text-3xl leading-none tracking-tight text-gray-900">
+                      <span class="px-3 flex items-start text-4xl leading-none tracking-tight text-blue-900">
                         <span class="font-extrabold">
-                          Abierto al público
+                          Ayudá al Partido Digital
                         </span>
                       </span>
                     </div>
-                    <div class="mt-3 text-xl leading-7 font-medium text-gray-500">
-                      Gratis de por vida
-                    </div>
+                    <p class="mt-5 text-lg leading-7 font-medium text-gray-500">
+                      De acceso libre
+                    </p>
                   </div>
                 </div>
                 <div class="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
@@ -369,41 +422,38 @@
                     <li class="flex items-start">
                       <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                          </path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Pariatur quod similique
+                        Colaborá para lograr los objetivos del partido
                       </p>
                     </li>
                     <li class="mt-4 flex items-start">
                       <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                          </path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Sapiente libero doloribus
+                        Ideal para primeros acercamientos a la política
                       </p>
                     </li>
                     <li class="mt-4 flex items-start">
                       <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                          </path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Vel ipsa esse repudiandae
+                        Sé parte del futuro de la política hoy mismo
                       </p>
                     </li>
                   </ul>
                   <div class="mt-8">
                     <div class="rounded-lg shadow-md">
-                      <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150" aria-describedby="tier-hobby">
-                        Start your trial
+                      <a href="/participacion#simpatizante" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-orange-700 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150" aria-describedby="tier-hobby">
+                        Conocer más
                       </a>
                     </div>
                   </div>
@@ -413,21 +463,29 @@
           </div>
           <div class="mt-10 max-w-lg mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-4">
             <div class="relative z-10 rounded-lg shadow-xl">
-              <div class="bg-white rounded-t-lg px-6 pt-10 pb-10">
-                <div class="text-center">
-                  <h3 class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-orange-lightest text-orange-dark" id="participacion-contacto">
-                    Contacto
+              <div class="pointer-events-none absolute inset-0 rounded-lg border-2 border-orange-700"></div>
+              <div class="absolute inset-x-0 top-0 transform translate-y-px">
+                <div class="flex justify-center transform -translate-y-1/2">
+                  <span class="inline-flex rounded-full bg-orange-700 px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
+                    Recomendado
+                  </span>
+                </div>
+              </div>
+              <div class="bg-white rounded-t-lg px-6 pb-6 pt-8 text-center">
+                <div>
+                  <h3 class="text-center text-2xl leading-8 font-medium text-blue-900" id="tier-scale">
+                    Ciudadano
                   </h3>
                   <div class="mt-4 flex items-center justify-center">
-                    <span class="px-3 flex items-start text-4xl leading-none tracking-tight text-gray-900 sm:text-4xl">
+                    <span class="px-3 flex items-start text-4xl leading-none tracking-tight text-blue-900">
                       <span class="font-extrabold">
-                        ¡Mandanos tu opinión ya!
+                        Hacé tu propuesta para mejorar Uruguay
                       </span>
                     </span>
                   </div>
-                  <div class="mt-3 text-xl leading-7 font-medium text-gray-500">
-                    Te responderemos a la brevedad
-                  </div>
+                  <p class="mt-5 text-lg leading-7 font-medium text-gray-500">
+                    De acceso libre
+                  </p>
                 </div>
               </div>
               <div class="border-t-2 border-gray-100 rounded-b-lg pt-10 pb-8 px-6 bg-gray-50 sm:px-10 sm:py-10">
@@ -435,60 +493,65 @@
                   <li class="flex items-start">
                     <div class="flex-shrink-0">
                       <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+</svg>
                     </div>
                     <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                      Quia rem est sed impedit magnam
+                      Mantené un contacto estrecho con otros actores de la sociedad
                     </p>
                   </li>
                   <li class="mt-4 flex items-start">
                     <div class="flex-shrink-0">
                       <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+</svg>
                     </div>
                     <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                      Dolorem vero ratione voluptates
+                      Participación responsable a título personal para evitar usuarios fantasmas
                     </p>
                   </li>
                   <li class="mt-4 flex items-start">
                     <div class="flex-shrink-0">
                       <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+</svg>
                     </div>
                     <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                      Qui sed ab doloribus voluptatem dolore
+                      Proponé mejoras a nivel país y obtené feedback
                     </p>
                   </li>
                   <li class="mt-4 flex items-start">
                     <div class="flex-shrink-0">
                       <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+</svg>
                     </div>
                     <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                      Laborum commodi molestiae id et fugiat
+                      Mejora las propuestas de otros participantes
                     </p>
                   </li>
                   <li class="mt-4 flex items-start">
                     <div class="flex-shrink-0">
                       <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+</svg>
                     </div>
                     <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                      Nam ut ipsa nesciunt culpa modi dolor
+                      Construye el Programa de Gobierno del Partido Digital
                     </p>
                   </li>
                 </ul>
                 <div class="mt-10">
                   <div class="rounded-lg shadow-md">
-                    <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150" aria-describedby="tier-growth">
-                      Start your trial
+                    <a href="https://mivoz.uy" class="block w-full text-center rounded-lg border border-transparent bg-orange-500 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-orange-700 focus:outline-none focus:border-orange-900 focus:shadow-outline-orange transition ease-in-out duration-150" aria-describedby="tier-growth">
+                      Ir a MiVoz
                     </a>
                   </div>
+                  <p class="mt-5 text-sm text-center">
+                    <a class="transition ease-in-out text-gray-400 duration-150 hover:text-orange-500" href="/participación#Ciudadano">
+                      Conocer más
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -496,21 +559,21 @@
           <div class="mt-10 mx-auto max-w-md lg:m-0 lg:max-w-none lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:row-end-3">
             <div class="h-full flex flex-col rounded-lg shadow-lg overflow-hidden lg:rounded-none lg:rounded-r-lg">
               <div class="flex-1 flex flex-col">
-                <div class="bg-white px-6 py-6">
-                  <div class="text-center">
-                    <h3 class="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-orange-lightest text-orange-dark" id="participacion-afiliado">
+                <div class="bg-white px-6 py-6 text-center">
+                  <div>
+                    <h3 class="text-center text-2xl leading-8 font-medium text-blue-900" id="tier-scale">
                       Afiliado
                     </h3>
                     <div class="mt-4 flex items-center justify-center">
-                      <span class="px-3 flex items-start text-4xl leading-none tracking-tight text-gray-900">
+                      <span class="px-3 flex items-start text-4xl leading-none tracking-tight text-blue-900">
                         <span class="font-extrabold">
-                          Apoyá la causa
+                          Construí el Partido Digital
                         </span>
                       </span>
                     </div>
-                    <div class="mt-3 text-xl leading-7 font-medium text-gray-500">
-                      Por solo $200/mes
-                    </div>
+                    <p class="mt-5 text-lg leading-7 font-medium text-gray-500">
+                      A través de una cuota de afiliación.
+                    </p>
                   </div>
                 </div>
                 <div class="flex-1 flex flex-col justify-between border-t-2 border-gray-100 p-6 bg-gray-50 sm:p-10 lg:p-6 xl:p-10">
@@ -518,41 +581,38 @@
                     <li class="flex items-start">
                       <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                          </path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Pariatur quod similique
+                        Participar en la selección de los candidatos
                       </p>
                     </li>
                     <li class="mt-4 flex items-start">
                       <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                          </path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Sapiente libero doloribus
+                        Discutir sobre posiciones políticas del partido
                       </p>
                     </li>
                     <li class="mt-4 flex items-start">
                       <div class="flex-shrink-0">
                         <svg class="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
-                          </path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Vel ipsa esse repudiandae
+                        Ser elector y elegible para integrar órganos partidarios
                       </p>
                     </li>
                   </ul>
                   <div class="mt-8">
                     <div class="rounded-lg shadow-md">
-                      <a href="#" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150" aria-describedby="tier-scale">
-                        Start your trial
+                      <a href="/participacion#Afiliado" class="block w-full text-center rounded-lg border border-transparent bg-white px-6 py-3 text-base leading-6 font-medium text-orange-700 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150" aria-describedby="tier-scale">
+                        Conocer más
                       </a>
                     </div>
                   </div>
@@ -566,11 +626,334 @@
   </div>
 </div>
 
+<div class="bg-gray-100">
+  <div class="relative max-w-screen-lg mx-auto py-12 lg:flex lg:items-center">
+    <div class="lg:w-0 lg:flex-1">
+      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-blue-900 sm:text-4xl sm:leading-10" id="newsletter-headline">
+        También podes subscribirte
+      </h2>
+      <p class="mt-3 max-w-3xl text-lg leading-6 text-gray-700">
+        Así podés obtener en tu correo las últimas novedades del Partido Digital, y manejar qué tipo de noticias queres recibir.
+      </p>
+    </div>
+    <div class="mt-8 lg:mt-0 lg:ml-8">
+      <form class="sm:flex" aria-labelledby="newsletter-headline">
+        <input aria-label="Email address" type="email" required="" class="appearance-none w-full px-5 py-3 border border-transparent text-base leading-6 rounded-md text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out sm:max-w-xs" placeholder="Ingresa tu correo" />
+        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+          <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-300 focus:outline-none focus:bg-orange-500 transition duration-150 ease-in-out">
+            Subscribirme
+          </button>
+        </div>
+      </form>
+      <p class="mt-3 text-sm leading-5 text-gray-500">
+        Nos importa la privacidad de tus datos. Lee nuestra
+        <a href="/documentos/politica-de-privacidad" class="text-orange-700 font-medium underline">
+          Política de Privacidad</a>.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="relative bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+  <div class="absolute inset-0">
+    <div class="bg-white h-1/3 sm:h-2/3"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto">
+    <div class="text-center">
+      <h2 class="text-lg leading-6 font-semibold text-gray-700 uppercase tracking-wider">
+        Preguntas frecuentes
+      </h2>
+      <p class="mt- text-3xl leading-9 font-extrabold text-gradient bg-orange-full bg-animation sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+        Sabemos que somos innovadores,<br /> y eso genera preguntas.
+      </p>
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+      
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/-rYc90Zp5ew/sddefault.webp" data-toggle="modal" data-vid="-rYc90Zp5ew" data-target="#myModal" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/-rYc90Zp5ew/sddefault.jpg" data-toggle="modal" data-vid="-rYc90Zp5ew" data-target="#myModal" class="h-48 w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer" x-on:click="modalOpen = '-rYc90Zp5ew'">
+              ¿Cuál es la ideología del Partido Digital?
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/e129GSXMdPc/sddefault.webp" data-toggle="modal" data-vid="e129GSXMdPc" data-target="#myModal" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/e129GSXMdPc/sddefault.jpg" data-toggle="modal" data-vid="e129GSXMdPc" data-target="#myModal" class="h-48 w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer" x-on:click="modalOpen = 'e129GSXMdPc'">
+              ¿Hay lugar para un partido nuevo?
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/riIBnmwwdx4/sddefault.webp" data-toggle="modal" data-vid="riIBnmwwdx4" data-target="#myModal" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/riIBnmwwdx4/sddefault.jpg" data-toggle="modal" data-vid="riIBnmwwdx4" data-target="#myModal" class="h-48 w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer" x-on:click="modalOpen = 'riIBnmwwdx4'">
+              Si alguien propone la pena de muerte, ¿el Partido Digital la va a impulsar?
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/QlbE5d6oE7k/sddefault.webp" data-toggle="modal" data-vid="QlbE5d6oE7k" data-target="#myModal" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/QlbE5d6oE7k/sddefault.jpg" data-toggle="modal" data-vid="QlbE5d6oE7k" data-target="#myModal" class="h-48 w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer" x-on:click="modalOpen = 'QlbE5d6oE7k'">
+              ¿Qué va a hacer el Partido Digital en el balotaje?
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/vmX3xDrhRt8/sddefault.webp" data-toggle="modal" data-vid="vmX3xDrhRt8" data-target="#myModal" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/vmX3xDrhRt8/sddefault.jpg" data-toggle="modal" data-vid="vmX3xDrhRt8" data-target="#myModal" class="h-48 w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer" x-on:click="modalOpen = 'vmX3xDrhRt8'">
+              ¿Cómo funciona MiVoz.uy?
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/4-yzFQ_GRnk/sddefault.webp" data-toggle="modal" data-vid="4-yzFQ_GRnk" data-target="#myModal" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/4-yzFQ_GRnk/sddefault.jpg" data-toggle="modal" data-vid="4-yzFQ_GRnk" data-target="#myModal" class="h-48 w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer" x-on:click="modalOpen = '4-yzFQ_GRnk'">
+              ¿Por qué transparentaron sus finanzas?
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/JqbxO9YkBzE/sddefault.webp" data-toggle="modal" data-vid="JqbxO9YkBzE" data-target="#myModal" />
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/JqbxO9YkBzE/sddefault.jpg" data-toggle="modal" data-vid="JqbxO9YkBzE" data-target="#myModal" class="h-48 w-full object-cover" alt="" />
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer" x-on:click="modalOpen = 'JqbxO9YkBzE'">
+              ¿Uruguay está preparado para una idea como esta?
+            </h3>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    </section>
 
     
       <script>
     // Copy your tracking snippet into this block!
 </script>
     
+
+    <div x-show="modalOpen !== false" class="fixed z-10 inset-0 overflow-y-auto" style="display:none">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div x-on:click="modalOpen = false" x-show="modalOpen !== false" x-description="Background overlay, show/hide based on modal state." x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 transition-opacity">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen"></span>​
+        <div id="content" x-html="modalOpen !== false ? videoModal(modalOpen) : null" x-show="modalOpen !== false" x-description="Modal panel, show/hide based on modal state." x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            
+        </div>
+    </div>
+</div>
+
+      <div class="bg-gray-100">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div class="xl:col-span-1">
+          <img class="h-7" src="https://recursos.partidodigital.org.uy/assets/img/logo_texto_naranja.svg" alt="Partido Digital">
+          <p class="mt-8 text-gray-500 text-base leading-6">
+            Somos un partido político que busca mejorar la democracia aumentando la participación y transparencia apoyándose en la tecnología.
+          </p>
+          <div class="mt-8 flex">
+            <a href="https://facebook.com/PDigitalUY" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Facebook</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <a href="https://instagram.com/PDigitalUY" class="ml-6 text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Instagram</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+            <a href="https://twitter.com/PDigitalUY" class="ml-6 text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Twitter</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/PartidoDigital" class="ml-6 text-gray-400 hover:text-gray-500">
+              <span class="sr-only">GitHub</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mt-12 grid grid-cols-2 gap-0 xl:mt-0 xl:col-span-2">
+          <div class="md:grid md:grid-cols-2 md:gap-0">
+            <div>
+                <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                    Información
+                  </h4>
+                  <ul class="mt-4">
+                    <li>
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Transparencia
+                      </a>
+                    </li>
+                    <li class="mt-4">
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/participacion" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Participación
+                      </a>
+                    </li>
+                    <li class="mt-4">
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Sobre nosotros
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+                <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                    Recursos
+                  </h4>
+                  <ul class="mt-4">
+                    <li>
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/blog" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Blog
+                      </a>
+                    </li>
+                    <li class="mt-4">
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/plataforma" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Plataforma
+                      </a>
+                    </li>
+                    <li class="mt-4">
+                        <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/prensa" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                          Kit de Prensa
+                        </a>
+                      </li>
+                  </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                Documentación
+              </h4>
+              <ul class="mt-4">
+                
+                <li>
+                  <a href="/documentacion/programa-de-principios" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Programa de Principios
+                  </a>
+                </li>
+                
+                <li class="mt-4">
+                  <a href="/documentacion/politica-de-privacidad" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Política de Privacidad
+                  </a>
+                </li>
+                
+                <li class="mt-4">
+                  <a href="/documentacion/carta-organica" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Carta Orgánica
+                  </a>
+                </li>
+                
+                <li class="mt-4">
+                  <a href="/documentacion/codigo-de-etica" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Código de Ética
+                  </a>
+                </li>
+                
+                <li class="mt-4">
+                  <a href="/documentacion/terminos-y-condiciones" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Términos y Condiciones
+                  </a>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+                <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                    Entrar
+                  </h4>
+                  <ul class="mt-4">
+                    <li>
+                      <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        MiVoz
+                      </a>
+                    </li>
+                    <li class="mt-4">
+                      <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                        Comunidad
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-200 pt-8">
+        <p class="text-base leading-6 text-gray-400 xl:text-center">
+          <span x-text="new Date().getFullYear()"></span> | Partido Digital de Uruguay
+        </p>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
