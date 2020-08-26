@@ -1,0 +1,53 @@
+- nombre: Justin Graside
+  img: justin_graside.png
+  posicion: |
+      Integrante de la Mesa Ejecutiva
+      Co-fundador
+  networks:
+     linkedin: https://www.linkedin.com/in/justingraside/
+     twitter: https://twitter.com/JustinGraside
+    
+- nombre: Leo Giovanetti
+  img: leo_giovanetti.jpg
+  posicion: |
+      Vicepresidente
+      Integrante de la Mesa Ejecutiva
+      Líder del Equipo Técnico
+  networks:
+     linkedin: https://linkedin.com/in/leogiovanetti
+     twitter: https://twitter.com/leog
+
+- nombre: Mario Colla
+  img: mario_colla.jpeg
+  posicion: Integrante de la Mesa Ejecutiva
+  networks:
+     linkedin: https://www.linkedin.com/in/mario-colla-15866735/
+     twitter: https://twitter.com/Mario_Colla
+
+- nombre: Milton Rodríguez
+  img: milton_rodriguez.jpeg
+  posicion: Equipo de Ideas y Participación
+  networks:
+     linkedin: https://www.linkedin.com/in/milrodriguez/
+     twitter: https://twitter.com/rodriguezmilton
+
+- nombre: Pablo Oliveri
+  img: pablo_oliveri.jpeg
+  posicion: Equipo de Comunicación
+  networks:
+     linkedin: https://www.linkedin.com/in/pablooliveri/
+     twitter: https://twitter.com/pablooliveri
+
+- nombre: Ariel Guevara
+  img: ariel_guevara.jpg
+  posicion: Equipo de Ideas y Participación
+  networks:
+     linkedin: https://www.linkedin.com/in/ariel-guevara-456a955/
+     twitter: https://twitter.com/Ariel_Guevarin
+
+- nombre: Federico Masini
+  img: federico_masini.jpeg
+  posicion: Equipo de Comunicación
+  networks:
+     linkedin: https://www.linkedin.com/in/fmasini87/
+     twitter: https://twitter.com/fedemt87 
