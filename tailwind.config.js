@@ -6,19 +6,19 @@ module.exports = {
   ],
   theme: {
     gradients: theme => ({
-      'orange-full': ["-45deg", theme("colors.orange.light"), theme("colors.orange.default"), theme("colors.orange.dark"), theme("colors.orange.darkest")],
-      'orange-light-dark': ["to right", theme('colors.orange.light'), theme('colors.orange.default'), theme('colors.orange.dark')],
-      'orange-dark-light': ["to right", theme('colors.orange.dark'), theme('colors.orange.default'), theme('colors.orange.light')],
+      'orange-full': ["-45deg", theme("colors.orange.300"), theme("colors.orange.500"), theme("colors.orange.700"), theme("colors.orange.900")],
+      'orange-light-dark': ["to right", theme('colors.orange.300'), theme('colors.orange.500'), theme('colors.orange.700')],
+      'orange-dark-light': ["to right", theme('colors.orange.700'), theme('colors.orange.500'), theme('colors.orange.300')],
       // ...
     }),
     extend: {
       colors: {
         orange: {
-          lightest: "#ffd8a7",
-          light: "#fe8c00",
-          default: "#f87200",
-          dark: "#f83600",
-          darkest: "#e06c02"
+          "100": "#ffd8a7",
+          "300": "#fe8c00",
+          "500": "#f87200",
+          "700": "#f83600",
+          "900": "#e06c02"
         }
       },
       fontFamily: {

@@ -1,3 +1,14 @@
+/* global anchors */
+
+/*anchors.options = {
+  visible: 'always',
+};
+anchors.add('.page h1, .page h2, .page h3, .page h4, .page h5');*/
+
+const videoModal = (id) => {
+  return `<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+}
+
 fetch('https://spreadsheets.google.com/feeds/list/1ECohuUeBik_2rxvppS3sBHqm_gXpuNbOOYqRoMGans0/1/public/values?alt=json')
   .then(response => response.json())
   .then(data => {
@@ -19,12 +30,12 @@ fetch('https://spreadsheets.google.com/feeds/list/1ECohuUeBik_2rxvppS3sBHqm_gXpu
     document.querySelector("#egresos-usd").innerHTML = "$" + temp.substring(0, temp.indexOf(","));
   })
   .catch(error => {
-    document.querySelector("#ingresos-uyu").classList.remove("loading");
+    /*document.querySelector("#ingresos-uyu").classList.remove("loading");
     document.querySelector("#ingresos-uyu").innerHTML = "Error :(";
     document.querySelector("#egresos-uyu").classList.remove("loading");
     document.querySelector("#egresos-uyu").innerHTML = "Error :(";
     document.querySelector("#ingresos-usd").classList.remove("loading");
     document.querySelector("#ingresos-usd").innerHTML = "Error :(";
     document.querySelector("#egresos-usd").classList.remove("loading");
-    document.querySelector("#egresos-usd").innerHTML = "Error :(";
+    document.querySelector("#egresos-usd").innerHTML = "Error :(";*/
   });

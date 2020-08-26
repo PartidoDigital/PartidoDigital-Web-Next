@@ -31,11 +31,6 @@
 	}
 }
 
-nav.scrolled {
-    @apply shadow-2xl;
-    border-bottom: 0px;
-}
-
 .loading {
     animation: blinker 1s linear infinite;
 }
@@ -44,4 +39,9 @@ nav.scrolled {
     50% {
         opacity: 0;
     }
+}
+
+.bg-drop {
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    backdrop-filter: saturate(180%) blur(5px);
 }

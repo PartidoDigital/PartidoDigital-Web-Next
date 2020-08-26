@@ -10,15 +10,23 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  documentos:
+  documentacion:
+    output: true
+  paginas:
     output: true
 
 defaults:
   - scope:
       path: ""
-      type: documentos
+      type: documentacion
     values:
       layout: page
+  - scope:
+      path: ""
+      type: paginas
+    values:
+      layout: page
+      permalink: /:slug
 
 typescript:
   tsc: "npx tsc"
