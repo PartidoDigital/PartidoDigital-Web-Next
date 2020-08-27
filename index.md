@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% include index/_aviso.html %}
-
 {% include index/_header.html %}
 
 {% include index/_trasparencia.html %}
