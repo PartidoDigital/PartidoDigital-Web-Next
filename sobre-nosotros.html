@@ -12,9 +12,9 @@
 <link rel="canonical" href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros" />
 <meta property="og:url" content="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-01T20:32:39-03:00" />
+<meta property="article:published_time" content="2020-09-06T19:27:23-03:00" />
 <script type="application/ld+json">
-{"description":"Sobre nosotros Al Partido Digital lo hacemos personas que creemos que es necesaria una actualización en la forma en la que participamos politicamente, que logre empoderar a más personas para que su voz sea escuchada y tenga impacto. Todos y todas quienes aportamos nuestros tiempo y ganas para este emprendimiento político tenemos distintas ideas y orígenes ideológicos, algunos con experiencia político partidaria y otros debutando ahora, pero a todos nos une el respeto por las ideas del otro y las ganas de luchar porque cada idea tenga su lugar en un debate público transparente y moderno. Justin Graside Integrante de la Mesa Ejecutiva Co-fundador Twitter LinkedIn Leo Giovanetti Vicepresidente Integrante de la Mesa Ejecutiva Líder del Equipo Técnico Twitter LinkedIn Mario Colla Integrante de la Mesa Ejecutiva Twitter LinkedIn Milton Rodríguez Equipo de Ideas y Participación Twitter LinkedIn Pablo Oliveri Equipo de Comunicación Twitter LinkedIn Ariel Guevara Equipo de Ideas y Participación Twitter LinkedIn Federico Masini Equipo de Comunicación Twitter LinkedIn Vos Contactate con nosotros para ser parte del Partido Digital","mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros"},"@type":"BlogPosting","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros","headline":"Sobre Nosotros","dateModified":"2020-09-01T20:32:39-03:00","datePublished":"2020-09-01T20:32:39-03:00","@context":"https://schema.org"}</script>
+{"description":"Sobre nosotros Al Partido Digital lo hacemos personas que creemos que es necesaria una actualización en la forma en la que participamos politicamente, que logre empoderar a más personas para que su voz sea escuchada y tenga impacto. Todos y todas quienes aportamos nuestros tiempo y ganas para este emprendimiento político tenemos distintas ideas y orígenes ideológicos, algunos con experiencia político partidaria y otros debutando ahora, pero a todos nos une el respeto por las ideas del otro y las ganas de luchar porque cada idea tenga su lugar en un debate público transparente y moderno. Justin Graside Integrante de la Mesa Ejecutiva Co-fundador Twitter LinkedIn Leo Giovanetti Vicepresidente Integrante de la Mesa Ejecutiva Líder del Equipo Técnico Twitter LinkedIn Mario Colla Integrante de la Mesa Ejecutiva Twitter LinkedIn Milton Rodríguez Equipo de Ideas y Participación Twitter LinkedIn Pablo Oliveri Equipo de Comunicación Twitter LinkedIn Ariel Guevara Equipo de Ideas y Participación Twitter LinkedIn Federico Masini Equipo de Comunicación Twitter LinkedIn Vos Contactate con nosotros para ser parte del Partido Digital","mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros"},"@type":"BlogPosting","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros","headline":"Sobre Nosotros","dateModified":"2020-09-06T19:27:23-03:00","datePublished":"2020-09-06T19:27:23-03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-16x16.png" sizes="16x16">
@@ -25,37 +25,37 @@
     <script src="https://partidodigital.github.io/PartidoDigital-Web-Next/assets/scripts/site.js" defer></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
-  <body class="antialiased font-sans bg-white" x-data="{ modalOpen: false, scrolled: true, mobileMenuOpen: false }" x-init="
-    $watch('modalOpen', value => {
-      if (value !== false) { document.body.classList.add('overflow-hidden') } 
-      else { document.body.classList.remove('overflow-hidden') }
-    });" x-on:keydown.escape="modalOpen = false" >
+  <body class="antialiased font-sans bg-white" 
+    x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen }" 
+    x-data="{ modalOpen: false, scrolled: true, mobileMenuOpen: false, darkMode: false }" 
+    x-on:keydown.escape="modalOpen = false" >
 
     
 
     <div class="sticky top-0 z-20">
-    <div class="w-full px-4 sm:px-6 bg-white bg-opacity-50 bg-drop" x-bind:class="{ 'shadow-md': scrolled }">
+    <div class="nav w-full px-4 sm:px-6 bg-white bg-drop" x-bind:class="{ 'shadow-md': scrolled }">
       <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
         <div class="lg:w-0 lg:flex-1">
           <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" class="flex">
             <img class="h-8 w-auto sm:h-10" src="https://recursos.partidodigital.org.uy/assets/img/logo_horizontal_naranja.svg" alt="Logo">
           </a>
         </div>
-        <div class="-mr-2 -my-2 md:hidden">
+        <div class="-mr-2 -my-2 md:hidden relative">
+          <button x-on:click="darkMode = !darkMode" class="absolute top-1.5 right-10 mode flex-shrink-0 ml-4 h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
           <button x-on:click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg class="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
         <nav class="hidden md:flex space-x-10">
-          <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia" class="text-base leading-6 font-medium text-orange-500 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+          <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia" class="text-base leading-6 font-medium text-orange-500 dark:text-orange-300 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
             Transparencia
           </a>
-          <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/participacion" class="text-base leading-6 font-medium text-orange-500 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+          <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/participacion" class="text-base leading-6 font-medium text-orange-500 dark:text-orange-300 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
             Participación
           </a>
-          <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros" class="text-base leading-6 font-medium text-orange-500 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+          <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros" class="text-base leading-6 font-medium text-orange-500 dark:text-orange-300 hover:text-gray-500 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
             Sobre nosotros
           </a>
         </nav>
@@ -107,14 +107,15 @@
               </div>
             </div>
           </div>
+          <button x-on:click="darkMode = !darkMode" class="mode flex-shrink-0 ml-4 relative h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
         </div>
       </div>
     </div>
 
     <div x-description="Mobile menu, show/hide based on mobile menu state." x-show="mobileMenuOpen" x-transition:enter="duration-200 ease-out" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="duration-100 ease-in" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" style="display: none;">
       <div class="rounded-lg shadow-lg">
-        <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
-          <div class="pt-5 pb-6 px-5 space-y-6">
+        <div class="rounded-lg shadow-xs bg-white dark:bg-custom-blue divide-y-2 divide-gray-50 dark:divide-gray-600">
+          <div class="pt-5 pb-6 px-5 space-y-6 relative">
             <div class="flex items-center justify-between">
               <div>
                 <img class="h-8 w-auto" src="https://recursos.partidodigital.org.uy/assets/img/logo_horizontal_naranja.svg" alt="Logo">
@@ -149,28 +150,28 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 row-gap-4 col-gap-8">
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Blog
               </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Documentación
               </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Plataforma
               </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Kit de Prensa
               </a>
             </div>
-            <div class="space-y-6">
+            <div class="space-y-4">
               <span class="w-full flex rounded-md shadow-sm">
-                <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-700 transition ease-in-out duration-150">
+                <a href="#" class="w-full text-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-700 transition ease-in-out duration-150">
                   Entrar a MiVoz
                 </a>
               </span>
-              <p class="text-center text-base leading-6 font-medium text-gray-500">
+              <p class="text-center text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
                 ¿Afiliado, convencional, miembro de equipos de trabajo?
-                <a href="#" class="text-orange-700 hover:text-orange-500 transition ease-in-out duration-150">
+                <a href="#" class="text-orange-700 hover:text-orange-500 dark:text-orange-300 transition ease-in-out duration-150">
                   Entrar a Comunidad
                 </a>
               </p>
