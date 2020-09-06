@@ -10,9 +10,9 @@
 <link rel="canonical" href="https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia" />
 <meta property="og:url" content="https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-06T19:44:03-03:00" />
+<meta property="article:published_time" content="2020-09-06T20:10:23-03:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia"},"@type":"BlogPosting","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia","headline":"Transparencia","dateModified":"2020-09-06T19:44:03-03:00","datePublished":"2020-09-06T19:44:03-03:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia"},"@type":"BlogPosting","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/transparencia","headline":"Transparencia","dateModified":"2020-09-06T20:10:23-03:00","datePublished":"2020-09-06T20:10:23-03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-16x16.png" sizes="16x16">
@@ -25,7 +25,7 @@
   </head>
   <body class="antialiased font-sans bg-white" 
     x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen }" 
-    x-data="{ modalOpen: false, scrolled: true, mobileMenuOpen: false, darkMode: false }" 
+    x-data="{ modalOpen: false, scrolled: true, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
     x-on:keydown.escape="modalOpen = false" >
 
     
@@ -39,7 +39,7 @@
           </a>
         </div>
         <div class="-mr-2 -my-2 md:hidden relative">
-          <button x-on:click="darkMode = !darkMode" class="absolute top-1.5 right-10 mode flex-shrink-0 ml-4 h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
+          <button x-on:click="darkMode = !darkMode; localStorage.setItem('PD_dark_mode', darkMode)" class="absolute top-1.5 right-10 mode flex-shrink-0 ml-4 h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
           <button x-on:click="mobileMenuOpen = true" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
             <svg class="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -105,7 +105,7 @@
               </div>
             </div>
           </div>
-          <button x-on:click="darkMode = !darkMode" class="mode flex-shrink-0 ml-4 relative h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
+          <button x-on:click="darkMode = !darkMode; localStorage.setItem('PD_dark_mode', darkMode)" class="mode flex-shrink-0 ml-4 relative h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
         </div>
       </div>
     </div>
