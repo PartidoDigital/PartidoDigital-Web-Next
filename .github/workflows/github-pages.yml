@@ -27,7 +27,7 @@ jobs:
           NODE_ENV: development
           JEKYLL_ENV: development
         with:
-          enable_cache: true
+          enable_cache: false
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
