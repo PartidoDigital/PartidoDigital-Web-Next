@@ -1,47 +1,88 @@
----
----
+--- 
+--- 
 
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
 
+body.dark {
+  @apply bg-blue-900;
+}
+
+.dark .nav {
+  background-color: rgba(19, 55, 162, 0.5);
+}
+
 .text-gradient {
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bg-animation {
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .loading {
-    animation: blinker 1s linear infinite;
+  animation: blinker 1s linear infinite;
 }
-  
+
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }
 
 .bg-drop {
-    -webkit-backdrop-filter: saturate(180%) blur(5px);
-    backdrop-filter: saturate(180%) blur(5px);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  @apply bg-opacity-50 !important;
+  backdrop-filter: saturate(180%) blur(5px);
+}
+
+.mode::before {
+  @apply w-8 h-full left-0 top-0 absolute bg-no-repeat transition duration-300;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='%23ee7211' stroke-width='2.4' fill='%23ee7211' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Cpath d='M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-size: 50%;
+  background-position: center;
+}
+
+.mode::after {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background-color: var(--main-500);
+  content: "";
+  border-radius: 50%;
+  transition: transform .3s;
+}
+
+.dark .mode {
+  background-color: rgba(19, 55, 162, 0.5);
+}
+
+.dark .mode::after {
+  transform: translateX(-24px);
+}
+
+.dark .mode::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='white' stroke-width='2' fill='white' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1' viewBox='0 0 24 24'%3E%3Cpath d='M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z'/%3E%3C/svg%3E");
+  transform: translateX(26px);
 }

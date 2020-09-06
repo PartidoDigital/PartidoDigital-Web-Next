@@ -11,11 +11,10 @@
     <script src="{{site.url}}/assets/scripts/site.js" defer></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
-  <body class="antialiased font-sans bg-white" x-data="{ modalOpen: false, scrolled: {% if page.layout == 'page' %}true{% else %}false{% endif %}, mobileMenuOpen: false }" x-init="
-    $watch('modalOpen', value => {
-      if (value !== false) { document.body.classList.add('overflow-hidden') } 
-      else { document.body.classList.remove('overflow-hidden') }
-    });" x-on:keydown.escape="modalOpen = false" {% if page.layout == 'default' %} x-on:scroll.window="scrolled = window.pageYOffset > 40"{% endif %}>
+  <body class="antialiased font-sans bg-white" 
+    x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen }" 
+    x-data="{ modalOpen: false, scrolled: {% if page.layout == 'page' %}true{% else %}false{% endif %}, mobileMenuOpen: false, darkMode: false }" 
+    x-on:keydown.escape="modalOpen = false" {% if page.layout == 'default' %} x-on:scroll.window="scrolled = window.pageYOffset > 40"{% endif %}>
 
     {% if page.layout == 'default' %}
     {% include layouts/default/_aviso.html %}
