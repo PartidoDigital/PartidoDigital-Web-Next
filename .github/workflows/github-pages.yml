@@ -23,6 +23,9 @@ jobs:
         run: npm install
       - name: 🔨💎 install ruby dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
+        env:
+          NODE_ENV: development
+          JEKYLL_ENV: development
         with:
           enable_cache: true
       - name: 🚀 deploy
