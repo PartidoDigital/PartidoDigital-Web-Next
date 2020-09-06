@@ -81,6 +81,7 @@
           </a>
         </nav>
         <div class="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+          <button x-on:click="darkMode = !darkMode; localStorage.setItem('PD_dark_mode', darkMode)" class="mode flex-shrink-0 ml-4 relative h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
           <div x-data="{ flyoutMenuOpen: false }" x-on:click.away="flyoutMenuOpen = false" class="relative ml-8 inline-block">
             <button type="button" x-on:click="flyoutMenuOpen = !flyoutMenuOpen" x-state:on="Item active" x-state:off="Item inactive" x-bind:class="{ 'text-gray-900': flyoutMenuOpen, 'text-white': !flyoutMenuOpen }" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-500 transition ease-in-out duration-150">
               <span>Entrar</span>
@@ -128,7 +129,6 @@
               </div>
             </div>
           </div>
-          <button x-on:click="darkMode = !darkMode; localStorage.setItem('PD_dark_mode', darkMode)" class="mode flex-shrink-0 ml-4 relative h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
         </div>
       </div>
     </div>

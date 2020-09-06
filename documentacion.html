@@ -12,9 +12,9 @@
 <link rel="canonical" href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion" />
 <meta property="og:url" content="https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-06T20:10:23-03:00" />
+<meta property="article:published_time" content="2020-09-06T20:16:10-03:00" />
 <script type="application/ld+json">
-{"description":"Documentación","mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion"},"@type":"BlogPosting","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion","headline":"Documentacion","dateModified":"2020-09-06T20:10:23-03:00","datePublished":"2020-09-06T20:10:23-03:00","@context":"https://schema.org"}</script>
+{"description":"Documentación","mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion"},"@type":"BlogPosting","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion","headline":"Documentacion","dateModified":"2020-09-06T20:16:10-03:00","datePublished":"2020-09-06T20:16:10-03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-16x16.png" sizes="16x16">
@@ -60,6 +60,7 @@
           </a>
         </nav>
         <div class="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+          <button x-on:click="darkMode = !darkMode; localStorage.setItem('PD_dark_mode', darkMode)" class="mode flex-shrink-0 ml-4 relative h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
           <div x-data="{ flyoutMenuOpen: false }" x-on:click.away="flyoutMenuOpen = false" class="relative ml-8 inline-block">
             <button type="button" x-on:click="flyoutMenuOpen = !flyoutMenuOpen" x-state:on="Item active" x-state:off="Item inactive" x-bind:class="{ 'text-gray-900': flyoutMenuOpen, 'text-white': !flyoutMenuOpen }" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-500 transition ease-in-out duration-150">
               <span>Entrar</span>
@@ -107,7 +108,6 @@
               </div>
             </div>
           </div>
-          <button x-on:click="darkMode = !darkMode; localStorage.setItem('PD_dark_mode', darkMode)" class="mode flex-shrink-0 ml-4 relative h-7 rounded-full w-15 bg-transparent focus:outline-none border-orange-500 border-2"></button>
         </div>
       </div>
     </div>
