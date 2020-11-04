@@ -23,8 +23,7 @@ module.exports = {
           "500": "#ee7211",
           "700": "#f83600",
           "900": "#e06c02"
-        },
-        "custom-blue": "#1636a3"
+        }
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
