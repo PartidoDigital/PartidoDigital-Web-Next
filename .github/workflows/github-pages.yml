@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: 📂 setup repo
         uses: actions/checkout@v2
+        with:
+          submodules: true
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
