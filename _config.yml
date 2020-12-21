@@ -27,6 +27,11 @@ defaults:
     values:
       layout: page
       permalink: /:slug
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
 
 typescript:
   tsc: "npx tsc"
