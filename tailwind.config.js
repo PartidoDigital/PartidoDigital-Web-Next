@@ -1,10 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  dark: 'class',
-  experimental: {
-    darkModeVariant: true
-  },
+  darkMode: 'class',
   purge: [ 
     './**/*.html'
   ],
@@ -29,21 +26,6 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
-  },
-  variants: {
-    backgroundColor: ['responsive', 'group-hover', 'group-focus', 'hover', 'focus', 'active', 'dark'],
-    borderColor: ['responsive', 'group-hover', 'group-focus', 'hover', 'focus', 'dark'],
-    boxShadow: ['responsive', 'group-focus', 'hover', 'focus', 'dark'],
-    textColor: [
-      'responsive',
-      'group-hover',
-      'group-focus',
-      'hover',
-      'focus-within',
-      'focus',
-      'active',
-      'dark'
-    ],
   },
   plugins: [
     require('@tailwindcss/ui'),

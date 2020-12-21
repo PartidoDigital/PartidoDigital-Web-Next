@@ -1,4 +1,4 @@
-url: https://partidodigital.github.io/PartidoDigital-Web-Next
+url: http://192.168.0.140:4000
 permalink: /blog/:categories/:year/:month/:day/:title
 excerpt_separator: "<!--more-->"
 
