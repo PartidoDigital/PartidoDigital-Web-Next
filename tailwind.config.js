@@ -2,9 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   darkMode: 'class',
-  purge: [ 
-    './**/*.html'
-  ],
+  purge: ['./_site/**/*.html'],
   theme: {
     gradients: theme => ({
       'orange-full': ["-45deg", theme("colors.orange.300"), theme("colors.orange.500"), theme("colors.orange.700"), theme("colors.orange.900")],
@@ -12,6 +10,9 @@ module.exports = {
       'orange-dark-light': ["to right", theme('colors.orange.700'), theme('colors.orange.500'), theme('colors.orange.300')],
       // ...
     }),
+    minHeight: {
+      '28': '7rem'
+     },
     extend: {
       colors: {
         orange: {

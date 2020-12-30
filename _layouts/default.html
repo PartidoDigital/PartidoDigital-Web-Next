@@ -5,17 +5,20 @@
     {% seo %}
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-32x32.png" sizes="32x32">
-    <link rel="stylesheet" href="{{site.url}}/assets/style/site.css">
+    <link rel="stylesheet" href="{{site.url}}/assets/style/index.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
     <script src="{{site.url}}/assets/scripts/site.js" defer></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
   <body class="antialiased font-sans bg-white" 
-    x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen }" 
-    x-data="{ modalOpen: false, scrolled: {% if page.layout == 'page' %}true{% else %}false{% endif %}, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
-    x-on:keydown.escape="modalOpen = false" {% if page.layout == 'default' %} x-on:scroll.window="scrolled = window.pageYOffset > 40"{% endif %}>
+    x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen, 'overflow-hidden': searchOpen }" 
+    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, scrolled: {% if page.layout == 'page' %}true{% else %}false{% endif %}, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
+    x-on:keydown.escape="modalOpen = false; searchOpen = false;" {% if page.layout == 'default' %} x-on:scroll.window="scrolled = window.pageYOffset > 40"{% endif %}>
 
     {% if page.layout == 'default' %}
     {% include layouts/default/_aviso.html %}
@@ -23,7 +26,7 @@
 
     {% include layouts/default/_nav.html %}
 
-    <section>
+    <section class="{{page.layout}}">
     {{ content }}
     </section>
 
@@ -34,5 +37,7 @@
     {% include layouts/default/_modal.html %}
 
     {% include layouts/default/_footer.html %}
+
+    {% include layouts/default/_buscador.html %}
   </body>
 </html>

@@ -1,41 +1,43 @@
 url: https://partidodigital.github.io/PartidoDigital-Web-Next
 permalink: /blog/:categories/:year/:month/:day/:title
+github_url: https://github.com/partidodigital
 excerpt_separator: "<!--more-->"
 
 timezone: America/Montevideo
 markdown: kramdown
+collections_dir: _collections
 plugins:
   - jekyll-seo-tag
   - jekyll-postcss
   - jekyll-sitemap
 
 collections:
-  documentacion:
+  documentos:
     output: true
   paginas:
     output: true
+    permalink: /:path/
 
 defaults:
   - scope:
       path: ""
-      type: documentacion
+      type: documentos
     values:
-      layout: page
+      layout: pagina
   - scope:
       path: ""
       type: paginas
     values:
-      layout: page
-      permalink: /:slug
+      layout: pagina
   - scope:
       path: ""
       type: posts
     values:
       layout: post
 
-typescript:
-  tsc: "npx tsc"
-  js_dest: "assets/scripts"
+algolia:
+  application_id: 9SWKMC2I4H
+  index_name: jekyll
 
 exclude:
   - CNAME

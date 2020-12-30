@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+{% if page.breadcrumbs != nil or layout.breadcrumbs != nil %}
+    {% assign breadcrumbs = layout.breadcrumbs | default: page.breadcrumbs %}
+{% endif %}
+
+<div class="bg-white dark:bg-black {{page.collection}}">
+    <div class="max-w-screen-xl mx-auto py-6 px-4 text-center sm:px-6 lg:px-8">
+        <div class="mb-5 bg-white dark:bg-black">
+            <div class="space-y-8 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+                <nav class="inline-flex" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-4">
+                        <li>
+                            <div>
+                                <a href="/" class="text-gray-400 hover:text-gray-500">
+                                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                </svg>
+                                <span class="sr-only">Página principal</span>
+                                </a>
+                            </div>
+                        </li>
+                    {% for breadcrumb in breadcrumbs %}
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                {% assign bc_page = site['paginas'] | where: "slug",breadcrumb | first %}
+                                <a href="{{ bc_page.url }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ bc_page.title | upcase }}</a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="flex-shrink-0 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <a href="{{ page.url }}" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">{{ page.title | upcase }}</a>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="bg-white dark:bg-black {% if page.collection == 'documentos' %}sticky top-0{% endif %}">
+                    <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl text-gradient bg-orange-full text-center">
+                        {{ page.title }}
+                    </h2>
+                </div>
+                {% if page.subtitulo1 != nil %}
+                <p class="text-xl leading-7 text-gray-500 dark:text-gray-200">
+                    {{ page.subtitulo1 }}
+                </p>
+                {% endif %}
+                {% if page.subtitulo2 != nil %}
+                <p class="text-xl leading-7 text-gray-500 dark:text-gray-200">
+                    {{ page.subtitulo2 }}
+                </p>
+                {% endif %}
+                <div class="content text-left">
+                    {% if page.collection == 'documentos' %}
+                        {% capture anchor %}
+                            <span class="sr-only">Link a "%heading%"</span>
+                            <svg class="w-4 h-4 inline text-gray-300 dark:text-gray-600 align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                            </svg>
+                        {% endcapture %}
+                        {% include utils/anchor_headings.html html=content anchorBody=anchor anchorAttrs='title="Link a %heading%"' %}
+                    {% else %}
+                        {{ content }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
