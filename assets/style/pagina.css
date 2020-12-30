@@ -1,0 +1,54 @@
+.pagina .documentos .content {
+    @apply text-left;
+}
+
+.pagina .paginas .content {
+    @apply text-left;
+}
+
+.pagina .documentos .content ul {
+    @apply list-disc ml-5;
+}
+
+.pagina .paginas .content h2 {
+    @apply font-bold text-xl;
+    scroll-margin-top: 2.5em;
+}
+
+.pagina .documentos .content h3 {
+    @apply font-black text-xl;
+    scroll-margin-top: 2.5em;
+}
+
+.pagina .paginas .content h3 {
+    @apply font-black text-xl;
+    scroll-margin-top: 2.5em;
+}
+
+.pagina .documentos .content h4 {
+    @apply font-extrabold text-lg mt-3;
+    scroll-margin-top: 2.5em;
+}
+
+.pagina .paginas .content h4 {
+    @apply font-extrabold text-lg mt-3;
+    scroll-margin-top: 2.5em;
+}
+
+.pagina .documentos .content h5 {
+    @apply text-lg mt-3 font-bold;
+    scroll-margin-top: 2.5em;
+}
+
+.pagina .paginas .content h5 {
+    @apply text-lg mt-3 font-bold;
+    scroll-margin-top: 2.5em;
+}
+
+.pagina .documentos .content p {
+    @apply mb-3;
+}
+
+.pagina .paginas .content p {
+    @apply mb-3;
+}

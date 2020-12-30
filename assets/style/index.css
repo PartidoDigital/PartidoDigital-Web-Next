@@ -1,0 +1,18 @@
+--- 
+--- 
+
+@import 'autocomplete.css';
+@import 'dark.css';
+@import 'newsletter.css';
+@import 'pagina.css';
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.text-gradient {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

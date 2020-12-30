@@ -7,4 +7,5 @@ group :jekyll_plugins do
     gem 'jekyll-postcss'
     gem 'jekyll-sitemap'
     gem 'jekyll-inline-svg'
+    gem 'jekyll-algolia'
 end

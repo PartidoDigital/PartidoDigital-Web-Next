@@ -1,0 +1,42 @@
+<div class="relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 dark:bg-black">
+  <div class="absolute inset-0">
+    <div class="bg-white h-1/3 sm:h-2/3 dark:bg-black"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto">
+    <div class="text-center">
+      <h2 class="text-lg leading-6 font-semibold text-gray-700 uppercase tracking-wider dark:text-gray-200">
+        Preguntas frecuentes
+      </h2>
+      <p class="mt- text-3xl leading-9 font-extrabold text-gradient bg-orange-full sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+        ¿Te quedan preguntas?
+      </p>
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-none">
+      {% assign videos = site.data.videos | where_exp:"preg","preg.home == true" %}
+      {% for video in videos %}
+      <div class="flex flex-col rounded-lg shadow-xl overflow-hidden">
+        <div class="flex-shrink-0">
+          <picture>
+            <source type="image/webp" srcset="https://i.ytimg.com/vi_webp/{{video.id}}/sddefault.webp" data-toggle="modal" data-vid="{{video.id}}" data-target="#myModal">
+            <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://img.youtube.com/vi/{{video.id}}/sddefault.jpg" data-toggle="modal" data-vid="{{video.id}}" data-target="#myModal" class="h-48 w-full object-cover" alt="">
+          </picture>
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between dark:bg-gray-900">
+          <div class="flex-1">
+            <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 cursor-pointer dark:text-gray-200" x-on:click="modalOpen = '{{video.id}}'">
+              {{video.titulo}}
+            </h3>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="mt-8 md:mt-10 sm:flex sm:justify-center">
+      <div class="rounded-md shadow">
+          <a href="/preguntas-frecuentes" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange-700 ease-in-out md:py-4 md:text-lg md:px-10">
+              Ver todas las preguntas frecuentes
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
