@@ -23,15 +23,9 @@ jobs:
           node-version: '12'
       - name: 🔨⬡ install node dependencies
         run: npm install
-      - name: 🔨💎 install ruby dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
+      - name: 🚀 build and publish
+        uses:  helaili/jekyll-action@2.0.4
         env:
+          JEKYLL_PAT: ${{ secrets.GH_ACTION_TOKEN }}
           NODE_ENV: production
           JEKYLL_ENV: production
-        with:
-          enable_cache: false
-      - name: 🚀 deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GH_ACTION_TOKEN }}
-          publish_dir: ./_site
