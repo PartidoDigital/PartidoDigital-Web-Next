@@ -4,9 +4,6 @@ module.exports = {
   plugins: [
     require("postcss-import")({ path: "./assets/style" }),
     require("tailwindcss"),
-    require("autoprefixer"),
-    ...(jekyllEnv != "development" ? [
-        require("cssnano")({ preset: "default" }),
-    ] : [])
+    require("autoprefixer")
   ]
 };

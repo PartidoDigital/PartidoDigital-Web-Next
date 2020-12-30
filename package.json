@@ -4,7 +4,6 @@
   "description": "Nueva web del Partido Digital de Uruguay",
   "main": "index.md",
   "dependencies": {
-    "cssnano": "^4.1.10",
     "tailwindcss-plugins": "^0.3.0"
   },
   "devDependencies": {
