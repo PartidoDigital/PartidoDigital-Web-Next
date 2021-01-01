@@ -31,7 +31,7 @@ jobs:
         with:
           enable_cache: false
       - name: 🔍 run Algolia indexing
-        run: bundle exec jekyll algolia
+        run: ALGOLIA_API_KEY='${{ secrets.ALGOLIA_API_KEY }}' bundle exec jekyll algolia
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
