@@ -30,6 +30,8 @@ jobs:
           JEKYLL_ENV: production
         with:
           enable_cache: false
+      - name: 🔍 run Algolia indexing
+        run: bundle exec jekyll algolia
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
