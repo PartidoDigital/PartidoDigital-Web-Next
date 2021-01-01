@@ -1,53 +1,87 @@
 - nombre: Justin Graside
   img: justin_graside.png
   posicion: |
-      Integrante de la Mesa Ejecutiva
-      Co-fundador
-  networks:
-     linkedin: https://www.linkedin.com/in/justingraside/
-     twitter: https://twitter.com/JustinGraside
+      Presidente
+      Mesa Ejecutiva Nacional
     
 - nombre: Leo Giovanetti
   img: leo_giovanetti.jpg
   posicion: |
       Vicepresidente
-      Integrante de la Mesa Ejecutiva
-      Líder del Equipo Técnico
-  networks:
-     linkedin: https://linkedin.com/in/leogiovanetti
-     twitter: https://twitter.com/leog
+      Mesa Ejecutiva Nacional
 
-- nombre: Mario Colla
-  img: mario_colla.jpeg
-  posicion: Integrante de la Mesa Ejecutiva
-  networks:
-     linkedin: https://www.linkedin.com/in/mario-colla-15866735/
-     twitter: https://twitter.com/Mario_Colla
+- nombre: Pierina Franchi
+  img: pierina_franchi.png
+  posicion: |
+    Secretaria
+    Mesa Ejecutiva Nacional
 
-- nombre: Milton Rodríguez
-  img: milton_rodriguez.jpeg
-  posicion: Equipo de Ideas y Participación
-  networks:
-     linkedin: https://www.linkedin.com/in/milrodriguez/
-     twitter: https://twitter.com/rodriguezmilton
+- nombre: Daniel Gutierrez
+  img: daniel_gutierrez.png
+  posicion: |
+    Tesorero
+    Lider Finanzas y Transparencia
 
-- nombre: Pablo Oliveri
-  img: pablo_oliveri.jpeg
-  posicion: Equipo de Comunicación
-  networks:
-     linkedin: https://www.linkedin.com/in/pablooliveri/
-     twitter: https://twitter.com/pablooliveri
+- nombre: Susana Chaer
+  img: susana_chaer.png
+  posicion: |
+    Vocal
+    Mesa Ejecutiva Nacional
+
+- nombre: Mathías Botta
+  img: mathias_botta.jpg
+  posicion: |
+    Vocal
+    Lider Ideas y Participación
+    
+- nombre: Rodrigo Sangorrin
+  img: rodrigo_sangorrin.jpeg
+  posicion: |
+    Vocal
+    Mesa Ejecutiva Nacional
+    
+- nombre: Paula Rodríguez
+  img: paula_rodriguez.jpeg
+  posicion: |
+    Lider Legal
+    Mesa Ejecutiva Nacional
 
 - nombre: Ariel Guevara
   img: ariel_guevara.jpg
-  posicion: Equipo de Ideas y Participación
-  networks:
-     linkedin: https://www.linkedin.com/in/ariel-guevara-456a955/
-     twitter: https://twitter.com/Ariel_Guevarin
+  posicion: Mesa Ejecutiva Nacional
 
 - nombre: Federico Masini
   img: federico_masini.jpeg
-  posicion: Equipo de Comunicación
-  networks:
-     linkedin: https://www.linkedin.com/in/fmasini87/
-     twitter: https://twitter.com/fedemt87 
+  posicion: Mesa Ejecutiva Nacional
+
+- nombre: Gustavo Silva
+  img: gustavo_silva.jpg
+  posicion: Mesa Ejecutiva Nacional
+
+- nombre: Joaquin Moreno
+  img: joaquin_moreno.jpeg
+  posicion: Lider Inteligencia de Datos
+
+- nombre: Marina Gómez
+  img: marina_gomez.jpeg
+  posicion: Mesa Ejecutiva Nacional
+
+- nombre: Pablo Antognazza
+  img: pablo_antognazza.png
+  posicion: Mesa Ejecutiva Nacional
+
+- nombre: Pablo Oliveri
+  img: pablo_oliveri.jpeg
+  posicion: Mesa Ejecutiva Nacional
+
+- nombre: Diego Ventura
+  img: diego_ventura.jpeg
+  posicion: Mesa Ejecutiva Nacional
+
+- nombre: Rafael Suárez
+  img: rafael_suarez.jpeg
+  posicion: Mesa Ejecutiva Nacional
+
+- nombre: Ma. del Huerto Ribas
+  icon: '<svg class="fill-current text-black dark:text-gray-200 mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 487 487" xml:space="preserve"><path d="M 428.683 326.004 C 431.012 321.436 434.658 314.271 438.294 307.078 C 441.807 300.13 444.598 294.567 446.587 290.546 C 447.729 288.236 448.674 286.3 449.326 284.925 C 450.657 282.115 451.914 279.461 450.175 276.076 C 449.071 273.929 446.996 272.439 444.608 272.082 C 409.836 266.887 395 242.787 395 191.5 L 395 151.5 C 395 67.963 327.038 0 243.5 0 C 159.962 0 92 67.963 92 151.5 L 92 191.5 C 92 242.787 77.164 266.887 42.387 272.083 C 40 272.441 37.927 273.93 36.824 276.076 C 35.084 279.461 36.342 282.115 37.673 284.925 C 38.325 286.3 39.27 288.237 40.412 290.546 C 42.402 294.567 45.192 300.13 48.705 307.078 C 52.341 314.27 55.988 321.435 58.316 326.004 C 44.419 339.142 36 357.687 36 377.957 L 36 455.5 C 36 472.869 50.131 487 67.5 487 L 419.5 487 C 436.869 487 451 472.869 451 455.5 L 451 377.957 C 451 357.687 442.581 339.142 428.683 326.004 Z M 54.361 284.915 C 72.309 280.14 85.734 270.021 94.346 254.746 C 102.861 239.643 107 218.955 107 191.5 L 107 151.5 C 107 76.233 168.234 15 243.5 15 C 318.766 15 380 76.233 380 151.5 L 380 191.5 C 380 226.189 385.699 272.459 432.638 284.919 C 428.592 293.065 422.086 305.911 416.551 316.778 C 410.365 313.048 403.532 310.195 396.187 308.432 L 369.609 302.053 C 367.672 301.589 365.633 301.912 363.937 302.952 C 362.241 303.993 361.027 305.665 360.564 307.6 C 360.305 308.681 360.009 309.751 359.72 310.823 L 336.017 304.897 C 334.758 304.583 333.528 304.127 332.357 303.543 L 332.12 303.425 C 326.494 300.612 322.999 294.956 322.999 288.666 L 322.999 272.635 C 347.528 250.734 362.999 218.892 362.999 183.499 L 362.999 167.499 C 362.999 167.435 362.991 167.373 362.989 167.309 C 362.985 167.16 362.979 167.012 362.966 166.862 C 362.957 166.757 362.945 166.654 362.932 166.55 C 362.915 166.412 362.894 166.275 362.869 166.138 C 362.848 166.024 362.824 165.911 362.798 165.799 C 362.77 165.677 362.739 165.556 362.704 165.435 C 362.668 165.31 362.629 165.187 362.587 165.064 C 362.551 164.96 362.514 164.856 362.473 164.752 C 362.42 164.617 362.362 164.485 362.301 164.353 C 362.26 164.264 362.218 164.175 362.173 164.087 C 362.101 163.947 362.024 163.811 361.944 163.677 C 361.914 163.626 361.89 163.573 361.858 163.523 L 321.858 99.523 C 319.704 96.075 315.194 94.973 311.691 97.036 C 310.76 97.588 217.358 152 131.5 152 C 127.358 152 124 155.357 124 159.5 L 124 183.5 C 124 218.893 139.471 250.735 164 272.636 L 164 288.667 C 164 294.957 160.505 300.612 154.884 303.423 L 154.637 303.546 C 153.47 304.129 152.241 304.584 150.979 304.899 L 127.279 310.824 C 126.99 309.752 126.694 308.682 126.435 307.601 C 125.972 305.665 124.759 303.994 123.062 302.953 C 121.366 301.913 119.328 301.59 117.39 302.054 L 90.812 308.433 C 83.467 310.196 76.634 313.049 70.448 316.779 C 64.914 305.91 58.407 293.061 54.361 284.915 Z M 139 166.875 C 214.38 164.405 290.625 125.763 312.938 113.552 L 348 169.65 L 348 183.5 C 348 241.121 301.122 288 243.5 288 C 185.878 288 139 241.121 139 183.5 L 139 166.875 Z M 179 288.667 L 179 284.057 C 197.618 296.041 219.761 303 243.5 303 C 267.239 303 289.382 296.041 308 284.057 L 308 288.667 C 308 300.676 314.672 311.472 325.418 316.845 L 325.657 316.964 C 327.802 318.035 330.065 318.872 332.382 319.451 L 354.895 325.08 C 347.149 343.955 334.645 360.814 318.591 373.671 C 297.083 390.896 271.117 400 243.5 400 C 215.883 400 189.917 390.896 168.409 373.671 C 152.355 360.814 139.85 343.955 132.104 325.08 L 154.615 319.451 C 156.934 318.872 159.198 318.035 161.338 316.966 L 161.586 316.842 C 172.328 311.472 179 300.676 179 288.667 Z M 436 455.5 C 436 464.598 429.553 487.429 420.455 487.429 L 68.377 486.96 C 59.279 486.96 51 464.598 51 455.5 L 51 377.957 C 51 351.73 68.812 329.139 94.314 323.018 L 113.8 318.341 C 121.665 344.57 137.534 368.161 159.032 385.379 C 183.229 404.757 212.438 415 243.5 415 C 274.562 415 303.771 404.757 327.967 385.379 C 349.465 368.161 365.334 344.569 373.199 318.341 L 392.685 323.018 C 418.188 329.139 436 351.73 436 377.957 L 436 455.5 Z"></path></svg>'
+  posicion: Mesa Ejecutiva Nacional

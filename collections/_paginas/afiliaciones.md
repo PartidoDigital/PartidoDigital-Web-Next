@@ -1,5 +1,4 @@
 ---
-layout: pagina
 title: Afiliaciones
 ---
 

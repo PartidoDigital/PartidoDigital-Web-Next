@@ -1,5 +1,4 @@
 ---
-layout: pagina
 title: ¡Muchas gracias por tu apoyo!
 og_description: "Ya doné para que el Partido Digital pueda llegar a los USD 30.000 que necesita para la campaña, ¡apoyalos vos también!"
 og_title: "Yo hice la diferencia para ser protagonista de un mejor Uruguay"

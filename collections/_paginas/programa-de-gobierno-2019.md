@@ -10,7 +10,7 @@ Se elaboró una lista explicativa con los contenidos que una propuesta debe tene
 
 También se lanzó la campaña “Cazador de Ideas”, para que cuando un ciudadano viera algún proyecto de otro partido o en prensa que le interesara llevar al parlamento pudiéramos presentarlo en la plataforma para el debate. Con esta metodología se llega a propuestas de tres tipos según su elaboración: Autor original sube una idea que es complementada por otros usuarios y por los moderadores con datos y opiniones. El autor original completa su propuesta incorporando los aportes recibidos y la pasa a validación (Equipo Jurídico) Autor original sube una idea que es complementada por los moderadores con datos y sugerencias. El autor original completa su propuesta incorporando los aportes recibidos y la pasa a validación (Equipo Jurídico) Autor original sube una propuesta completa y la pasa a validación. No hay interacción con otros usuarios ni con los moderadores. A su vez, se realizaron propuestas que se elaboraron mediante actividades presenciales con ciudadanos, las cuales a su vez fueron complementadas con aportes de los debates temáticos organizados por el Partido Digital, con representantes de técnicos de muchos partidos políticos y referentes del sector privado y sociedad civil.
 
-<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-7">
+<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-7 list-none">
 {% for propuestas in site.data.propuestas %}
   <li class="col-span-1 flex flex-col text-center bg-white dark:bg-black rounded-lg shadow divide-y divide-gray-200 border border-transparent dark:border-gray-800">
     <div class="flex-1 flex flex-col p-8">

@@ -1,13 +1,13 @@
 ---
-layout: pagina
 title: Donar
+breadcrumbs: ["finanzas"]
 ---
 
 La campaña del Partido Digital será financiada por todos quienes creen que es necesario aportar transparencia e innovar en la política y la gestión pública en Uruguay.  ¡Necesitamos de tu aporte para lograrlo!
 
 Desde el Partido Digital comenzaremos dando el ejemplo con el manejo de nuestra finanzas, podrás ver en qué gastamos el dinero que nos donas y cómo lo hacemos.
 <br><br>
-<a href="https://docs.google.com/spreadsheets/d/1ECohuUeBik_2rxvppS3sBHqm_gXpuNbOOYqRoMGans0/edit?usp=sharing" class="w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 mb-2" target="_blank">
+<a href="{{site.planilla_gastos}}" class="w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 mb-2" target="_blank">
     Ver Gastos e Ingresos
 </a>
 <br><br>

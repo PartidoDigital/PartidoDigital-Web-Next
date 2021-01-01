@@ -3,7 +3,7 @@ title: Documentación
 subtitulo1: En esta sección se presenta toda la documentación asociada al Partido Digital.
 ---
 
-<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-4">
+<ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-4 list-none">
     {% assign sorted = site.documentos | sort: 'date' | reverse %}
     {% for documento in sorted %}
     <li class="col-span-1 bg-white shadow-2xl rounded-lg dark:bg-black border border-transparent dark:border-gray-800 divide-y divide-gray-200 dark:divide-gray-800">
