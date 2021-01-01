@@ -2,13 +2,18 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   darkMode: 'class',
-  purge: [],
+  purge: [
+    "_includes/**/*.html",
+    "!_includes/recursos",
+    "_layouts/**/*.html",
+    "_collections/**/*.md"
+  ],
+  variants: {
+    extend: {
+      opacity: ['disabled'],
+    }
+  },
   theme: {
-    gradients: theme => ({
-      'orange-full': ["-45deg", theme("colors.orange.300"), theme("colors.orange.500"), theme("colors.orange.700"), theme("colors.orange.900")],
-      'orange-light-dark': ["to right", theme('colors.orange.300'), theme('colors.orange.500'), theme('colors.orange.700')],
-      'orange-dark-light': ["to right", theme('colors.orange.700'), theme('colors.orange.500'), theme('colors.orange.300')]
-    }),
     minHeight: {
       '28': '7rem'
      },
@@ -29,6 +34,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/ui'),
-    require('tailwindcss-plugins/gradients'),
-  ],
+    require('@tailwindcss/forms')
+  ]
 }

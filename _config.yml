@@ -1,15 +1,25 @@
-url: https://partidodigital.github.io/PartidoDigital-Web-Next
 permalink: /blog/:categories/:year/:month/:day/:title
 github_url: https://github.com/partidodigital
 excerpt_separator: "<!--more-->"
 
 timezone: America/Montevideo
 markdown: kramdown
-collections_dir: _collections
+collections_dir: collections
 plugins:
   - jekyll-seo-tag
   - jekyll-postcss
   - jekyll-sitemap
+
+css_dir: "/assets/style/"
+
+# jekyll-seo-tag configuration
+author: "Leo Giovanetti"
+url: https://partidodigital.github.io/PartidoDigital-Web-Next
+title: "Partido Digital de Uruguay"
+description: "Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?"
+twitter:
+  username: "pdigitaluy"
+logo: "https://recursos.partidodigital.org.uy/assets/img/presentacion.jpg"
 
 collections:
   documentos:
@@ -38,6 +48,8 @@ defaults:
 algolia:
   application_id: 9SWKMC2I4H
   index_name: jekyll
+  settings:                                                                      
+    attributeForDistinct: collection 
 
 exclude:
   - CNAME

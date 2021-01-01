@@ -1,10 +1,10 @@
 ---
 layout: pagina
-breadcrumbs: ["programa-de-gobierno"]
+breadcrumbs: ["programa-de-gobierno-2019"]
 ---
 
 {% for categoria in site.data.propuestas[page.tema] %}
-<h1 class="mb-5 mt-8 text-2xl font-bold text-gradient bg-orange-light-dark inline-block">{{categoria.categoria}}</h1>
+<h1 class="mb-5 mt-8 text-2xl inline-block font-bold bg-gradient-to-r from-orange-200 text-transparent bg-clip-text to-orange-700">{{categoria.categoria}}</h1>
 <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 text-center">
     {% for propuesta in categoria.posts %}
     <li class="col-span-1 bg-white shadow-2xl rounded-lg dark:bg-black border border-transparent dark:border-gray-800 divide-y divide-gray-200 dark:divide-gray-800 flex flex-col">

@@ -13,3 +13,5 @@ layout: default
 {% include index/_preguntas.html %}
 
 {% include index/_newsletter.html %}
+
+<script src="{{site.url}}/assets/scripts/site.js" defer></script>

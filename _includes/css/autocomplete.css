@@ -1,0 +1,27 @@
+.aa-dropdown-menu {
+    @apply bg-white text-xl w-full leading-10 min-h-28 relative dark:bg-gray-800;
+}
+
+.aa-suggestion .ais-Highlight {
+    @apply underline;
+}
+
+.aa-suggestion {
+    @apply px-2 my-2 rounded-full cursor-pointer dark:text-gray-100 truncate;
+}
+
+.aa-suggestion.aa-cursor {
+    @apply bg-orange-100 dark:text-gray-900;
+}
+
+.algolia-autocomplete {
+    @apply w-full;
+}
+
+.aa-recent-suggestion {
+    @apply px-2 my-2 rounded-full cursor-pointer bg-gray-300 relative ml-6 md:ml-0 truncate;
+}
+  
+.aa-recent svg {
+    @apply w-6 h-6 text-black dark:text-gray-200 justify-end absolute md:right-2 top-2 align-text-bottom cursor-pointer hover:text-orange-700;
+}

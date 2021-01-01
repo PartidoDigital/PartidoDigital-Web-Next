@@ -8,7 +8,7 @@ subtitulo1: En esta sección se presenta toda la documentación asociada al Part
     {% for documento in sorted %}
     <li class="col-span-1 bg-white shadow-2xl rounded-lg dark:bg-black border border-transparent dark:border-gray-800 divide-y divide-gray-200 dark:divide-gray-800">
         <div class="w-full flex items-center justify-between p-6 space-x-6">
-            <div class="flex-1 truncate">
+            <div class="flex-1 truncate text-center">
                 <h3 class="text-gray-900 dark:text-gray-100 text-lg font-medium truncate">{{ documento.title }}</h3>
                 <p class="mt-1 text-gray-500 dark:text-gray-400 text-sm truncate">Actualizado el {{ documento.date | date: "%d/%m/%Y" }}</p>
             </div>

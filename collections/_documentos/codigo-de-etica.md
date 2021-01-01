@@ -1,6 +1,6 @@
 ---
 title: Código de Ética
-date: 2019-10-09
+date: 2021-12-01
 breadcrumbs: ["documentacion"]
 ---
 
@@ -37,7 +37,7 @@ Actuar de acuerdo con las reglas del ordenamiento jurídico nacional, y la Carta
 ### **Responsabilidad**
 En el cumplimiento de las obligaciones asumidas y en la respuesta por los propios actos.
 
-### **Respeto** 
+### **Respeto a la comunidad** 
 En el trato con otros miembros del partido, el electorado, contrincantes políticos, la prensa, y la ciudadanía en general.
 
 ## 4. ¿Qué se espera de cada uno?

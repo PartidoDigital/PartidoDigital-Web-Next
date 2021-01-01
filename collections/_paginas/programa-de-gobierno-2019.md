@@ -28,7 +28,7 @@ También se lanzó la campaña “Cazador de Ideas”, para que cuando un ciudad
     <div>
       <div class="-mt-px flex divide-x divide-gray-200 dark:bg-gray-900">
         <div class="w-0 flex-1 flex">
-          <a href="/programa-de-gobierno/{{propuestas[0]}}" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-orange-500 hover:text-orange-700 font-medium border border-transparent rounded-bl-lg">
+          <a href="/programa-de-gobierno-2019/{{propuestas[0]}}" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-orange-500 hover:text-orange-700 font-medium border border-transparent rounded-bl-lg">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
             <span class="ml-3">Ver propuestas</span>
           </a>
@@ -41,7 +41,7 @@ También se lanzó la campaña “Cazador de Ideas”, para que cuando un ciudad
 
 <div class="mt-8 md:mt-10 sm:flex sm:justify-center">
     <div>
-        <a href="/assets/docs/ProgramaEntreTodos.pdf" class="block w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 mb-2" aria-describedby="tier-scale">
+        <a href="/assets/docs/ProgramaEntreTodos.pdf" class="block w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 mb-2">
             Descargar Programa Entre Todos
         </a>
         <small class="text-gray-500 text-center block">(Haz click derecho y elige "Descargar como...")</small>

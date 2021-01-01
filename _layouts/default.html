@@ -12,7 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-    <script src="{{site.url}}/assets/scripts/site.js" defer></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
   <body class="antialiased font-sans bg-white" 
@@ -20,9 +19,11 @@
     x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, scrolled: {% if page.layout == 'page' %}true{% else %}false{% endif %}, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
     x-on:keydown.escape="modalOpen = false; searchOpen = false;" {% if page.layout == 'default' %} x-on:scroll.window="scrolled = window.pageYOffset > 40"{% endif %}>
 
+    {% comment %}
     {% if page.layout == 'default' %}
     {% include layouts/default/_aviso.html %}
     {% endif %}
+    {% endcomment %}
 
     {% include layouts/default/_nav.html %}
 
@@ -32,6 +33,8 @@
 
     {% if jekyll.environment == 'production' %}
       {% include layouts/default/_analytics.html %}
+    {% else %}
+      <script>window.ga=function() {}</script>
     {% endif %}
 
     {% include layouts/default/_modal.html %}

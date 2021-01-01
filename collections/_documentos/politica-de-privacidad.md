@@ -1,6 +1,6 @@
 ---
 title: Política de Privacidad
-date: 2016-12-04
+date: 2020-12-31
 breadcrumbs: ["documentacion"]
 ---
 
@@ -70,7 +70,7 @@ información cuando consideramos que la liberación es apropiada para cumplir co
 de sitio, o para proteger los derechos de nosotros o de otros, propiedad o seguridad.
 
 ## Enlaces de terceros
-La presente Política de Privacidad es de aplicación exclusiva la Plataforma del Partido Digital del Uruguay y no se extiende a
+La presente Política de Privacidad es de aplicación exclusiva la Plataforma del Partido Digital de Uruguay y no se extiende a
 los casos de acceso a la misma a través de enlaces externos, ni tampoco en los enlaces de este sitio a otros sitios web. Por lo
 tanto, no tenemos ninguna responsabilidad por el contenido y las actividades de estos sitios. No obstante, buscamos proteger la
 integridad de nuestro sitio y agradecemos cualquier comentario al respecto.
