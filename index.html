@@ -2,13 +2,23 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <!-- Begin Jekyll SEO tag v2.6.1 -->
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Partido Digital de Uruguay | Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?</title>
 <meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Partido Digital de Uruguay" />
+<meta name="author" content="Leo Giovanetti" />
 <meta property="og:locale" content="en_US" />
+<meta name="description" content="Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?" />
+<meta property="og:description" content="Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?" />
 <link rel="canonical" href="https://partidodigital.github.io/PartidoDigital-Web-Next/" />
 <meta property="og:url" content="https://partidodigital.github.io/PartidoDigital-Web-Next/" />
+<meta property="og:site_name" content="Partido Digital de Uruguay" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Partido Digital de Uruguay" />
+<meta name="twitter:site" content="@pdigitaluy" />
+<meta name="twitter:creator" content="@Leo Giovanetti" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/","@context":"https://schema.org"}</script>
+{"description":"Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?","@type":"WebSite","headline":"Partido Digital de Uruguay","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/","name":"Partido Digital de Uruguay","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://recursos.partidodigital.org.uy/assets/img/presentacion.jpg"},"name":"Leo Giovanetti"},"author":{"@type":"Person","name":"Leo Giovanetti"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-16x16.png" sizes="16x16">
@@ -20,7 +30,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-    <script src="https://partidodigital.github.io/PartidoDigital-Web-Next/assets/scripts/site.js" defer></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
   <body class="antialiased font-sans bg-white" 
@@ -28,33 +37,6 @@
     x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, scrolled: false, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
     x-on:keydown.escape="modalOpen = false; searchOpen = false;"  x-on:scroll.window="scrolled = window.pageYOffset > 40">
 
-    
-    <div x-data="{ show: JSON.parse(localStorage.getItem('PD_notice_show')) === null }" x-show="show" class="relative bg-orange-900">
-  <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
-    <div class="pr-16 sm:text-center sm:px-16">
-      <p class="font-medium text-white">
-        <span class="md:hidden">
-          Caso Sr. Daniel Goldman Pérez - 
-        </span>
-        <span class="hidden md:inline">
-          Blog: Cronología de hechos del caso Sr. Daniel Goldman Pérez
-        </span>
-        <span class="inline sm:ml-2 sm:inline-block">
-          <a href="#" class="text-white font-bold underline">
-            Leer →
-          </a>
-        </span>
-      </p>
-    </div>
-    <div class="absolute inset-y-0 right-0 pr-1 flex items-start sm:pr-2 sm:items-start">
-      <button x-on:click="show= false; localStorage.setItem('PD_notice_show', false)" type="button" class="flex p-2 rounded-md hover:bg-orange-700 focus:outline-none focus:bg-orange-700 transition ease-in-out duration-150" aria-label="Dismiss">
-        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</div>
     
 
     <div class="sticky top-0 z-20">
@@ -196,34 +178,22 @@
             </div>
             <div>
               <nav class="grid row-gap-8">
-                <a href="#" class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                  <div class="text-base leading-6 font-medium text-orange-500">
-                    Transparencia
-                  </div>
+                <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-participacion" class="text-base leading-6 font-medium text-orange-500 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                  Sobre participación
                 </a>
-                <a href="#" class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                  <div class="text-base leading-6 font-medium text-orange-500">
-                    Participación
-                  </div>
+                <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-transparencia" class="text-base leading-6 font-medium text-orange-500 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                  Sobre transparencia
                 </a>
-                <a href="#" class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150">
-                  <div class="text-base leading-6 font-medium text-orange-500">
-                    Sobre nosotros
-                  </div>
+                <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-nosotros" class="text-base leading-6 font-medium text-orange-500 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
+                  Sobre nosotros
                 </a>
               </nav>
             </div>
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 row-gap-4 col-gap-8">
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
-                Blog
-              </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Documentación
-              </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
-                Plataforma
               </a>
               <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Kit de Prensa
@@ -231,13 +201,13 @@
             </div>
             <div class="space-y-4">
               <span class="w-full flex rounded-md shadow-sm">
-                <a href="#" class="w-full text-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-700 transition ease-in-out duration-150">
+                <a href="https://digo.mivoz.uy/login" class="w-full text-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-700 transition ease-in-out duration-150">
                   Entrar a MiVoz
                 </a>
               </span>
               <p class="text-center text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
                 ¿Afiliado, convencional, miembro de equipos de trabajo?
-                <a href="#" class="text-orange-500 hover:text-orange-700 dark:text-orange-300 transition ease-in-out duration-150">
+                <a href="https://comunidad.partidodigital.org.uy" class="text-orange-500 hover:text-orange-700 dark:text-orange-300 transition ease-in-out duration-150">
                   Entrar a Comunidad
                 </a>
               </p>
@@ -254,19 +224,19 @@
   <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:text-left">
     <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
       <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-        Más <span class="text-gradient bg-orange-full">igualdad</span> de participación,<br /> más <span class="text-gradient bg-orange-full">libertad</span> para decidir.
+        Más <span class="bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500">igualdad</span> de participación,<br /> más <span class="bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500">libertad</span> para decidir.
       </h1>
       <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 dark:text-gray-200 sm:text-xl md:mt-5 md:max-w-3xl">
         Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?
       </p>
       <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
         <div class="rounded-md shadow">
-          <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange-700 md:py-4 md:text-lg md:px-10">
+          <a href="/afiliaciones" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange-700 md:py-4 md:text-lg md:px-10">
             Convertirme en afiliado
           </a>
         </div>
         <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-          <a href="#" class="border-orange-500 dark:bg-black block w-full text-center rounded-lg border bg-white px-8 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10" aria-describedby="tier-hobby">
+          <a href="/donar" class="border-orange-500 dark:bg-black block w-full text-center rounded-lg border bg-white px-8 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline md:py-4 md:text-lg md:px-10" aria-describedby="tier-hobby">
             Doná
           </a>
         </div>
@@ -310,7 +280,7 @@
         <h2 class="text-lg leading-6 font-semibold text-gray-700 uppercase tracking-wider dark:text-gray-200">
             Programa #EntreTodos
         </h2>
-        <p class="mt- text-3xl leading-9 font-extrabold text-gradient bg-orange-full sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+        <p class="mt- text-3xl leading-9 font-extrabold bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
             Estas fueron algunas de nuestras propuestas
         </p>
         <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-gray-500 sm:mt-5 sm:text-2xl sm:leading-8 dark:text-gray-200">
@@ -395,7 +365,7 @@
         </dl>
         <div class="mt-8 md:mt-10 sm:flex sm:justify-center">
             <div class="rounded-md shadow">
-                <a href="/programa-de-gobierno" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange-700 ease-in-out md:py-4 md:text-lg md:px-10">
+                <a href="/programa-de-gobierno-2019" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-orange-500 hover:bg-orange-700 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange-700 ease-in-out md:py-4 md:text-lg md:px-10">
                     Ver todas las propuestas
                 </a>
             </div>
@@ -410,7 +380,7 @@
       <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
         Participación
       </h2>
-      <p class="mt- text-3xl leading-9 font-extrabold text-gradient bg-orange-full sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+      <p class="mt- text-3xl leading-9 font-extrabold bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
         Existen dos maneras de poder participar<br /> en las iniciativas del Partido Digital
       </p>
       <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-gray-300 sm:mt-5 sm:text-2xl sm:leading-8">
@@ -480,7 +450,7 @@
                   </ul>
                   <div class="mt-8">
                     <div class="rounded-lg">
-                      <a href="/voluntariado" class="block w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150" aria-describedby="tier-scale">
+                      <a href="/voluntariado" class="block w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
                         Sumarme
                       </a>
                     </div>
@@ -626,7 +596,7 @@
                   </ul>
                   <div class="mt-8">
                     <div class="rounded-lg">
-                      <a href="/afiliaciones" class="block w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150" aria-describedby="tier-scale">
+                      <a href="/afiliaciones" class="block w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
                         Afiliarme
                       </a>
                     </div>
@@ -652,7 +622,7 @@
       <h2 class="text-lg leading-6 font-semibold text-gray-700 uppercase tracking-wider dark:text-gray-200">
         Trasparencia
       </h2>
-      <p class="mt-2 text-3xl leading-9 font-extrabold text-gradient bg-orange-full sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+      <p class="mt-2 text-3xl leading-9 font-extrabold bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
         De nuestro accionar como partido <br />político y de nuestras finanzas
       </p>
       <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-gray-500 sm:mt-5 sm:text-2xl sm:leading-8 dark:text-gray-200">
@@ -697,7 +667,7 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6 dark:bg-gray-900">
             <div class="text-sm leading-5 text-center">
-              <a href="#" class="font-medium text-orange-500 hover:text-orange-700">
+              <a href="/finanzas" class="font-medium text-orange-500 hover:text-orange-700">
                 <svg class="h-4 w-4 fill-current inline-flex align-text-bottom mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="m19.5 24h-15c-1.378 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.122-2.5 2.5-2.5h15c1.378 0 2.5 1.122 2.5 2.5v19c0 1.378-1.122 2.5-2.5 2.5zm-15-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h15c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z" />
                   <path d="m18.5 21h-13c-.276 0-.5-.224-.5-.5v-12c0-.276.224-.5.5-.5h13c.276 0 .5.224.5.5v12c0 .276-.224.5-.5.5zm-12.5-1h12v-11h-12z" />
@@ -746,7 +716,7 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6 dark:bg-gray-900">
             <div class="text-sm leading-5 text-center">
-              <a href="#" class="font-medium text-orange-500 hover:text-orange-700">
+              <a href="/finanzas" class="font-medium text-orange-500 hover:text-orange-700">
                 <svg class="h-4 w-4 fill-current inline-flex align-text-bottom mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="m19.5 24h-15c-1.378 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.122-2.5 2.5-2.5h15c1.378 0 2.5 1.122 2.5 2.5v19c0 1.378-1.122 2.5-2.5 2.5zm-15-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h15c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z" />
                   <path d="m18.5 21h-13c-.276 0-.5-.224-.5-.5v-12c0-.276.224-.5.5-.5h13c.276 0 .5.224.5.5v12c0 .276-.224.5-.5.5zm-12.5-1h12v-11h-12z" />
@@ -795,7 +765,7 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6 dark:bg-gray-900">
             <div class="text-sm leading-5 text-center">
-              <a href="#" class="font-medium text-orange-500 hover:text-orange-700">
+              <a href="/finanzas" class="font-medium text-orange-500 hover:text-orange-700">
                 <svg class="h-4 w-4 fill-current inline-flex align-text-bottom mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="m19.5 24h-15c-1.378 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.122-2.5 2.5-2.5h15c1.378 0 2.5 1.122 2.5 2.5v19c0 1.378-1.122 2.5-2.5 2.5zm-15-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h15c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z" />
                   <path d="m18.5 21h-13c-.276 0-.5-.224-.5-.5v-12c0-.276.224-.5.5-.5h13c.276 0 .5.224.5.5v12c0 .276-.224.5-.5.5zm-12.5-1h12v-11h-12z" />
@@ -844,7 +814,7 @@
           </div>
           <div class="bg-gray-50 px-4 py-4 sm:px-6 dark:bg-gray-900">
             <div class="text-sm leading-5 text-center">
-              <a href="#" class="font-medium text-orange-500 hover:text-orange-700">
+              <a href="/finanzas" class="font-medium text-orange-500 hover:text-orange-700">
                 <svg class="h-4 w-4 fill-current inline-flex align-text-bottom mr-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="m19.5 24h-15c-1.378 0-2.5-1.122-2.5-2.5v-19c0-1.378 1.122-2.5 2.5-2.5h15c1.378 0 2.5 1.122 2.5 2.5v19c0 1.378-1.122 2.5-2.5 2.5zm-15-23c-.827 0-1.5.673-1.5 1.5v19c0 .827.673 1.5 1.5 1.5h15c.827 0 1.5-.673 1.5-1.5v-19c0-.827-.673-1.5-1.5-1.5z" />
                   <path d="m18.5 21h-13c-.276 0-.5-.224-.5-.5v-12c0-.276.224-.5.5-.5h13c.276 0 .5.224.5.5v12c0 .276-.224.5-.5.5zm-12.5-1h12v-11h-12z" />
@@ -860,7 +830,7 @@
         </div>
       </div>
     </div>
-    <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-white sm:mt-5 sm:text-2xl sm:leading-8 text-center bg-orange-full rounded-lg px-3 py-2 font-bold">
+    <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-white sm:mt-5 sm:text-2xl sm:leading-8 text-center bg-gradient-to-r from-orange-300 to-orange-700 via-orange-500 rounded-lg px-3 py-2 font-bold">
       Así queremos que sean todas las finanzas públicas: 100% transparentes para que puedas controlar.
     </p>
   </div>
@@ -875,7 +845,7 @@
       <h2 class="text-lg leading-6 font-semibold text-gray-700 uppercase tracking-wider dark:text-gray-200">
         Preguntas frecuentes
       </h2>
-      <p class="mt- text-3xl leading-9 font-extrabold text-gradient bg-orange-full sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+      <p class="mt- text-3xl leading-9 font-extrabold bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
         ¿Te quedan preguntas?
       </p>
     </div>
@@ -964,6 +934,9 @@
   </div>
 </div>
 
+<script src="https://partidodigital.github.io/PartidoDigital-Web-Next/assets/scripts/site.js" defer=""></script>
+
+
     </section>
 
     
@@ -1050,21 +1023,36 @@
                     Recursos
                   </h4>
                   <ul class="mt-4">
-                    <li>
+                    <!--<li>
                       <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/blog" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         Blog
                       </a>
-                    </li>
-                    <li class="mt-4">
+                    </li>-->
+                    <!--<li class="mt-4">
                       <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/plataforma" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         Plataforma
                       </a>
+                    </li>-->
+                    <li class="mt-4">
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/donar" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                        Donar
+                      </a>
                     </li>
                     <li class="mt-4">
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/afiliaciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                        Afiliaciones
+                      </a>
+                    </li>
+                    <li class="mt-4">
+                      <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/finanzas" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                        Finanzas
+                      </a>
+                    </li>
+                    <!--<li class="mt-4">
                       <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/prensa" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         Kit de Prensa
                       </a>
-                    </li>
+                    </li>-->
                   </ul>
             </div>
           </div>
@@ -1074,37 +1062,31 @@
                 Documentación
               </h4>
               <ul class="mt-4">
-                
                 <li>
                   <a href="/documentos/programa-de-principios" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Programa de Principios
                   </a>
                 </li>
-                
                 <li class="mt-4">
                   <a href="/documentos/politica-de-privacidad" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Política de Privacidad
                   </a>
                 </li>
-                
                 <li class="mt-4">
                   <a href="/documentos/carta-organica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Carta Orgánica
                   </a>
                 </li>
-                
                 <li class="mt-4">
                   <a href="/documentos/codigo-de-etica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Código de Ética
                   </a>
                 </li>
-                
                 <li class="mt-4">
                   <a href="/documentos/terminos-y-condiciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Términos y Condiciones
                   </a>
                 </li>
-                
               </ul>
             </div>
             <div class="mt-12 md:mt-0">
@@ -1139,12 +1121,12 @@
     </div>
   </div>
 
-    <div x-show="searchOpen" class="fixed z-30 inset-0 overflow-y-auto">
+    <div x-show="searchOpen" class="fixed z-30 inset-0 overflow-y-auto" style="display:none;">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0 mt-24">
       <div x-on:click="searchOpen = false" x-show="searchOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 transition-opacity" aria-hidden="true">
         <div class="absolute inset-0 bg-black opacity-75"></div>
       </div>
-      <div x-show="searchOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="inline-block align-bottom bg-white rounded-lg px-5 pt-1 pb-5 text-left overflow-hidden shadow-xl transform transition-all sm:align-middle sm:w-full max-w-3xl dark:bg-gray-800" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+      <div x-show="searchOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="inline-block align-bottom bg-white rounded-lg px-5 pt-1 pb-5 text-left overflow-hidden shadow-xl transform transition-all sm:align-middle w-full md:max-w-3xl dark:bg-gray-800" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
         <div class="flex items-start flex-none border-gray-200 dark:border-gray-900 border-b">
             <div class="flex-1 flex">
                 <form class="w-full flex md:ml-0 mb-0" action="#" method="GET">
@@ -1162,15 +1144,17 @@
         </div>
         <div class="flex-auto w-full items-center flex min-h-28" id="search-results">
             <span class="text-gray-400 py-10 text-xl absolute dark:text-gray-500" x-show='allSuggestions.length === 0'>No hay búsquedas recientes</span>
-            <span x-show='allSuggestions.length > 0 && searchText.length === 0' class="bg-white text-xl w-full leading-10 min-h-28" role="listbox">
+            <span x-show='allSuggestions.length > 0 && searchText.length === 0' class="bg-white text-xl w-full leading-10 min-h-28 dark:bg-gray-800" role="listbox">
                 <div>
                     <p class="text-lg text-gray-900 dark:text-gray-200 mt-4">Búsquedas recientes:</p>
-                    <span class="relative" style="display: block;">
+                    <span class="relative aa-recent" style="display: block;">
                         <template x-for='(item, index) in allSuggestions' :key="index">
-                            <div class="px-2 my-2 rounded-full cursor-pointer bg-orange-100 relative" role="option" x-ref="suggestion">
-                                <div class="inline" x-html="item.icon"></div>
-                                <span x-text="item.title"></span>
-                                <svg x-on:click="localStorage.setItem('PD_suggestions', JSON.stringify((allSuggestions.splice(index,1), allSuggestions))); $refs.suggestion.remove();" class="w-6 h-6 text-black justify-end absolute right-2 top-2 align-text-bottom cursor-pointer hover:text-orange-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <div>
+                                <div class="aa-recent-suggestion" role="option" x-ref="suggestion">
+                                    <div class="inline" x-html="item.icon"></div>
+                                    <span x-text="item.title"></span>
+                                </div>
+                                <svg x-on:click="localStorage.setItem('PD_suggestions', JSON.stringify((allSuggestions.splice(index,1), allSuggestions))); $refs.suggestion.remove();" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                                 </svg>
                             </div>
@@ -1187,6 +1171,8 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
+
+<script src="https://partidodigital.github.io/PartidoDigital-Web-Next/assets/scripts/buscador.js" defer></script>
   </body>
 </html>
