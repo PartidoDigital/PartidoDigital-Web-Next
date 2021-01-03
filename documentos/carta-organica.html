@@ -36,13 +36,13 @@
   </head>
   <body class="antialiased font-sans bg-white" 
     x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen, 'overflow-hidden': searchOpen }" 
-    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, scrolled: false, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
+    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false,  mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
     x-on:keydown.escape="modalOpen = false; searchOpen = false;" >
 
     
 
     <div class=" top-0 z-20">
-    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" x-bind:class="{ 'shadow-md': scrolled }">
+    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" >
       <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
         <div class="lg:w-0 lg:flex-1">
           <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" class="hidden md:flex">
@@ -179,7 +179,7 @@
               </div>
             </div>
             <div>
-              <nav class="grid row-gap-8">
+              <nav class="grid row-gap-8 space-y-4">
                 <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-participacion" class="text-base leading-6 font-medium text-orange-500 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   Sobre participación
                 </a>
@@ -194,11 +194,17 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 row-gap-4 col-gap-8">
-              <a href="/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Documentación
               </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
-                Kit de Prensa
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/donar" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Donar
+              </a>
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/afiliaciones" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Afiliación
+              </a>
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/finanzas" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Finanzas
               </a>
             </div>
             <div class="space-y-4">
@@ -226,11 +232,11 @@
 <div class="bg-white dark:bg-black documentos">
     <div class="max-w-screen-xl mx-auto py-6 px-4 text-center sm:px-6 lg:px-8">
         <div class="mb-5 bg-white dark:bg-black">
-            <nav class="inline-flex mb-3" aria-label="Breadcrumb">
+            <nav class="hidden lg:inline-flex mb-3" aria-label="Breadcrumb">
                 <ol class="flex items-center space-x-3">
                     <li>
                         <div>
-                            <a href="/" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
+                            <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
                             <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                             </svg>
@@ -260,18 +266,18 @@
                     </li>
                 </ol>
             </nav>
+            <div class="bg-white dark:bg-black sticky top-0 mb-4 z-30">
+                <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
+                    Carta Orgánica
+                </h2>
+            </div>
             <div class="md:space-y-8 sm:mx-auto sm:max-w-xl space-y-4 lg:max-w-5xl">
-                <div class="bg-white dark:bg-black sticky top-0">
-                    <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
-                        Carta Orgánica
-                    </h2>
-                </div>
                 
                 
                 <div class="content text-left">
                     
                         
-                        <h3 id="capitulo-I">
+                        <h3 id="capitulo-I" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo I <a href="#capitulo-I" title="Link a Capítulo I">
@@ -284,7 +290,7 @@
         
       </h3>
     
-      <h4 id="del-partido-digital">
+      <h4 id="del-partido-digital" style="scroll-margin-top: 2.5em;">
         
         
           DEL PARTIDO DIGITAL <a href="#del-partido-digital" title="Link a DEL PARTIDO DIGITAL">
@@ -297,7 +303,7 @@
         
       </h4>
     
-      <h5 id="articulo-1">
+      <h5 id="articulo-1" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 1 <a href="#articulo-1" title="Link a Artículo 1">
@@ -311,7 +317,7 @@
       </h5>
     
 <p>El Partido Digital es un partido político abierto a todos los uruguayos que deseen construir un Uruguay por y para todos.</p>
-      <h3 id="capitulo-II">
+      <h3 id="capitulo-II" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo II <a href="#capitulo-II" title="Link a Capítulo II">
@@ -324,7 +330,7 @@
         
       </h3>
     
-      <h4 id="de-los-afiliados">
+      <h4 id="de-los-afiliados" style="scroll-margin-top: 2.5em;">
         
         
           DE LOS AFILIADOS <a href="#de-los-afiliados" title="Link a DE LOS AFILIADOS">
@@ -337,7 +343,7 @@
         
       </h4>
     
-      <h5 id="articulo-2">
+      <h5 id="articulo-2" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 2 <a href="#articulo-2" title="Link a Artículo 2">
@@ -351,7 +357,7 @@
       </h5>
     
 <p>Para ser afiliado es necesario ser mayor de dieciséis (16) años, poseedor de credencial cívica y comprometerse a respetar y defender los principios del Partido Digital y su Carta Orgánica.</p>
-      <h5 id="articulo-3">
+      <h5 id="articulo-3" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 3 <a href="#articulo-3" title="Link a Artículo 3">
@@ -365,7 +371,7 @@
       </h5>
     
 <p>Las afiliaciones al partido deberán presentarse ante la Mesa Ejecutiva Nacional del Partido Digital.</p>
-      <h5 id="articulo-4">
+      <h5 id="articulo-4" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 4 <a href="#articulo-4" title="Link a Artículo 4">
@@ -379,7 +385,7 @@
       </h5>
     
 <p>En los 90 días siguientes a la afiliación, la Mesa Ejecutiva Nacional puede dejar sin efecto la misma debido a que la persona no cumpla con los principios del Partido Digital. Si en ese plazo la Mesa Ejecutiva Nacional no se expide al respecto se dará por aprobada la afiliación.</p>
-      <h5 id="articulo-5">
+      <h5 id="articulo-5" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 5 <a href="#articulo-5" title="Link a Artículo 5">
@@ -405,7 +411,7 @@
   <li>presentar iniciativas en forma individual o colectiva;</li>
   <li>promover la modificación por los cauces estatutarios de las decisiones previamente adoptadas, así como de la presente Carta Orgánica.</li>
 </ul>
-      <h5 id="articulo-6">
+      <h5 id="articulo-6" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 6 <a href="#articulo-6" title="Link a Artículo 6">
@@ -427,7 +433,7 @@
   <li>contribuir a la formación del tesoro partidario en la forma que establezca la Mesa Ejecutiva;</li>
   <li>solidarizarse con los demás afiliados al partido y respetar sus posiciones.</li>
 </ul>
-      <h5 id="articulo-7">
+      <h5 id="articulo-7" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 7 <a href="#articulo-7" title="Link a Artículo 7">
@@ -441,7 +447,7 @@
       </h5>
     
 <p>El afiliado que incumpla las normas estatutarias, las reglamentaciones y resoluciones del Partido o en general viole las obligaciones impuestas a los afiliados por la presente Carta Orgánica podrá ser sancionado por los órganos competentes previa vista a los efectos de presentar descargos y articular su defensa.</p>
-      <h3 id="capitulo-III">
+      <h3 id="capitulo-III" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo III <a href="#capitulo-III" title="Link a Capítulo III">
@@ -454,7 +460,7 @@
         
       </h3>
     
-      <h4 id="de-los-simpatizantes">
+      <h4 id="de-los-simpatizantes" style="scroll-margin-top: 2.5em;">
         
         
           DE LOS SIMPATIZANTES <a href="#de-los-simpatizantes" title="Link a DE LOS SIMPATIZANTES">
@@ -467,7 +473,7 @@
         
       </h4>
     
-      <h5 id="articulo-8">
+      <h5 id="articulo-8" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 8 <a href="#articulo-8" title="Link a Artículo 8">
@@ -481,7 +487,7 @@
       </h5>
     
 <p>Son simpatizantes del Partido Digital quienes sin ser afiliados se vinculan y colaboran con él en forma periódica, así como los menores de dieciséis (16) años pero con catorce (14) años ya cumplidos que soliciten su ingreso y sean aceptados por la Mesa Ejecutiva Nacional.</p>
-      <h5 id="articulo-9">
+      <h5 id="articulo-9" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 9 <a href="#articulo-9" title="Link a Artículo 9">
@@ -495,7 +501,7 @@
       </h5>
     
 <p>El partido procurará la participación de los simpatizantes en aquellos aspectos de la vida partidaria que no sea necesaria la calidad de afiliado. Los mismos recibirán además la información que el partido considere de su interés.</p>
-      <h5 id="articulo-10">
+      <h5 id="articulo-10" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 10 <a href="#articulo-10" title="Link a Artículo 10">
@@ -509,7 +515,7 @@
       </h5>
     
 <p>Los simpatizantes que hayan dado cabal cumplimiento de los artículos precedentes podrán solicitar sin más trámite ante las autoridades competentes ser afiliados al partido.</p>
-      <h3 id="capitulo-IV">
+      <h3 id="capitulo-IV" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo IV <a href="#capitulo-IV" title="Link a Capítulo IV">
@@ -522,7 +528,7 @@
         
       </h3>
     
-      <h4 id="de-los-órganos-del-partido">
+      <h4 id="de-los-órganos-del-partido" style="scroll-margin-top: 2.5em;">
         
         
           DE LOS ÓRGANOS DEL PARTIDO <a href="#de-los-órganos-del-partido" title="Link a DE LOS ÓRGANOS DEL PARTIDO">
@@ -535,7 +541,7 @@
         
       </h4>
     
-      <h5 id="articulo-11">
+      <h5 id="articulo-11" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 11 <a href="#articulo-11" title="Link a Artículo 11">
@@ -554,7 +560,7 @@
   <li>el Directorio;</li>
   <li>la Mesa Ejecutiva Nacional.</li>
 </ul>
-      <h5 id="articulo-12">
+      <h5 id="articulo-12" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 12 <a href="#articulo-12" title="Link a Artículo 12">
@@ -572,7 +578,7 @@
   <li>la Convención Departamental;</li>
   <li>la Mesa Ejecutiva Departamental.</li>
 </ul>
-      <h5 id="articulo-13">
+      <h5 id="articulo-13" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 13 <a href="#articulo-13" title="Link a Artículo 13">
@@ -586,7 +592,7 @@
       </h5>
     
 <p>Integrarán también la estructura orgánica partidaria los Equipos de Trabajo conforme lo establece el Capítulo XIV de esta Carta Orgánica.</p>
-      <h3 id="capitulo-V">
+      <h3 id="capitulo-V" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo V <a href="#capitulo-V" title="Link a Capítulo V">
@@ -599,7 +605,7 @@
         
       </h3>
     
-      <h4 id="de-la-convención-nacional">
+      <h4 id="de-la-convención-nacional" style="scroll-margin-top: 2.5em;">
         
         
           DE LA CONVENCIÓN NACIONAL <a href="#de-la-convención-nacional" title="Link a DE LA CONVENCIÓN NACIONAL">
@@ -612,7 +618,7 @@
         
       </h4>
     
-      <h5 id="articulo-14">
+      <h5 id="articulo-14" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 14 <a href="#articulo-14" title="Link a Artículo 14">
@@ -626,7 +632,7 @@
       </h5>
     
 <p>La Convención Nacional es el órgano máximo del Partido Digital y está integrada por los convencionales electos en las elecciones internas que se establecen en el Artículo 77 numeral 12 y en la disposición transitoria W de la Constitución de la República.</p>
-      <h5 id="articulo-15">
+      <h5 id="articulo-15" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 15 <a href="#articulo-15" title="Link a Artículo 15">
@@ -647,7 +653,7 @@
   <li>aprobar las modificaciones totales o parciales de la presente Carta Orgánica;</li>
   <li>aprobar su reglamento interno.</li>
 </ul>
-      <h5 id="articulo-16">
+      <h5 id="articulo-16" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 16 <a href="#articulo-16" title="Link a Artículo 16">
@@ -661,7 +667,7 @@
       </h5>
     
 <p>La Convención Nacional se compondrá de la forma prevista en la disposición transitoria W de la Constitución de la República y la ley reglamentaria correspondiente.</p>
-      <h5 id="articulo-17">
+      <h5 id="articulo-17" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 17 <a href="#articulo-17" title="Link a Artículo 17">
@@ -679,7 +685,7 @@
   <li>frente a una propuesta de la Convención Departamental respectiva;</li>
   <li>frente a una propuesta del treinta y cinco (35) por ciento de los afiliados del departamento.</li>
 </ul>
-      <h5 id="articulo-18">
+      <h5 id="articulo-18" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 18 <a href="#articulo-18" title="Link a Artículo 18">
@@ -693,7 +699,7 @@
       </h5>
     
 <p>La Convención Nacional con el voto conforme de la mayoría absoluta de sus miembros podrá resolver la creación de una o más circunscripciones electorales en un departamento a propuesta de la Mesa Ejecutiva Nacional.</p>
-      <h5 id="articulo-19">
+      <h5 id="articulo-19" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 19 <a href="#articulo-19" title="Link a Artículo 19">
@@ -707,7 +713,7 @@
       </h5>
     
 <p>La Convención Nacional se reunirá ordinariamente una vez al año, preferentemente en el segundo trimestre del mismo, en fecha definida por la Mesa Ejecutiva Nacional.</p>
-      <h5 id="articulo-20">
+      <h5 id="articulo-20" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 20 <a href="#articulo-20" title="Link a Artículo 20">
@@ -726,7 +732,7 @@
   <li>cuando lo solicite una cuarta parte de los congresales;</li>
   <li>cuando lo soliciten en forma conjunta tres Mesas Ejecutivas Departamentales.</li>
 </ul>
-      <h5 id="articulo-21">
+      <h5 id="articulo-21" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 21 <a href="#articulo-21" title="Link a Artículo 21">
@@ -740,7 +746,7 @@
       </h5>
     
 <p>En los casos de los literales “b” (cuando lo solicite una cuarta parte de los congresales) y “c” (cuando lo soliciten en forma conjunta tres Mesas Ejecutivas Departamentales) del Artículo 20, la solicitud se efectuará por escrito ante la Mesa Ejecutiva Nacional, la que efectuará la convocatoria en la primera sesión que se realice tras la presentación de la solicitud, en fecha que no excederá los sesenta días a contar desde entonces. El lugar de reunión será dispuesto por la Mesa Ejecutiva Nacional en el acto de la convocatoria.</p>
-      <h5 id="articulo-22">
+      <h5 id="articulo-22" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 22 <a href="#articulo-22" title="Link a Artículo 22">
@@ -754,7 +760,7 @@
       </h5>
     
 <p>La Convención Nacional será presidida por un Presidente y un Secretario designados por el cuerpo, al comienzo de cada sesión. En el mismo acto se designará un Vicepresidente y un Prosecretario.</p>
-      <h5 id="articulo-23">
+      <h5 id="articulo-23" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 23 <a href="#articulo-23" title="Link a Artículo 23">
@@ -768,7 +774,7 @@
       </h5>
     
 <p>Para sesionar, La Convención Nacional, se requerirá la presencia de la mayoría absoluta de sus componentes a la hora previamente fijada como primera convocatoria. Transcurrida dos horas desde dicha convocatoria, la Convención iniciará la sesión con aquellos convencionales presentes.</p>
-      <h5 id="articulo-24">
+      <h5 id="articulo-24" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 24 <a href="#articulo-24" title="Link a Artículo 24">
@@ -782,7 +788,7 @@
       </h5>
     
 <p>La Mesa Ejecutiva Nacional elaborará el orden del día, incluyendo en primer término los puntos que la propia Convención Nacional haya resuelto incluir en su sesión precedente.</p>
-      <h5 id="articulo-25">
+      <h5 id="articulo-25" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 25 <a href="#articulo-25" title="Link a Artículo 25">
@@ -796,7 +802,7 @@
       </h5>
     
 <p>La Mesa Ejecutiva Nacional deberá incorporar al orden del día aquellos puntos que fueran solicitados por el diez (10) por ciento de los afiliados o por dos Mesas Ejecutivas Departamentales, con una antelación no menor de treinta días (30) al señalado para la reunión.</p>
-      <h5 id="articulo-26">
+      <h5 id="articulo-26" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 26 <a href="#articulo-26" title="Link a Artículo 26">
@@ -810,7 +816,7 @@
       </h5>
     
 <p>Durante el desarrollo de la Convención la mayoría absoluta de convencionales podrá modificar el orden de tratamiento de los asuntos y, por dos tercios, incorporar nuevos puntos.</p>
-      <h5 id="articulo-27">
+      <h5 id="articulo-27" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 27 <a href="#articulo-27" title="Link a Artículo 27">
@@ -824,7 +830,7 @@
       </h5>
     
 <p>Las reuniones extraordinarias de la Convención Nacional sólo tratarán los asuntos para los cuales fueron convocados.</p>
-      <h5 id="articulo-28">
+      <h5 id="articulo-28" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 28 <a href="#articulo-28" title="Link a Artículo 28">
@@ -838,7 +844,7 @@
       </h5>
     
 <p>La Mesa Ejecutiva Nacional enviará a las Mesas Ejecutivas Departamentales con cuarenta días de anticipación a la fecha de realización de la Convención Nacional el orden del día del mismo, conjuntamente con la convocatoria y toda la información necesaria para que los congresos correspondientes puedan considerar los temas en discusión.</p>
-      <h3 id="capitulo-VI">
+      <h3 id="capitulo-VI" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo VI <a href="#capitulo-VI" title="Link a Capítulo VI">
@@ -851,7 +857,7 @@
         
       </h3>
     
-      <h4 id="del-directorio">
+      <h4 id="del-directorio" style="scroll-margin-top: 2.5em;">
         
         
           DEL DIRECTORIO <a href="#del-directorio" title="Link a DEL DIRECTORIO">
@@ -864,7 +870,7 @@
         
       </h4>
     
-      <h5 id="articulo-29">
+      <h5 id="articulo-29" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 29 <a href="#articulo-29" title="Link a Artículo 29">
@@ -878,7 +884,7 @@
       </h5>
     
 <p>El Directorio es el órgano partidario cuya función es defender el espíritu fundacional del Partido Digital, promover la participación de las personas en la vida política de Uruguay siguiendo el Programa de Principios.</p>
-      <h5 id="articulo-30">
+      <h5 id="articulo-30" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 30 <a href="#articulo-30" title="Link a Artículo 30">
@@ -898,7 +904,7 @@
   <li>proponer acciones disciplinarias a analizar por la Junta de Disciplina del Partido Digital;</li>
   <li>aprobar o rechazar la inscripción de agrupaciones.</li>
 </ul>
-      <h5 id="articulo-31">
+      <h5 id="articulo-31" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 31 <a href="#articulo-31" title="Link a Artículo 31">
@@ -912,7 +918,7 @@
       </h5>
     
 <p>El Directorio del Partido Digital estará compuesto por siete integrantes con voz y voto.</p>
-      <h5 id="articulo-32">
+      <h5 id="articulo-32" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 32 <a href="#articulo-32" title="Link a Artículo 32">
@@ -926,7 +932,7 @@
       </h5>
     
 <p>Los integrantes del Directorio del Partido Digital deben cumplir los mismos requisitos para formar parte de la Mesa Ejecutiva Nacional y además tener 2 años de antigüedad en el Partido Digital y con probada actividad en el partido.</p>
-      <h5 id="articulo-33">
+      <h5 id="articulo-33" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 33 <a href="#articulo-33" title="Link a Artículo 33">
@@ -940,7 +946,7 @@
       </h5>
     
 <p>La Convención Nacional como órgano elector del Directorio, convocada por éste, se reunirá para elegir al nuevo Directorio, en un plazo máximo de un año desde la fecha de la instalación de la Convención.</p>
-      <h5 id="articulo-34">
+      <h5 id="articulo-34" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 34 <a href="#articulo-34" title="Link a Artículo 34">
@@ -954,7 +960,7 @@
       </h5>
     
 <p>Se podrán postular espontáneamente para cada puesto del Directorio, aquellos Convencionales Nacionales que cumplen con los requisitos antes estipulados. La persona más votada, será la titular en ese puesto y los dos siguientes más votados serán primer y segundo suplente respectivamente.</p>
-      <h5 id="articulo-35">
+      <h5 id="articulo-35" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 35 <a href="#articulo-35" title="Link a Artículo 35">
@@ -968,7 +974,7 @@
       </h5>
     
 <p>El Directorio del Partido Digital se debe reunir por lo menos cuatro veces en el año.</p>
-      <h3 id="capitulo-VII">
+      <h3 id="capitulo-VII" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo VII <a href="#capitulo-VII" title="Link a Capítulo VII">
@@ -981,7 +987,7 @@
         
       </h3>
     
-      <h4 id="de-la-mesa-ejecutiva-nacional">
+      <h4 id="de-la-mesa-ejecutiva-nacional" style="scroll-margin-top: 2.5em;">
         
         
           DE LA MESA EJECUTIVA NACIONAL <a href="#de-la-mesa-ejecutiva-nacional" title="Link a DE LA MESA EJECUTIVA NACIONAL">
@@ -994,7 +1000,7 @@
         
       </h4>
     
-      <h5 id="articulo-36">
+      <h5 id="articulo-36" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 36 <a href="#articulo-36" title="Link a Artículo 36">
@@ -1008,7 +1014,7 @@
       </h5>
     
 <p>La Mesa Ejecutiva Nacional es el órgano de conducción partidaria que asume la representación del Partido en el lapso que media entre las sesiones de la Convención Nacional. Sesionará en la forma y condiciones que ella misma establezca por mayoría absoluta de sus integrantes.</p>
-      <h5 id="articulo-37">
+      <h5 id="articulo-37" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 37 <a href="#articulo-37" title="Link a Artículo 37">
@@ -1022,7 +1028,7 @@
       </h5>
     
 <p>La Mesa Ejecutiva Nacional se compondrá de quince miembros electos por todos los afiliados en una circunscripción nacional, por listas con triple número de suplentes, voto secreto y sistema de representación proporcional, prohibiéndose la acumulación por sublemas.</p>
-      <h5 id="articulo-38">
+      <h5 id="articulo-38" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 38 <a href="#articulo-38" title="Link a Artículo 38">
@@ -1036,7 +1042,7 @@
       </h5>
     
 <p>La Mesa Ejecutiva Nacional se compondrá también por una persona de cada equipo de trabajo (de ahora en más “Líderes”), con voz y sin voto, encargada de coordinar esfuerzos y demostrar avances en su equipo de trabajo.</p>
-      <h5 id="articulo-39">
+      <h5 id="articulo-39" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 39 <a href="#articulo-39" title="Link a Artículo 39">
@@ -1064,7 +1070,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
   <li>convocar por dos tercios de sus integrantes a elecciones extraordinarias de la Mesa Ejecutiva Nacional;</li>
   <li>aprobar su propio reglamento de funcionamiento.</li>
 </ul>
-      <h5 id="articulo-40">
+      <h5 id="articulo-40" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 40 <a href="#articulo-40" title="Link a Artículo 40">
@@ -1078,7 +1084,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>La Mesa Ejecutiva Nacional debe reunirse como mínimo seis veces al año, en la fecha y en el lugar preestablecido en la sesión anterior, procurando en la medida de lo posible, hacerlo en sedes rotativas en todo el país.</p>
-      <h5 id="articulo-41">
+      <h5 id="articulo-41" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 41 <a href="#articulo-41" title="Link a Artículo 41">
@@ -1092,7 +1098,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>Para sesionar, la Mesa Ejecutiva Nacional, requerirá en la primera convocatoria, un quórum de dos tercios de sus integrantes. Transcurridas dos horas, sesionará con mayoría absoluta de sus componentes.</p>
-      <h5 id="articulo-42">
+      <h5 id="articulo-42" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 42 <a href="#articulo-42" title="Link a Artículo 42">
@@ -1106,7 +1112,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>Para que la integración de la Mesa Ejecutiva Nacional sea posible, deberá ser aprobada por el cuerpo por mayoría absoluta de sus integrantes.</p>
-      <h3 id="capitulo-VIII">
+      <h3 id="capitulo-VIII" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo VIII <a href="#capitulo-VIII" title="Link a Capítulo VIII">
@@ -1119,7 +1125,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
         
       </h3>
     
-      <h4 id="de-la-convención-departamental">
+      <h4 id="de-la-convención-departamental" style="scroll-margin-top: 2.5em;">
         
         
           DE LA CONVENCIÓN DEPARTAMENTAL <a href="#de-la-convención-departamental" title="Link a DE LA CONVENCIÓN DEPARTAMENTAL">
@@ -1132,7 +1138,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
         
       </h4>
     
-      <h5 id="articulo-43">
+      <h5 id="articulo-43" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 43 <a href="#articulo-43" title="Link a Artículo 43">
@@ -1146,7 +1152,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>La Convención Departamental es el órgano de base para discutir la estrategia del Partido Digital a nivel departamental.</p>
-      <h5 id="articulo-44">
+      <h5 id="articulo-44" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 44 <a href="#articulo-44" title="Link a Artículo 44">
@@ -1168,7 +1174,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
   <li>determinar la existencia de órganos departamentales intermedios entre la Convención Departamental y la Mesa Ejecutiva Departamental, por mayoría absoluta;</li>
   <li>aprobar su reglamento interno.</li>
 </ul>
-      <h5 id="articulo-45">
+      <h5 id="articulo-45" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 45 <a href="#articulo-45" title="Link a Artículo 45">
@@ -1187,7 +1193,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
   <li>cuando lo disponga la Mesa Ejecutiva Departamental;</li>
   <li>cuando lo solicite el diez (10) por ciento de los afiliados del Departamento.</li>
 </ul>
-      <h5 id="articulo-46">
+      <h5 id="articulo-46" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 46 <a href="#articulo-46" title="Link a Artículo 46">
@@ -1201,7 +1207,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>En el caso del literal “c” (cuando lo solicite el diez (10) por ciento de los afiliados del Departamento) del Artículo 45, la solicitud se presentará por escrito ante la Mesa Ejecutiva Departamental la que efectuará la convocatoria en la primera sesión que realice tras la presentación de la solicitud, en fecha que no excederá los sesenta días a contar desde entonces.</p>
-      <h3 id="capitulo-IX">
+      <h3 id="capitulo-IX" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo IX <a href="#capitulo-IX" title="Link a Capítulo IX">
@@ -1214,7 +1220,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
         
       </h3>
     
-      <h4 id="de-la-mesa-ejecutiva-departamental">
+      <h4 id="de-la-mesa-ejecutiva-departamental" style="scroll-margin-top: 2.5em;">
         
         
           DE LA MESA EJECUTIVA DEPARTAMENTAL <a href="#de-la-mesa-ejecutiva-departamental" title="Link a DE LA MESA EJECUTIVA DEPARTAMENTAL">
@@ -1227,7 +1233,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
         
       </h4>
     
-      <h5 id="articulo-47">
+      <h5 id="articulo-47" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 47 <a href="#articulo-47" title="Link a Artículo 47">
@@ -1241,7 +1247,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>La Mesa Ejecutiva Departamental es el órgano de conducción y representación partidaria a nivel del Departamento en el lapso que media entre sesión y sesión de la Convención Departamental.</p>
-      <h5 id="articulo-48">
+      <h5 id="articulo-48" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 48 <a href="#articulo-48" title="Link a Artículo 48">
@@ -1255,7 +1261,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>El número de los miembros de la Mesa Ejecutiva Departamental será de cinco (5) electos por la Convención Departamental mediante voto secreto, por listas y representación proporcional.</p>
-      <h5 id="articulo-49">
+      <h5 id="articulo-49" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 49 <a href="#articulo-49" title="Link a Artículo 49">
@@ -1278,7 +1284,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
   <li>organizar las finanzas, aprobar presupuestos y balances financieros del partido a nivel departamental;</li>
   <li>aprobar su propio reglamento de funcionamiento.</li>
 </ul>
-      <h5 id="articulo-50">
+      <h5 id="articulo-50" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 50 <a href="#articulo-50" title="Link a Artículo 50">
@@ -1292,7 +1298,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
       </h5>
     
 <p>La Mesa Ejecutiva Departamental debe reunirse como mínimo diez (10) veces al año en la fecha preestablecida en la sesión y en cualquier otro momento a solicitud del presidente. Para sesionar se requerirá la presencia de la mayoría absoluta de sus integrantes.</p>
-      <h3 id="capitulo-X">
+      <h3 id="capitulo-X" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo X <a href="#capitulo-X" title="Link a Capítulo X">
@@ -1305,7 +1311,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
         
       </h3>
     
-      <h4 id="de-la-acción-partidaria">
+      <h4 id="de-la-acción-partidaria" style="scroll-margin-top: 2.5em;">
         
         
           DE LA ACCIÓN PARTIDARIA <a href="#de-la-acción-partidaria" title="Link a DE LA ACCIÓN PARTIDARIA">
@@ -1318,7 +1324,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
         
       </h4>
     
-      <h5 id="articulo-51">
+      <h5 id="articulo-51" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 51 <a href="#articulo-51" title="Link a Artículo 51">
@@ -1333,7 +1339,7 @@ proponer las líneas fundamentales de la política electoral del Partido y coord
     
 <p>La Mesa Ejecutiva Nacional organizará la acción partidaria en áreas de trabajo a nivel nacional y/o departamental.
 Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podrán establecer múltiples programas según la disposición de los afiliados y los requerimientos del partido. Los afiliados tendrán siempre la más amplia libertad para proponer programas de trabajo y definir la forma de realizarlo.</p>
-      <h5 id="articulo-53">
+      <h5 id="articulo-53" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 53 <a href="#articulo-53" title="Link a Artículo 53">
@@ -1347,7 +1353,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Podrán organizarse en unidades de trabajo, grupos o comisiones de integración limitada o abierta, de duración transitoria o permanente.</p>
-      <h3 id="capitulo-XI">
+      <h3 id="capitulo-XI" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XI <a href="#capitulo-XI" title="Link a Capítulo XI">
@@ -1360,7 +1366,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="de-las-instancias-electorales">
+      <h4 id="de-las-instancias-electorales" style="scroll-margin-top: 2.5em;">
         
         
           DE LAS INSTANCIAS ELECTORALES <a href="#de-las-instancias-electorales" title="Link a DE LAS INSTANCIAS ELECTORALES">
@@ -1373,7 +1379,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="articulo-54">
+      <h5 id="articulo-54" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 54 <a href="#articulo-54" title="Link a Artículo 54">
@@ -1387,7 +1393,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>En todas las instancias electorales y plebiscitarias internas del partido, regirá el principio del voto secreto y directo.</p>
-      <h5 id="articulo-55">
+      <h5 id="articulo-55" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 55 <a href="#articulo-55" title="Link a Artículo 55">
@@ -1401,7 +1407,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Las elecciones para designar los integrantes de la Mesa Ejecutiva Nacional se realizarán cada treinta meses.</p>
-      <h5 id="articulo-56">
+      <h5 id="articulo-56" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 56 <a href="#articulo-56" title="Link a Artículo 56">
@@ -1415,7 +1421,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Las elecciones para designar los integrantes de las Mesas Ejecutivas Departamentales se efectuarán dos meses antes de las elecciones de la Mesa Ejecutiva Nacional, exceptuando circunstancias especiales que pueda determinar el Directorio.</p>
-      <h3 id="capitulo-XII">
+      <h3 id="capitulo-XII" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XII <a href="#capitulo-XII" title="Link a Capítulo XII">
@@ -1428,7 +1434,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="del-plebiscito">
+      <h4 id="del-plebiscito" style="scroll-margin-top: 2.5em;">
         
         
           DEL PLEBISCITO <a href="#del-plebiscito" title="Link a DEL PLEBISCITO">
@@ -1441,7 +1447,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="articulo-57">
+      <h5 id="articulo-57" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 57 <a href="#articulo-57" title="Link a Artículo 57">
@@ -1455,7 +1461,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Por iniciativa de un tercio de integrantes de la Convención Nacional, de un veinticinco por ciento (25%) de los afiliados, o de un diez por ciento (10%) de congresales más un diez por ciento (10%) de los afiliados - no congresales - en forma conjunta; deberá convocarse un plebiscito sobre el objeto de la iniciativa, haya estado incluida o no en el orden del día de la siguiente sesión de la Convención.</p>
-      <h5 id="articulo-58">
+      <h5 id="articulo-58" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 58 <a href="#articulo-58" title="Link a Artículo 58">
@@ -1469,7 +1475,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los requisitos para promover y votar en los plebiscitos mencionados en el Artículo 57 serán los mismos que los exigidos para ser elector en el Artículo 5 literal “e” de la presente Carta Orgánica.</p>
-      <h5 id="articulo-59">
+      <h5 id="articulo-59" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 59 <a href="#articulo-59" title="Link a Artículo 59">
@@ -1497,7 +1503,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
   <li>la política de alianzas programática o electorales;</li>
   <li>la adopción de definiciones programáticas.</li>
 </ul>
-      <h3 id="capitulo-XIII">
+      <h3 id="capitulo-XIII" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XIII <a href="#capitulo-XIII" title="Link a Capítulo XIII">
@@ -1510,7 +1516,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="de-la-comisión-fiscal-la-comisión-electoral-y-el-tribunal-de-disciplina">
+      <h4 id="de-la-comisión-fiscal-la-comisión-electoral-y-el-tribunal-de-disciplina" style="scroll-margin-top: 2.5em;">
         
         
           DE LA COMISIÓN FISCAL, LA COMISIÓN ELECTORAL Y EL TRIBUNAL DE DISCIPLINA <a href="#de-la-comisión-fiscal-la-comisión-electoral-y-el-tribunal-de-disciplina" title="Link a DE LA COMISIÓN FISCAL, LA COMISIÓN ELECTORAL Y EL TRIBUNAL DE DISCIPLINA">
@@ -1523,7 +1529,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="articulo-60">
+      <h5 id="articulo-60" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 60 <a href="#articulo-60" title="Link a Artículo 60">
@@ -1537,7 +1543,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Comisión Fiscal, la Comisión Electoral y el Tribunal de Disciplina son órganos de contralor interno del Partido. Su función es velar por el respeto del presente Carta Orgánica.</p>
-      <h5 id="articulo-61">
+      <h5 id="articulo-61" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 61 <a href="#articulo-61" title="Link a Artículo 61">
@@ -1551,7 +1557,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los integrantes de la Comisión Fiscal, la Comisión Electoral y el Tribunal de Disciplina serán designados por la Convención Nacional a propuesta de la Mesa Ejecutiva Nacional y se regirán por lo dispuesto en esta Carta Orgánica.</p>
-      <h5 id="articulo-62">
+      <h5 id="articulo-62" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 62 <a href="#articulo-62" title="Link a Artículo 62">
@@ -1565,7 +1571,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Comisión Fiscal se integrará con tres (3) miembros con doble número de suplentes y tendrá el cometido de controlar la gestión financiera y patrimonial del partido. Podrán ser asistidos por un Contador Público de su confianza.</p>
-      <h5 id="articulo-63">
+      <h5 id="articulo-63" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 63 <a href="#articulo-63" title="Link a Artículo 63">
@@ -1579,7 +1585,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Dentro de los noventa días de finalizado cada ejercicio anual, la Mesa Ejecutiva Nacional o los responsables a quienes esta hubiera encargado la administración de las finanzas partidarias, presentará a la Comisión Fiscal un balance de lo actuado, con detalles de ingresos, gastos e inversiones realizadas.</p>
-      <h5 id="articulo-64">
+      <h5 id="articulo-64" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 64 <a href="#articulo-64" title="Link a Artículo 64">
@@ -1593,7 +1599,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Comisión Fiscal tendrá treinta (30) días para expedirse al respecto. Podrá además solicitar a la Mesa Ejecutiva Nacional, o a cualquier otro órgano del partido, la adopción de las medidas que del estudio del balance resultaren pertinentes.</p>
-      <h5 id="articulo-65">
+      <h5 id="articulo-65" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 65 <a href="#articulo-65" title="Link a Artículo 65">
@@ -1607,7 +1613,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Establécese el deber de rendir cuentas de todos aquellos a quienes se encomiende la administración de bienes partidarios o estén autorizados a la realización de gastos.</p>
-      <h5 id="articulo-66">
+      <h5 id="articulo-66" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 66 <a href="#articulo-66" title="Link a Artículo 66">
@@ -1621,7 +1627,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los afiliados que hubieren sido designados o elegidos para el desempeño de cargos nacionales o partidarios legislativos o ejecutivos nacionales o departamentales deberán prestar una declaración jurada referente a su estado patrimonial al momento de iniciar el desempeño de esos cargos.</p>
-      <h5 id="articulo-67">
+      <h5 id="articulo-67" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 67 <a href="#articulo-67" title="Link a Artículo 67">
@@ -1635,7 +1641,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Comisión Fiscal actuará como depositaria de esas declaraciones juradas y podrá sin expresión de causa solicitar su actualización, así como solicitar información complementaria.</p>
-      <h5 id="articulo-68">
+      <h5 id="articulo-68" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 68 <a href="#articulo-68" title="Link a Artículo 68">
@@ -1649,7 +1655,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Comisión Electoral se integrará con cinco miembros y doble número de suplentes. Tendrá como cometido organizar y supervisar las instancias electorales internas convocadas por la Mesa Ejecutiva Nacional de conformidad con la presente Carta Orgánica, y de proclamar los candidatos electos.</p>
-      <h5 id="articulo-69">
+      <h5 id="articulo-69" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 69 <a href="#articulo-69" title="Link a Artículo 69">
@@ -1663,7 +1669,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Comisión Electoral actuará también como tribunal, decidiendo las impugnaciones a darse lugar con motivo de las instancias electorales. Sus decisiones tendrán carácter inapelable.</p>
-      <h5 id="articulo-70">
+      <h5 id="articulo-70" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 70 <a href="#articulo-70" title="Link a Artículo 70">
@@ -1677,7 +1683,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Tribunal de Disciplina se integrará con tres miembros y doble número de suplentes. Podrán ser asistidos por un profesional de su confianza.</p>
-      <h5 id="articulo-71">
+      <h5 id="articulo-71" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 71 <a href="#articulo-71" title="Link a Artículo 71">
@@ -1691,7 +1697,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Tribunal de Disciplina actuará frente a denuncias fundadas en la violación de la Carta Orgánica por parte de cualquier afiliado, o ante la comisión de acciones que redunden en daño moral, político o patrimonial para el Partido.</p>
-      <h5 id="articulo-72">
+      <h5 id="articulo-72" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 72 <a href="#articulo-72" title="Link a Artículo 72">
@@ -1705,7 +1711,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Tribunal de Disciplina, una vez que hubiere asumido competencia lo que se pondrá en conocimiento del afiliado - podrá adoptar todas las medidas tendientes a la comprobación de los hechos denunciados. Cuando considere finalizada la parte instructora conferirá vista de las actuaciones al afiliado imputado de los hechos de la denuncia, quien dispondrá de diez días hábiles para efectuar su defensa, articular descargos y ofrecer prueba.</p>
-      <h5 id="articulo-73">
+      <h5 id="articulo-73" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 73 <a href="#articulo-73" title="Link a Artículo 73">
@@ -1719,7 +1725,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Tribunal de Disciplina deberá emitir su fallo en el término de veinte días una vez diligenciadas las pruebas si hubiere. Vencido el mismo sin dictarse resolución se tendrá por desestimada la denuncia.</p>
-      <h5 id="articulo-74">
+      <h5 id="articulo-74" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 74 <a href="#articulo-74" title="Link a Artículo 74">
@@ -1733,7 +1739,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Si el objeto del procedimiento disciplinario fuere la comisión de hechos calificados por el Tribunal como inconductas políticas, el fallo podrá ser apelado ante la Mesa Ejecutiva Nacional en el término de 10 días hábiles posteriores a la notificación. En los demás casos el fallo será inapelable.</p>
-      <h5 id="articulo-75">
+      <h5 id="articulo-75" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 75 <a href="#articulo-75" title="Link a Artículo 75">
@@ -1747,7 +1753,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Las sanciones deberán tener razonable proporcionalidad con los hechos imputados, pudiendo llegar hasta la expulsión del Partido para el responsable de los hechos irregulares.</p>
-      <h5 id="articulo-76">
+      <h5 id="articulo-76" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 76 <a href="#articulo-76" title="Link a Artículo 76">
@@ -1761,7 +1767,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La presente Carta Orgánica podrá ser reformada mediante el voto conforme de las tres cuartas partes de integrantes de la Convención Nacional. Para la reforma se requerirá la iniciativa del diez por ciento (10%) de los integrantes de la Convención Nacional o del diez por ciento (10%) del total de afiliados o mayoría absoluta del Directorio.</p>
-      <h5 id="articulo-77">
+      <h5 id="articulo-77" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 77 <a href="#articulo-77" title="Link a Artículo 77">
@@ -1775,7 +1781,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>En todos los casos la reforma de la Carta Orgánica deberá incluirse en el orden del día de la sesión de la Convención Nacional con la debida antelación, no pudiendo introducirse el estudio de la misma mediante la modificación del orden del día preestablecido. En caso de ser aprobada una reforma en la Carta Orgánica, la misma será comunicada por cauces orgánicos a afiliados y simpatizantes.</p>
-      <h3 id="capitulo-XIV">
+      <h3 id="capitulo-XIV" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XIV <a href="#capitulo-XIV" title="Link a Capítulo XIV">
@@ -1788,7 +1794,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="de-los-equipos-de-trabajo">
+      <h4 id="de-los-equipos-de-trabajo" style="scroll-margin-top: 2.5em;">
         
         
           DE LOS EQUIPOS DE TRABAJO <a href="#de-los-equipos-de-trabajo" title="Link a DE LOS EQUIPOS DE TRABAJO">
@@ -1801,7 +1807,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="articulo-78">
+      <h5 id="articulo-78" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 78 <a href="#articulo-78" title="Link a Artículo 78">
@@ -1815,7 +1821,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Se elegirán Líderes de cada equipo de trabajo: Técnico, Legislación, Finanzas, Participación, Afiliaciones y Comunicación.</p>
-      <h5 id="articulo-79">
+      <h5 id="articulo-79" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 79 <a href="#articulo-79" title="Link a Artículo 79">
@@ -1829,7 +1835,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los afiliados podrán postularse para la función de Líderes de los equipos de trabajo y la Mesa Ejecutiva Nacional analizará los méritos de los postulantes para dejar habilitados a los más capaces para el puesto.</p>
-      <h5 id="articulo-80">
+      <h5 id="articulo-80" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 80 <a href="#articulo-80" title="Link a Artículo 80">
@@ -1843,7 +1849,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Dentro de estos candidatos habilitados para ser Líderes de los equipos de trabajo, la Mesa Ejecutiva Nacional podrá escoger a sus preferidos en las respectivas áreas. Los Líderes se mantendrán en funciones durante el mismo periodo que la Mesa Ejecutiva Nacional.</p>
-      <h5 id="articulo-81">
+      <h5 id="articulo-81" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 81 <a href="#articulo-81" title="Link a Artículo 81">
@@ -1857,7 +1863,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Se constituirán equipos de trabajo temáticos para fomentar el trabajo de personas especializadas en respectivas áreas.</p>
-      <h5 id="articulo-82">
+      <h5 id="articulo-82" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 82 <a href="#articulo-82" title="Link a Artículo 82">
@@ -1871,7 +1877,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los equipos de trabajo que se plantean en la fundación del Partido Digital son los siguientes: Técnico, Legislación, Finanzas, Afiliaciones, Participación, Comunicación. No obstante, se podrán crear más equipos de trabajo, previa aprobación de la Mesa Ejecutiva Nacional del Partido Digital.</p>
-      <h5 id="articulo-83">
+      <h5 id="articulo-83" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 83 <a href="#articulo-83" title="Link a Artículo 83">
@@ -1885,7 +1891,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Equipo Técnico tendrá la función de resolver las cuestiones tecnológicas correspondientes al Partido Digital, incluyendo el conjunto de herramientas online (de ahora en más la “Plataforma”) necesarias para cumplir con los objetivos del mismo según lo disponga la Mesa Ejecutiva Nacional.</p>
-      <h5 id="articulo-84">
+      <h5 id="articulo-84" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 84 <a href="#articulo-84" title="Link a Artículo 84">
@@ -1899,7 +1905,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Equipo de Legislación tendrá la función de asesorar sobre el marco legal existente respecto a la actuación del Partido Digital.</p>
-      <h5 id="articulo-85">
+      <h5 id="articulo-85" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 85 <a href="#articulo-85" title="Link a Artículo 85">
@@ -1913,7 +1919,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El equipo de Finanzas tendrá la función de gestionar las finanzas del Partido Digital y asegurar de hacer cumplir lo establecido en esta Carta Orgánica al respecto y lo expresado en la Ley 18.485.</p>
-      <h5 id="articulo-86">
+      <h5 id="articulo-86" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 86 <a href="#articulo-86" title="Link a Artículo 86">
@@ -1927,7 +1933,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El equipo de Participación se enfocará en generar instancias de participación para la elaboración y discusión de ideas que definirán el accionar del Partido Digital en las instancias en que participe.</p>
-      <h5 id="articulo-87">
+      <h5 id="articulo-87" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 87 <a href="#articulo-87" title="Link a Artículo 87">
@@ -1941,7 +1947,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El equipo de Comunicación estará a cargo de implementar y definir la estrategia externa e interna de comunicación del Partido Digital según lo disponga la Mesa Ejecutiva Nacional.</p>
-      <h3 id="capitulo-XV">
+      <h3 id="capitulo-XV" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XV <a href="#capitulo-XV" title="Link a Capítulo XV">
@@ -1954,7 +1960,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="de-las-agrupaciones">
+      <h4 id="de-las-agrupaciones" style="scroll-margin-top: 2.5em;">
         
         
           DE LAS AGRUPACIONES <a href="#de-las-agrupaciones" title="Link a DE LAS AGRUPACIONES">
@@ -1967,7 +1973,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="articulo-88">
+      <h5 id="articulo-88" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 88 <a href="#articulo-88" title="Link a Artículo 88">
@@ -1981,7 +1987,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Las agrupaciones que deseen constituirse como tal, deberán presentar las firmas de al menos 50 adherentes para su habilitación.</p>
-      <h5 id="articulo-89">
+      <h5 id="articulo-89" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 89 <a href="#articulo-89" title="Link a Artículo 89">
@@ -1995,7 +2001,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los candidatos de las agrupaciones deberán cumplir los requisitos expuestos anteriormente para los candidatos del Partido Digital.</p>
-      <h5 id="articulo-90">
+      <h5 id="articulo-90" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 90 <a href="#articulo-90" title="Link a Artículo 90">
@@ -2009,7 +2015,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Luego de presentadas las firmas, el nombre de la agrupación y la información requerida por Ley, el Directorio se expedirá sobre su aprobación en un plazo no mayor a 30 días.</p>
-      <h3 id="capitulo-XVI">
+      <h3 id="capitulo-XVI" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XVI <a href="#capitulo-XVI" title="Link a Capítulo XVI">
@@ -2022,7 +2028,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="del-tesoro-partidario">
+      <h4 id="del-tesoro-partidario" style="scroll-margin-top: 2.5em;">
         
         
           DEL TESORO PARTIDARIO <a href="#del-tesoro-partidario" title="Link a DEL TESORO PARTIDARIO">
@@ -2035,7 +2041,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="articulo-91">
+      <h5 id="articulo-91" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 91 <a href="#articulo-91" title="Link a Artículo 91">
@@ -2049,7 +2055,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Tesoro Partidario estará formado por las donaciones y legados que le hagan, las cuotas que perciba, las rentas que el Tesoro produzca, y la parte correspondiente de la contribución que impone esta Carta a todos los representantes del Partido Digital que ocupen cargos de carácter electivo, políticos, de particular confianza, u otros de designación directa.</p>
-      <h5 id="articulo-92">
+      <h5 id="articulo-92" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 92 <a href="#articulo-92" title="Link a Artículo 92">
@@ -2068,7 +2074,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
   <li>El 5% de los sueldos líquidos (nominal menos descuentos legales) de los titulares de cargos políticos, de particular confianza, u otros de designación directa, designados a propuesta del Partido o de sus sectores, por el Poder Ejecutivo, el Poder Legislativo, Gobiernos Departamentales, Municipales, u otros Organismos del Estado o con participación estatal, ya sea que se trate de cargos en el país o en el extranjero;</li>
   <li>La cuota correspondiente a la adhesión partidaria, que deberán abonar los Convencionales Nacionales y Departamentales, Titulares y Suplentes, así como todo otro ciudadano electo bajo el Lema Partido Digital o que ocupe cargo de responsabilidad en la estructura partidaria, o en nombre o a propuesta del Partido o sus Sectores, que no esté comprendido en los literales “a” y “b” de este artículo.</li>
 </ul>
-      <h5 id="articulo-93">
+      <h5 id="articulo-93" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 93 <a href="#articulo-93" title="Link a Artículo 93">
@@ -2082,7 +2088,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Mesa Ejecutiva Nacional, por mayoría de dos tercios, fijará el monto de la cuota así como Reglamentará la percepción y distribución de lo recaudado por dicho concepto.</p>
-      <h5 id="articulo-94">
+      <h5 id="articulo-94" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 94 <a href="#articulo-94" title="Link a Artículo 94">
@@ -2096,7 +2102,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>La Mesa Ejecutiva Nacional, por mayoría especial de dos tercios, podrá establecer otras contribuciones.</p>
-      <h5 id="articulo-95">
+      <h5 id="articulo-95" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 95 <a href="#articulo-95" title="Link a Artículo 95">
@@ -2110,7 +2116,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los fondos del Tesoro Partidario serán destinados a llenar los fines del Partido previa aprobación del presupuesto por la Mesa Ejecutiva Nacional y comunicación a todos los afiliados.</p>
-      <h5 id="articulo-96">
+      <h5 id="articulo-96" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 96 <a href="#articulo-96" title="Link a Artículo 96">
@@ -2124,7 +2130,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los fondos del Partido Digital se gestionarán de forma transparente y disponible para que cualquier persona pueda visualizar y auditar.</p>
-      <h5 id="articulo-97">
+      <h5 id="articulo-97" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 97 <a href="#articulo-97" title="Link a Artículo 97">
@@ -2138,7 +2144,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>De manera online todos los uruguayos podrán acceder a ver los ingresos y gastos del Partido Digital y las personas que realizan los movimientos.</p>
-      <h5 id="articulo-98">
+      <h5 id="articulo-98" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 98 <a href="#articulo-98" title="Link a Artículo 98">
@@ -2152,7 +2158,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Todas las donaciones y aportes que se reciban en el Partido Digital serán nominativas, no se permitirán donaciones anónimas independientemente de los montos aportados.</p>
-      <h3 id="capitulo-XVII">
+      <h3 id="capitulo-XVII" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XVII <a href="#capitulo-XVII" title="Link a Capítulo XVII">
@@ -2165,7 +2171,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="de-las-alianzas-electorales">
+      <h4 id="de-las-alianzas-electorales" style="scroll-margin-top: 2.5em;">
         
         
           DE LAS ALIANZAS ELECTORALES <a href="#de-las-alianzas-electorales" title="Link a DE LAS ALIANZAS ELECTORALES">
@@ -2178,7 +2184,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="articulo-99">
+      <h5 id="articulo-99" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 99 <a href="#articulo-99" title="Link a Artículo 99">
@@ -2192,7 +2198,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Partido Digital no realizará alianzas electorales o políticas de ningún tipo que atenten contra la forma de participación propuesta en esto Carta Orgánica y en el Programa de Principios, y/o disminuyan el poder de decisión de las personas a través de las vías de participación que ofrece el partido.</p>
-      <h3 id="capitulo-XVIII">
+      <h3 id="capitulo-XVIII" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XVIII <a href="#capitulo-XVIII" title="Link a Capítulo XVIII">
@@ -2205,7 +2211,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h3>
     
-      <h4 id="de-los-representantes-electos">
+      <h4 id="de-los-representantes-electos" style="scroll-margin-top: 2.5em;">
         
         
           DE LOS REPRESENTANTES ELECTOS <a href="#de-los-representantes-electos" title="Link a DE LOS REPRESENTANTES ELECTOS">
@@ -2218,7 +2224,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h4>
     
-      <h5 id="de-la-actuación-de-los-representantes-del-partido-digital-en-el-poder-legislativo">
+      <h5 id="de-la-actuación-de-los-representantes-del-partido-digital-en-el-poder-legislativo" style="scroll-margin-top: 2.5em;">
         
         
           De la actuación de los representantes del Partido Digital en el Poder Legislativo <a href="#de-la-actuación-de-los-representantes-del-partido-digital-en-el-poder-legislativo" title="Link a De la actuación de los representantes del Partido Digital en el Poder Legislativo">
@@ -2231,7 +2237,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
         
       </h5>
     
-      <h5 id="articulo-100">
+      <h5 id="articulo-100" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 100 <a href="#articulo-100" title="Link a Artículo 100">
@@ -2245,7 +2251,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El/Los representantes del Partido Digital en cualquier órgano legislativo (de ahora en más “Legislador(es) Digital(es)”) deben actuar de acuerdo a lo que se decida en la herramienta online de la Plataforma que tenga ese propósito. Esta herramienta mostrará el proyecto de Ley para votar, material adicional para conocer sobre el tema, opiniones de expertos en el área y de los votantes.</p>
-      <h5 id="articulo-101">
+      <h5 id="articulo-101" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 101 <a href="#articulo-101" title="Link a Artículo 101">
@@ -2259,7 +2265,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Aquellas situaciones en las que los Legisladores Digitales no tengan la posibilidad de plantear una votación online sobre el tema, se abstendrán de participar.</p>
-      <h5 id="articulo-102">
+      <h5 id="articulo-102" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 102 <a href="#articulo-102" title="Link a Artículo 102">
@@ -2273,7 +2279,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>En caso de que el Legislador Digital vote explícitamente en contra de lo que se decidió en la Plataforma, el mismo deberá dejar el cargo. En caso de suceder esto, quien ocupe su lugar será el siguiente legislador en la lista de candidatos presentada en las últimas elecciones.</p>
-      <h5 id="articulo-103">
+      <h5 id="articulo-103" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 103 <a href="#articulo-103" title="Link a Artículo 103">
@@ -2287,7 +2293,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los Legisladores Digitales deberán concurrir todos los meses a una reunión abierta del Partido Digital, en donde contestarán todas las preguntas que se le realicen, tanto de manera online como presencial.</p>
-      <h5 id="articulo-104">
+      <h5 id="articulo-104" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 104 <a href="#articulo-104" title="Link a Artículo 104">
@@ -2301,7 +2307,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Los Legisladores Digitales deberá concurrir por lo menos una vez al año a todas las ciudades de Uruguay desde dónde lo solicite un grupo mayor a 20 personas.</p>
-      <h5 id="articulo-105">
+      <h5 id="articulo-105" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 105 <a href="#articulo-105" title="Link a Artículo 105">
@@ -2315,7 +2321,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Cada vez que se presenta un proyecto de Ley, el Legislador Digital, con ayuda de equipo de asesores asignados a colaborar en la tarea del legislador, deberá subirlo a la Plataforma en un plazo menor a cuarenta y ocho horas a partir de que el mismo esté en posesión del Legislador Digital, con su correspondiente resumen.</p>
-      <h5 id="articulo-106">
+      <h5 id="articulo-106" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 106 <a href="#articulo-106" title="Link a Artículo 106">
@@ -2329,7 +2335,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El resumen del proyecto de Ley debe ser objetivo, sin expresión de opinión partidaria.</p>
-      <h5 id="articulo-107">
+      <h5 id="articulo-107" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 107 <a href="#articulo-107" title="Link a Artículo 107">
@@ -2343,7 +2349,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Si hay propuestas de nuevos resúmenes del proyecto de Ley en cuestión se deberá analizar y se publicarán para ponerlo a disposición de la comunidad del Partido Digital.</p>
-      <h5 id="articulo-108">
+      <h5 id="articulo-108" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 108 <a href="#articulo-108" title="Link a Artículo 108">
@@ -2357,7 +2363,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Legislador Digital también tendrá la tarea de invitar a expertos en el área del proyecto de Ley a opinar y comunicar su posición sobre el mismo, en la Plataforma.</p>
-      <h5 id="articulo-109">
+      <h5 id="articulo-109" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 109 <a href="#articulo-109" title="Link a Artículo 109">
@@ -2371,7 +2377,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>Así mismo el Legislador Digital debe estar disponible para contestar las preguntas que se realicen en la Plataforma sobre el proyecto de Ley.</p>
-      <h5 id="articulo-110">
+      <h5 id="articulo-110" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 110 <a href="#articulo-110" title="Link a Artículo 110">
@@ -2385,7 +2391,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Legislador Digital en colaboración de los equipos de trabajo del Partido Digital, deben trabajar para que cada proyecto de Ley tenga la mayor participación posible y hacer todo lo que esté a su alcance para lograrlo, siguiendo estrictamente lo permitido por el Código de Ética y las herramientas a disposición.</p>
-      <h5 id="articulo-111">
+      <h5 id="articulo-111" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 111 <a href="#articulo-111" title="Link a Artículo 111">
@@ -2399,7 +2405,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
       </h5>
     
 <p>El Legislador Digital podrá emitir su opinión en la Plataforma sobre un proyecto de Ley, esta opinión será tratada como la de cualquier otro participante.</p>
-      <h5 id="articulo-112">
+      <h5 id="articulo-112" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 112 <a href="#articulo-112" title="Link a Artículo 112">
@@ -2414,7 +2420,7 @@ Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podr�
     
 <p>El Legislador Digital deberá estar disponible de manera online una hora semanal como mínimo, para responder preguntas de los afiliados. Esta hora deberá comunicarse por los medios de comunicación disponibles por el Partido Digital con un mínimo de cuarenta y ocho horas de anticipación.
 De la votación de las leyes</p>
-      <h5 id="articulo-113">
+      <h5 id="articulo-113" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 113 <a href="#articulo-113" title="Link a Artículo 113">
@@ -2428,7 +2434,7 @@ De la votación de las leyes</p>
       </h5>
     
 <p>La herramienta online perteneciente a la Plataforma en la que se puede votar los proyectos de Ley y determinar la actuación de los representantes legislativos deberá ser accesible a todos los uruguayos habilitados para votar.</p>
-      <h5 id="articulo-114">
+      <h5 id="articulo-114" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 114 <a href="#articulo-114" title="Link a Artículo 114">
@@ -2442,7 +2448,7 @@ De la votación de las leyes</p>
       </h5>
     
 <p>Se publicará junto con un resumen del mismo, links a artículos y material que permitan entender en profundidad el mismo y opiniones de expertos en la materia, presentadas estas últimas de manera diferencial al resto de las opiniones.</p>
-      <h5 id="articulo-115">
+      <h5 id="articulo-115" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 115 <a href="#articulo-115" title="Link a Artículo 115">
@@ -2456,7 +2462,7 @@ De la votación de las leyes</p>
       </h5>
     
 <p>Todo el material compartido en la Plataforma desde el Partido Digital será neutral, sin favorecer ninguna de las posiciones en cuestión.</p>
-      <h5 id="articulo-116">
+      <h5 id="articulo-116" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 116 <a href="#articulo-116" title="Link a Artículo 116">
@@ -2470,7 +2476,7 @@ De la votación de las leyes</p>
       </h5>
     
 <p>Todos los uruguayos habilitados para votar, podrán proponer iniciativas que tengan como fin ser presentadas al órgano correspondiente en la misma herramienta online utilizada para generar el Programa de Gobierno, siguiendo los mismos pasos para la presentación de propuestas que lo integren.</p>
-      <h5 id="articulo-117">
+      <h5 id="articulo-117" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 117 <a href="#articulo-117" title="Link a Artículo 117">
@@ -2484,7 +2490,7 @@ De la votación de las leyes</p>
       </h5>
     
 <p>Estas iniciativas deberán cumplir con los requisitos para que sean ejecutables en el período de gobierno actual.</p>
-      <h5 id="articulo-118">
+      <h5 id="articulo-118" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 118 <a href="#articulo-118" title="Link a Artículo 118">
@@ -2498,7 +2504,7 @@ De la votación de las leyes</p>
       </h5>
     
 <p>Si cumplen con estos requisitos, los proyectos de Ley serán presentados en la herramienta online de votación y difundidos para toda la comunidad del Partido Digital.</p>
-      <h5 id="articulo-119">
+      <h5 id="articulo-119" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 119 <a href="#articulo-119" title="Link a Artículo 119">
@@ -2512,7 +2518,7 @@ De la votación de las leyes</p>
       </h5>
     
 <p>Si el proyecto de Ley obtiene más de dos tercios de los votos de los usuarios registrados, será propuesto por un representante del Partido Digital en el órgano legislativo correspondiente.</p>
-      <h5 id="articulo-120">
+      <h5 id="articulo-120" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 120 <a href="#articulo-120" title="Link a Artículo 120">
@@ -2527,7 +2533,7 @@ De la votación de las leyes</p>
     
 <p>Todos los Legisladores Digitales votarán a favor del proyecto de Ley cuando se presente.
 De la actuación de los representantes electos del Partido Digital en el Poder Ejecutivo</p>
-      <h5 id="articulo-121">
+      <h5 id="articulo-121" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 121 <a href="#articulo-121" title="Link a Artículo 121">
@@ -2541,7 +2547,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>El/Los representantes del Partido Digital en cualquier órgano ejecutivo (de ahora en más “Ejecutivo(s) Digital(es)”) deberán trabajar para implementar las ideas del Programa de Gobierno. En caso de llegar a la Presidencia, el objetivo será implementar todas las ideas y en caso de Ministerios, Organismos Públicos y Entes Descentralizados, las ideas correspondientes a su área.</p>
-      <h5 id="articulo-122">
+      <h5 id="articulo-122" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 122 <a href="#articulo-122" title="Link a Artículo 122">
@@ -2555,7 +2561,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Cada año se realizará un balance de la gestión que se presentará de manera online y presencial.</p>
-      <h5 id="articulo-123">
+      <h5 id="articulo-123" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 123 <a href="#articulo-123" title="Link a Artículo 123">
@@ -2569,7 +2575,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Su actuación estará determinada por las ideas y lineamientos planteados en el Programa de Gobierno.</p>
-      <h5 id="articulo-124">
+      <h5 id="articulo-124" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 124 <a href="#articulo-124" title="Link a Artículo 124">
@@ -2583,7 +2589,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Aquellas situaciones que tienen un tiempo de ejecución mayor a noventa días y no están relacionadas con ninguna idea o propuesta del Programa de Gobierno, se pondrán a votación en la Plataforma.</p>
-      <h5 id="articulo-125">
+      <h5 id="articulo-125" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 125 <a href="#articulo-125" title="Link a Artículo 125">
@@ -2597,7 +2603,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Los representantes del Partido Digital que acceden al Poder Ejecutivo deberán hacer su trabajo lo más participativo y transparente posible, mientras no atente con la ejecución de las ideas del Programa de Gobierno y lo permita su autoridad. Al finalizar cada año se deberán comunicar las acciones que fueron puestas a votación en la Plataforma y la justificación correspondiente de las que no.</p>
-      <h3 id="capitulo-XIX">
+      <h3 id="capitulo-XIX" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XIX <a href="#capitulo-XIX" title="Link a Capítulo XIX">
@@ -2610,7 +2616,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         
       </h3>
     
-      <h4 id="de-la-elaboración-del-programa-de-gobierno-del-partido-digital">
+      <h4 id="de-la-elaboración-del-programa-de-gobierno-del-partido-digital" style="scroll-margin-top: 2.5em;">
         
         
           DE LA ELABORACIÓN DEL PROGRAMA DE GOBIERNO DEL PARTIDO DIGITAL <a href="#de-la-elaboración-del-programa-de-gobierno-del-partido-digital" title="Link a DE LA ELABORACIÓN DEL PROGRAMA DE GOBIERNO DEL PARTIDO DIGITAL">
@@ -2623,7 +2629,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         
       </h4>
     
-      <h5 id="articulo-126">
+      <h5 id="articulo-126" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 126 <a href="#articulo-126" title="Link a Artículo 126">
@@ -2637,7 +2643,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>El Programa de Gobierno del Partido Digital será elaborado de forma colaborativa en el que todos los uruguayos habilitados para votar podrán aportar ideas.</p>
-      <h5 id="articulo-127">
+      <h5 id="articulo-127" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 127 <a href="#articulo-127" title="Link a Artículo 127">
@@ -2651,7 +2657,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>El proceso de elaboración del programa de gobierno estará compuesto por tres pasos: recepción propuestas, enriquecimiento colectivo (no excluyente) y votación.</p>
-      <h5 id="articulo-128">
+      <h5 id="articulo-128" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 128 <a href="#articulo-128" title="Link a Artículo 128">
@@ -2665,7 +2671,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>En el primer paso (recepción de propuestas), de los tres establecidos en el Artículo 127, los uruguayos podrán proponer ideas que consideren sean las mejores para aplicar a nivel país, a través de la Plataforma mencionada, en la que deberán tener en cuenta todos los factores necesarios para que la misma sea ejecutable en el próximo periodo de Gobierno.</p>
-      <h5 id="articulo-129">
+      <h5 id="articulo-129" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 129 <a href="#articulo-129" title="Link a Artículo 129">
@@ -2679,7 +2685,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Aquellas propuestas que no sigan los factores definidos, no podrán pasar al paso de votación.</p>
-      <h5 id="articulo-130">
+      <h5 id="articulo-130" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 130 <a href="#articulo-130" title="Link a Artículo 130">
@@ -2693,7 +2699,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Las propuestas que no cumplen con los requisitos mínimos para ser ejecutables serán publicadas con las razones que ameriten para aportar transparencia al proceso.</p>
-      <h5 id="articulo-131">
+      <h5 id="articulo-131" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 131 <a href="#articulo-131" title="Link a Artículo 131">
@@ -2707,7 +2713,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>En el segundo paso (enriquecimiento colectivo), de los tres establecidos en el Artículo 127, las propuestas recibirán sugerencias y aportes de todos los uruguayos, los que el autor intelectual de la propuesta decidirá si aplica o no a la misma. En caso de que aplique, el autor intelectual de la propuesta debe modificar el texto de su propuesta acorde, en caso contrario debe comunicar la razón por la que no aplica.</p>
-      <h5 id="articulo-132">
+      <h5 id="articulo-132" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 132 <a href="#articulo-132" title="Link a Artículo 132">
@@ -2721,7 +2727,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Las propuestas más votadas del área integrará el Programa de Gobierno.</p>
-      <h5 id="articulo-133">
+      <h5 id="articulo-133" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 133 <a href="#articulo-133" title="Link a Artículo 133">
@@ -2735,7 +2741,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Todas las propuestas que pasen a la etapa de votación deben estar de acuerdo a la Constitución de la República Oriental del Uruguay y tratados internacionales a los que Uruguay está suscrito.</p>
-      <h5 id="articulo-134">
+      <h5 id="articulo-134" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 134 <a href="#articulo-134" title="Link a Artículo 134">
@@ -2749,7 +2755,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>El Equipo de Participación será el órgano encargado dentro del Partido Digital de determinar aquellas propuestas que cumplen los criterios definidos en el artículo anterior.</p>
-      <h5 id="articulo-135">
+      <h5 id="articulo-135" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 135 <a href="#articulo-135" title="Link a Artículo 135">
@@ -2763,7 +2769,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Las áreas que integran el Programa de Gobierno serán decididas por la Mesa Ejecutiva Nacional, entre todas las sugerencias que se encuentren en la Plataforma.</p>
-      <h5 id="articulo-136">
+      <h5 id="articulo-136" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 136 <a href="#articulo-136" title="Link a Artículo 136">
@@ -2777,7 +2783,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Todas las decisiones que no estén contempladas en la Carta Orgánica, serán decididas por la Mesa Ejecutiva Nacional.</p>
-      <h3 id="capitulo-XX">
+      <h3 id="capitulo-XX" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XX <a href="#capitulo-XX" title="Link a Capítulo XX">
@@ -2790,7 +2796,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         
       </h3>
     
-      <h4 id="aspectos-tecnológicos">
+      <h4 id="aspectos-tecnológicos" style="scroll-margin-top: 2.5em;">
         
         
           ASPECTOS TECNOLÓGICOS <a href="#aspectos-tecnológicos" title="Link a ASPECTOS TECNOLÓGICOS">
@@ -2803,7 +2809,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         
       </h4>
     
-      <h5 id="de-la-tecnología-a-utilizar">
+      <h5 id="de-la-tecnología-a-utilizar" style="scroll-margin-top: 2.5em;">
         
         
           De la tecnología a utilizar <a href="#de-la-tecnología-a-utilizar" title="Link a De la tecnología a utilizar">
@@ -2816,7 +2822,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         
       </h5>
     
-      <h5 id="articulo-137">
+      <h5 id="articulo-137" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 137 <a href="#articulo-137" title="Link a Artículo 137">
@@ -2830,7 +2836,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Las herramientas online a utilizar por el Partido Digital mediante su Plataforma deberán ser de código abierto, para que sea transparente su desarrollo y funcionamiento.</p>
-      <h5 id="articulo-138">
+      <h5 id="articulo-138" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 138 <a href="#articulo-138" title="Link a Artículo 138">
@@ -2844,7 +2850,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>El Equipo Técnico podrá tener herramientas en desarrollo o experimentales en calidad de pruebas de concepto de forma cerrada por el tiempo que sea necesario. Si se comprueba que estas herramientas mejoran procesos y/o resultados, se incluirán en la Plataforma, para que sean accesibles públicamente.</p>
-      <h5 id="articulo-139">
+      <h5 id="articulo-139" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 139 <a href="#articulo-139" title="Link a Artículo 139">
@@ -2858,7 +2864,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Las herramientas a utilizar serán elegidas por la Mesa Ejecutiva Nacional teniendo presente las recomendaciones del Líder del Equipo Técnico.</p>
-      <h5 id="articulo-140">
+      <h5 id="articulo-140" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 140 <a href="#articulo-140" title="Link a Artículo 140">
@@ -2872,7 +2878,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Todas las elecciones de herramientas online que integren la Plataforma con sus correspondientes justificaciones e información estará disponible en el sitio web del Partido Digital en la sección Plataforma.</p>
-      <h5 id="articulo-141">
+      <h5 id="articulo-141" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 141 <a href="#articulo-141" title="Link a Artículo 141">
@@ -2886,7 +2892,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Si el Equipo Técnico identifica que para resolver una necesidad técnica del Partido Digital debemos recurrir a una herramienta de terceros para optimizar recursos o cubrir una necesidad de mejor manera que haciéndolo con los recursos existentes internamente, el Equipo Técnico evaluará la mejor opción y presentará su sugerencia que deberá ser discutida y aprobada por mayoría simple por la Mesa Ejecutiva Nacional De la seguridad</p>
-      <h5 id="articulo-142">
+      <h5 id="articulo-142" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 142 <a href="#articulo-142" title="Link a Artículo 142">
@@ -2900,7 +2906,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>El Equipo Técnico evaluará la solución según aquellos criterios que aseguren que funciona de acuerdo a las prácticas que fomentamos desde el Partido Digital: software de código abierto, manejo seguro de la información y privacidad de los datos. De forma periódica se harán análisis para constatar que la herramienta mantenga sus estándares analizados al momento de su elección. Se realizarán acciones de hacking ético por lo menos una vez al año para asegurar que el maneja de la información cumple con los más altos estándares de seguridad.</p>
-      <h5 id="articulo-143">
+      <h5 id="articulo-143" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 143 <a href="#articulo-143" title="Link a Artículo 143">
@@ -2914,7 +2920,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Se implementarán todas las medidas disponibles para asegurar la información vertida por las personas participantes de las distintas instancias del Partido Digital.</p>
-      <h5 id="de-la-protección-de-la-privacidad">
+      <h5 id="de-la-protección-de-la-privacidad" style="scroll-margin-top: 2.5em;">
         
         
           De la protección de la privacidad <a href="#de-la-protección-de-la-privacidad" title="Link a De la protección de la privacidad">
@@ -2927,7 +2933,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         
       </h5>
     
-      <h5 id="articulo-144">
+      <h5 id="articulo-144" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 144 <a href="#articulo-144" title="Link a Artículo 144">
@@ -2941,7 +2947,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Todos los datos vertidos por los participantes de las distintas instancias del Partido Digital serán privados, excepto que la persona especifique lo contrario.</p>
-      <h5 id="articulo-145">
+      <h5 id="articulo-145" style="scroll-margin-top: 2.5em;">
         
         
           Artículo 145 <a href="#articulo-145" title="Link a Artículo 145">
@@ -2955,7 +2961,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
       </h5>
     
 <p>Se implementarán todas las medias necesarias, al alcance y disponibles por el Partido Digital para asegurar esto.</p>
-      <h3 id="capitulo-XXI">
+      <h3 id="capitulo-XXI" style="scroll-margin-top: 2.5em;">
         
         
           Capítulo XXI <a href="#capitulo-XXI" title="Link a Capítulo XXI">
@@ -2968,7 +2974,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         
       </h3>
     
-      <h4 id="disposiciones-transitorias">
+      <h4 id="disposiciones-transitorias" style="scroll-margin-top: 2.5em;">
         
         
           DISPOSICIONES TRANSITORIAS <a href="#disposiciones-transitorias" title="Link a DISPOSICIONES TRANSITORIAS">
@@ -3019,7 +3025,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
     </div>
 </div>
 
-      <div class="bg-gray-100 relative z-20 dark:bg-gray-900">
+      <footer class="bg-gray-100 relative z-20 dark:bg-gray-900">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="xl:col-span-1">
@@ -3123,27 +3129,27 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
               </h4>
               <ul class="mt-4">
                 <li>
-                  <a href="/documentos/programa-de-principios" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/programa-de-principios" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Programa de Principios
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/politica-de-privacidad" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/politica-de-privacidad" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Política de Privacidad
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/carta-organica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/carta-organica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Carta Orgánica
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/codigo-de-etica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/codigo-de-etica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Código de Ética
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/terminos-y-condiciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/terminos-y-condiciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Términos y Condiciones
                   </a>
                 </li>
@@ -3155,12 +3161,12 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
                   </h4>
                   <ul class="mt-4">
                     <li>
-                      <a href="#" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                      <a href="https://digo.mivoz.uy/login" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         MiVoz
                       </a>
                     </li>
                     <li class="mt-4">
-                      <a href="#" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                      <a href="https://comunidad.partidodigital.org.uy" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         Comunidad
                       </a>
                     </li>
@@ -3179,7 +3185,7 @@ De la actuación de los representantes electos del Partido Digital en el Poder E
         </p>
       </div>
     </div>
-  </div>
+  </footer>
 
     <div x-show="searchOpen" class="fixed z-30 inset-0 overflow-y-auto" style="display:none;">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0 mt-24">

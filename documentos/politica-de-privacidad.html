@@ -36,13 +36,13 @@
   </head>
   <body class="antialiased font-sans bg-white" 
     x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen, 'overflow-hidden': searchOpen }" 
-    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, scrolled: false, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
+    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false,  mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
     x-on:keydown.escape="modalOpen = false; searchOpen = false;" >
 
     
 
     <div class=" top-0 z-20">
-    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" x-bind:class="{ 'shadow-md': scrolled }">
+    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" >
       <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
         <div class="lg:w-0 lg:flex-1">
           <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" class="hidden md:flex">
@@ -179,7 +179,7 @@
               </div>
             </div>
             <div>
-              <nav class="grid row-gap-8">
+              <nav class="grid row-gap-8 space-y-4">
                 <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-participacion" class="text-base leading-6 font-medium text-orange-500 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   Sobre participación
                 </a>
@@ -194,11 +194,17 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 row-gap-4 col-gap-8">
-              <a href="/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Documentación
               </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
-                Kit de Prensa
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/donar" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Donar
+              </a>
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/afiliaciones" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Afiliación
+              </a>
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/finanzas" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Finanzas
               </a>
             </div>
             <div class="space-y-4">
@@ -226,11 +232,11 @@
 <div class="bg-white dark:bg-black documentos">
     <div class="max-w-screen-xl mx-auto py-6 px-4 text-center sm:px-6 lg:px-8">
         <div class="mb-5 bg-white dark:bg-black">
-            <nav class="inline-flex mb-3" aria-label="Breadcrumb">
+            <nav class="hidden lg:inline-flex mb-3" aria-label="Breadcrumb">
                 <ol class="flex items-center space-x-3">
                     <li>
                         <div>
-                            <a href="/" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
+                            <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
                             <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                             </svg>
@@ -260,12 +266,12 @@
                     </li>
                 </ol>
             </nav>
+            <div class="bg-white dark:bg-black sticky top-0 mb-4 z-30">
+                <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
+                    Política de Privacidad
+                </h2>
+            </div>
             <div class="md:space-y-8 sm:mx-auto sm:max-w-xl space-y-4 lg:max-w-5xl">
-                <div class="bg-white dark:bg-black sticky top-0">
-                    <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
-                        Política de Privacidad
-                    </h2>
-                </div>
                 
                 
                 <div class="content text-left">
@@ -275,7 +281,7 @@
 agosto de 2009, modificativas y concordantes, sobre protección de datos personales y Habeas Data, el
 tratamiento de datos personales que se realiza en la Plataforma del Partido Digital de Uruguay, se rige
 por las siguientes disposiciones:</p>
-      <h2 id="qué-información-recopilamos">
+      <h2 id="qué-información-recopilamos" style="scroll-margin-top: 2.5em;">
         
         
           ¿Qué información recopilamos? <a href="#qué-información-recopilamos" title="Link a ¿Qué información recopilamos?">
@@ -297,7 +303,7 @@ y credencial cívica. Su dirección de correo electrónico será verificada por 
 
 <p>Cuando se registran y publican, registramos la dirección IP de la que se originó el mensaje. También podemos
 conservar los registros del servidor que incluyen la dirección IP de cada solicitud a nuestro servidor.</p>
-      <h2 id="ejercicio-de-los-derechos">
+      <h2 id="ejercicio-de-los-derechos" style="scroll-margin-top: 2.5em;">
         
         
           Ejercicio de los derechos <a href="#ejercicio-de-los-derechos" title="Link a Ejercicio de los derechos">
@@ -313,7 +319,7 @@ conservar los registros del servidor que incluyen la dirección IP de cada solic
 <p>El Usuario podrá en todo momento ejercer los derechos de acceso, rectificación, actualización, inclusión y
 supresión, otorgados por la Ley Nº 18.331, sus modificativas y concordantes, ante el Partido Digital a través
 del mail <a href="mailto:plataforma@partidodigital.org.uy" target="_blank">plataforma@partidodigital.org.uy</a>.</p>
-      <h2 id="para-qué-utilizamos-su-información">
+      <h2 id="para-qué-utilizamos-su-información" style="scroll-margin-top: 2.5em;">
         
         
           ¿Para qué utilizamos su información? <a href="#para-qué-utilizamos-su-información" title="Link a ¿Para qué utilizamos su información?">
@@ -343,7 +349,7 @@ del mail <a href="mailto:plataforma@partidodigital.org.uy" target="_blank">plata
 <p><strong>Nota: Que se haya ingresado una Credencial Cívica válida según los chequeos de la Plataforma no garantiza que pueda
  tener acceso a las herramientas que la requieran. Para que esto suceda se procederá a comunicar a todos los Usuarios
  de los pasos a seguir para una verificación de forma física cuando así lo disponga el Partido Digital</strong></p>
-      <h2 id="cómo-protegemos-tu-información">
+      <h2 id="cómo-protegemos-tu-información" style="scroll-margin-top: 2.5em;">
         
         
           ¿Cómo protegemos tu información? <a href="#cómo-protegemos-tu-información" title="Link a ¿Cómo protegemos tu información?">
@@ -358,7 +364,7 @@ del mail <a href="mailto:plataforma@partidodigital.org.uy" target="_blank">plata
     
 <p>Implementamos una variedad de medidas de seguridad para mantener la seguridad de su información personal al ingresar,
 enviar o acceder a su información personal.</p>
-      <h2 id="cuál-es-su-política-de-retención-de-datos">
+      <h2 id="cuál-es-su-política-de-retención-de-datos" style="scroll-margin-top: 2.5em;">
         
         
           ¿Cuál es su política de retención de datos? <a href="#cuál-es-su-política-de-retención-de-datos" title="Link a ¿Cuál es su política de retención de datos?">
@@ -378,7 +384,7 @@ enviar o acceder a su información personal.</p>
  90 días.</li>
   <li>Conservar las direcciones IP asociadas a los usuarios registrados y sus publicaciones no más de 5 años.</li>
 </ul>
-      <h2 id="utilizamos-cookies">
+      <h2 id="utilizamos-cookies" style="scroll-margin-top: 2.5em;">
         
         
           ¿Utilizamos cookies? <a href="#utilizamos-cookies" title="Link a ¿Utilizamos cookies?">
@@ -400,7 +406,7 @@ del sitio y la interacción del sitio para que podamos ofrecer mejores experienc
 contratar con terceros proveedores de servicios para ayudarnos a entender mejor a nuestros visitantes del sitio. A estos
 proveedores de servicios no se les permite usar la información recopilada en nuestro nombre, excepto para ayudarnos a conducir
 y mejorar su experiencia.</p>
-      <h2 id="divulgamos-alguna-información-a-terceros">
+      <h2 id="divulgamos-alguna-información-a-terceros" style="scroll-margin-top: 2.5em;">
         
         
           ¿Divulgamos alguna información a terceros? <a href="#divulgamos-alguna-información-a-terceros" title="Link a ¿Divulgamos alguna información a terceros?">
@@ -416,7 +422,7 @@ y mejorar su experiencia.</p>
 <p>No vendemos, comercializamos o transferimos a terceros su información de identificación personal. También podemos divulgar su
 información cuando consideramos que la liberación es apropiada para cumplir con la ley, para hacer cumplir nuestras políticas
 de sitio, o para proteger los derechos de nosotros o de otros, propiedad o seguridad.</p>
-      <h2 id="enlaces-de-terceros">
+      <h2 id="enlaces-de-terceros" style="scroll-margin-top: 2.5em;">
         
         
           Enlaces de terceros <a href="#enlaces-de-terceros" title="Link a Enlaces de terceros">
@@ -433,7 +439,7 @@ de sitio, o para proteger los derechos de nosotros o de otros, propiedad o segur
 los casos de acceso a la misma a través de enlaces externos, ni tampoco en los enlaces de este sitio a otros sitios web. Por lo
 tanto, no tenemos ninguna responsabilidad por el contenido y las actividades de estos sitios. No obstante, buscamos proteger la
 integridad de nuestro sitio y agradecemos cualquier comentario al respecto.</p>
-      <h2 id="tu-consentimiento">
+      <h2 id="tu-consentimiento" style="scroll-margin-top: 2.5em;">
         
         
           Tu consentimiento <a href="#tu-consentimiento" title="Link a Tu consentimiento">
@@ -447,7 +453,7 @@ integridad de nuestro sitio y agradecemos cualquier comentario al respecto.</p>
       </h2>
     
 <p>Al utilizar la Plataforma del Partido Digital, usted da su consentimiento a nuestra política de privacidad.</p>
-      <h2 id="cambios-en-esta-política-de-privacidad">
+      <h2 id="cambios-en-esta-política-de-privacidad" style="scroll-margin-top: 2.5em;">
         
         
           Cambios en esta Política de Privacidad <a href="#cambios-en-esta-política-de-privacidad" title="Link a Cambios en esta Política de Privacidad">
@@ -491,7 +497,7 @@ integridad de nuestro sitio y agradecemos cualquier comentario al respecto.</p>
     </div>
 </div>
 
-      <div class="bg-gray-100 relative z-20 dark:bg-gray-900">
+      <footer class="bg-gray-100 relative z-20 dark:bg-gray-900">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="xl:col-span-1">
@@ -595,27 +601,27 @@ integridad de nuestro sitio y agradecemos cualquier comentario al respecto.</p>
               </h4>
               <ul class="mt-4">
                 <li>
-                  <a href="/documentos/programa-de-principios" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/programa-de-principios" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Programa de Principios
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/politica-de-privacidad" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/politica-de-privacidad" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Política de Privacidad
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/carta-organica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/carta-organica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Carta Orgánica
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/codigo-de-etica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/codigo-de-etica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Código de Ética
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/terminos-y-condiciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/terminos-y-condiciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Términos y Condiciones
                   </a>
                 </li>
@@ -627,12 +633,12 @@ integridad de nuestro sitio y agradecemos cualquier comentario al respecto.</p>
                   </h4>
                   <ul class="mt-4">
                     <li>
-                      <a href="#" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                      <a href="https://digo.mivoz.uy/login" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         MiVoz
                       </a>
                     </li>
                     <li class="mt-4">
-                      <a href="#" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                      <a href="https://comunidad.partidodigital.org.uy" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         Comunidad
                       </a>
                     </li>
@@ -651,7 +657,7 @@ integridad de nuestro sitio y agradecemos cualquier comentario al respecto.</p>
         </p>
       </div>
     </div>
-  </div>
+  </footer>
 
     <div x-show="searchOpen" class="fixed z-30 inset-0 overflow-y-auto" style="display:none;">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0 mt-24">

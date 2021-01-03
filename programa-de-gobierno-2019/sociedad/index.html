@@ -14,13 +14,13 @@
 <meta property="og:url" content="https://partidodigital.github.io/PartidoDigital-Web-Next/programa-de-gobierno-2019/sociedad/" />
 <meta property="og:site_name" content="Partido Digital de Uruguay" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-01T17:44:12-03:00" />
+<meta property="article:published_time" content="2021-01-03T19:18:19-03:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Propuestas sobre Sociedad" />
 <meta name="twitter:site" content="@pdigitaluy" />
 <meta name="twitter:creator" content="@Leo Giovanetti" />
 <script type="application/ld+json">
-{"description":"Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?","@type":"BlogPosting","headline":"Propuestas sobre Sociedad","dateModified":"2021-01-01T17:44:12-03:00","datePublished":"2021-01-01T17:44:12-03:00","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/programa-de-gobierno-2019/sociedad/","mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/programa-de-gobierno-2019/sociedad/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://recursos.partidodigital.org.uy/assets/img/presentacion.jpg"},"name":"Leo Giovanetti"},"author":{"@type":"Person","name":"Leo Giovanetti"},"@context":"https://schema.org"}</script>
+{"description":"Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?","@type":"BlogPosting","headline":"Propuestas sobre Sociedad","dateModified":"2021-01-03T19:18:19-03:00","datePublished":"2021-01-03T19:18:19-03:00","url":"https://partidodigital.github.io/PartidoDigital-Web-Next/programa-de-gobierno-2019/sociedad/","mainEntityOfPage":{"@type":"WebPage","@id":"https://partidodigital.github.io/PartidoDigital-Web-Next/programa-de-gobierno-2019/sociedad/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://recursos.partidodigital.org.uy/assets/img/presentacion.jpg"},"name":"Leo Giovanetti"},"author":{"@type":"Person","name":"Leo Giovanetti"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="icon" type="image/png" href="https://recursos.partidodigital.org.uy/assets/img/favicon-16x16.png" sizes="16x16">
@@ -36,13 +36,13 @@
   </head>
   <body class="antialiased font-sans bg-white" 
     x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen, 'overflow-hidden': searchOpen }" 
-    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, scrolled: false, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
+    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false,  mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
     x-on:keydown.escape="modalOpen = false; searchOpen = false;" >
 
     
 
-    <div class="sticky top-0 z-20">
-    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" x-bind:class="{ 'shadow-md': scrolled }">
+    <div class=" top-0 z-20">
+    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" >
       <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
         <div class="lg:w-0 lg:flex-1">
           <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" class="hidden md:flex">
@@ -179,7 +179,7 @@
               </div>
             </div>
             <div>
-              <nav class="grid row-gap-8">
+              <nav class="grid row-gap-8 space-y-4">
                 <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/sobre-participacion" class="text-base leading-6 font-medium text-orange-500 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   Sobre participación
                 </a>
@@ -194,11 +194,17 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 row-gap-4 col-gap-8">
-              <a href="/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Documentación
               </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
-                Kit de Prensa
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/donar" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Donar
+              </a>
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/afiliaciones" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Afiliación
+              </a>
+              <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/finanzas" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Finanzas
               </a>
             </div>
             <div class="space-y-4">
@@ -226,11 +232,11 @@
 <div class="bg-white dark:bg-black paginas">
     <div class="max-w-screen-xl mx-auto py-6 px-4 text-center sm:px-6 lg:px-8">
         <div class="mb-5 bg-white dark:bg-black">
-            <nav class="inline-flex mb-3" aria-label="Breadcrumb">
+            <nav class="hidden lg:inline-flex mb-3" aria-label="Breadcrumb">
                 <ol class="flex items-center space-x-3">
                     <li>
                         <div>
-                            <a href="/" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
+                            <a href="https://partidodigital.github.io/PartidoDigital-Web-Next" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
                             <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                             </svg>
@@ -260,12 +266,12 @@
                     </li>
                 </ol>
             </nav>
+            <div class="bg-white dark:bg-black sticky top-0 mb-4 z-30">
+                <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
+                    Propuestas sobre Sociedad
+                </h2>
+            </div>
             <div class="md:space-y-8 sm:mx-auto sm:max-w-xl space-y-4 lg:max-w-5xl">
-                <div class="bg-white dark:bg-black ">
-                    <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
-                        Propuestas sobre Sociedad
-                    </h2>
-                </div>
                 
                 
                 <div class="content text-left">
@@ -623,7 +629,7 @@
     </div>
 </div>
 
-      <div class="bg-gray-100 relative z-20 dark:bg-gray-900">
+      <footer class="bg-gray-100 relative z-20 dark:bg-gray-900">
     <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="xl:col-span-1">
@@ -727,27 +733,27 @@
               </h4>
               <ul class="mt-4">
                 <li>
-                  <a href="/documentos/programa-de-principios" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/programa-de-principios" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Programa de Principios
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/politica-de-privacidad" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/politica-de-privacidad" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Política de Privacidad
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/carta-organica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/carta-organica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Carta Orgánica
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/codigo-de-etica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/codigo-de-etica" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Código de Ética
                   </a>
                 </li>
                 <li class="mt-4">
-                  <a href="/documentos/terminos-y-condiciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                  <a href="https://partidodigital.github.io/PartidoDigital-Web-Next/documentos/terminos-y-condiciones" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                     Términos y Condiciones
                   </a>
                 </li>
@@ -759,12 +765,12 @@
                   </h4>
                   <ul class="mt-4">
                     <li>
-                      <a href="#" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                      <a href="https://digo.mivoz.uy/login" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         MiVoz
                       </a>
                     </li>
                     <li class="mt-4">
-                      <a href="#" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
+                      <a href="https://comunidad.partidodigital.org.uy" class="text-base leading-6 text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400">
                         Comunidad
                       </a>
                     </li>
@@ -783,7 +789,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </footer>
 
     <div x-show="searchOpen" class="fixed z-30 inset-0 overflow-y-auto" style="display:none;">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0 mt-24">
