@@ -9,11 +9,11 @@ layout: default
 <div class="bg-white dark:bg-black {{page.collection}}">
     <div class="max-w-screen-xl mx-auto py-6 px-4 text-center sm:px-6 lg:px-8">
         <div class="mb-5 bg-white dark:bg-black">
-            <nav class="inline-flex mb-3" aria-label="Breadcrumb">
+            <nav class="hidden lg:inline-flex mb-3" aria-label="Breadcrumb">
                 <ol class="flex items-center space-x-3">
                     <li>
                         <div>
-                            <a href="/" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
+                            <a href="{{site.url}}" class="text-gray-400 hover:text-gray-500 dark:text-gray-700 dark:hover:text-gray-800">
                             <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                             </svg>
@@ -53,12 +53,12 @@ layout: default
                     </li>
                 </ol>
             </nav>
+            <div class="bg-white dark:bg-black sticky top-0 mb-4 z-30">
+                <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
+                    {{ page.title }}
+                </h2>
+            </div>
             <div class="md:space-y-8 sm:mx-auto sm:max-w-xl space-y-4 lg:max-w-5xl">
-                <div class="bg-white dark:bg-black {% if page.collection == 'documentos' %}sticky top-0{% endif %}">
-                    <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
-                        {{ page.title }}
-                    </h2>
-                </div>
                 {% if page.subtitulo1 != nil %}
                 <p class="text-xl leading-7 text-gray-500 dark:text-gray-200">
                     {{ page.subtitulo1 }}
@@ -70,14 +70,14 @@ layout: default
                 </p>
                 {% endif %}
                 <div class="content text-left">
-                    {% if page.collection == 'documentos' %}
+                    {% if page.collection == 'documentos' or page.anchoring == true %}
                         {% capture anchor %}
                             <span class="sr-only">Link a "%heading%"</span>
                             <svg class="w-4 h-4 inline text-gray-300 dark:text-gray-600 align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
                             </svg>
                         {% endcapture %}
-                        {% include utils/anchor_headings.html html=content anchorBody=anchor anchorAttrs='title="Link a %heading%"' %}
+                        {% include utils/anchor_headings.html html=content headerAttrs='style="scroll-margin-top: 2.5em;"' anchorBody=anchor anchorAttrs='title="Link a %heading%"' %}
                     {% else %}
                         {{ content }}
                     {% endif %}

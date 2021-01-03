@@ -16,7 +16,7 @@
   </head>
   <body class="antialiased font-sans bg-white" 
     x-bind:class="{ 'dark': darkMode, 'overflow-hidden': modalOpen, 'overflow-hidden': searchOpen }" 
-    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, scrolled: {% if page.layout == 'page' %}true{% else %}false{% endif %}, mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
+    x-data="{ searchText: '', allSuggestions: JSON.parse(localStorage.getItem('PD_suggestions') || '[]'), modalOpen: false, searchOpen: false, {% if page.layout == 'default' %}scrolled: false,{% endif %} mobileMenuOpen: false, darkMode: JSON.parse(localStorage.getItem('PD_dark_mode')) }" 
     x-on:keydown.escape="modalOpen = false; searchOpen = false;" {% if page.layout == 'default' %} x-on:scroll.window="scrolled = window.pageYOffset > 40"{% endif %}>
 
     {% comment %}

@@ -1,5 +1,5 @@
-<div class="{% if page.collection != 'documentos' %}sticky{% endif %} top-0 z-20">
-    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" x-bind:class="{ 'shadow-md': scrolled }">
+<div class="{% if page.layout == 'default' %}sticky{% endif %} top-0 z-20">
+    <div class="nav w-full px-4 sm:px-6 bg-white dark:bg-black" {% if page.layout == 'default' %}x-bind:class="{ 'shadow-md': scrolled }"{% endif %}>
       <div class="flex justify-between items-center py-3 md:justify-start md:space-x-10">
         <div class="lg:w-0 lg:flex-1">
           <a href="{{site.url}}" class="hidden md:flex">
@@ -108,7 +108,7 @@
               </div>
             </div>
             <div>
-              <nav class="grid row-gap-8">
+              <nav class="grid row-gap-8 space-y-4">
                 <a href="{{site.url}}/sobre-participacion" class="text-base leading-6 font-medium text-orange-500 hover:text-orange-700 dark:text-orange-300 dark:hover:text-orange-700 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150">
                   Sobre participación
                 </a>
@@ -123,11 +123,17 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 row-gap-4 col-gap-8">
-              <a href="/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+              <a href="{{site.url}}/documentacion" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
                 Documentación
               </a>
-              <a href="#" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
-                Kit de Prensa
+              <a href="{{site.url}}/donar" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Donar
+              </a>
+              <a href="{{site.url}}/afiliaciones" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Afiliación
+              </a>
+              <a href="{{site.url}}/finanzas" class="text-base leading-6 font-medium text-gray-900 dark:text-gray-200 hover:text-gray-700 transition ease-in-out duration-150">
+                Finanzas
               </a>
             </div>
             <div class="space-y-4">

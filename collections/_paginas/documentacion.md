@@ -7,7 +7,7 @@ subtitulo1: En esta sección se presenta toda la documentación asociada al Part
     {% assign sorted = site.documentos | sort: 'date' | reverse %}
     {% for documento in sorted %}
     <li class="col-span-1 bg-white shadow-2xl rounded-lg dark:bg-black border border-transparent dark:border-gray-800 divide-y divide-gray-200 dark:divide-gray-800">
-        <div class="w-full flex items-center justify-between p-6 space-x-6">
+        <div class="w-full flex items-center justify-between p-6 pb-0 space-x-6">
             <div class="flex-1 truncate text-center">
                 <h3 class="text-gray-900 dark:text-gray-100 text-lg font-medium truncate">{{ documento.title }}</h3>
                 <p class="mt-1 text-gray-500 dark:text-gray-400 text-sm truncate">Actualizado el {{ documento.date | date: "%d/%m/%Y" }}</p>
@@ -22,7 +22,7 @@ subtitulo1: En esta sección se presenta toda la documentación asociada al Part
                     </a>
                 </div>
                 <div class="-ml-px w-0 flex-1 flex">
-                    <a href="{{site.github_url}}/PartidoDigital-Web-Next/blob/master/{{documento.path}}" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-orange-500 hover:text-orange-700 font-medium border border-transparent rounded-br-lg">
+                    <a href="{{site.github_url}}/PartidoDigital-Web-Next/blob/master/collections/{{documento.path}}" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-orange-500 hover:text-orange-700 font-medium border border-transparent rounded-br-lg">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                         <span class="ml-2">Ver código fuente</span>
                     </a>

@@ -1,5 +1,6 @@
 ---
 title: Afiliaciones
+breadcrumbs: ["sobre-participacion"]
 ---
 
 Los afiliados son parte oficial del Partido Digital y tiene poder de decisión sobre cuestiones partidarias como establece la [Carta Orgánica](/documentos/carta-organica). La cuota mensual de afiliación es de $200. En caso de no poder abonar este dinero puede solicituar una exoneración de la cuota a [contacto@partidodigital.org.uy](mailto:contacto@partidodigital.org.uy){:target="_blank"}.
@@ -10,7 +11,7 @@ Completá el formulario debajo para afiliarte al Partido Digital. Todos los camp
 
 Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el pago. Para pagar la afiliación de manera mensual seleccioná 12 cuotas.
 
-<form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-700 p-4 rounded-lg">
+<form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700 border border-transparent lg:border-gray-300 lg:dark:border-gray-700 p-4 rounded-lg">
   <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700">
     <div>
       <div>
@@ -19,7 +20,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
         </h3>
         <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
           Tus datos estan protegidos bajo nuestra 
-          <a href="/documentos/politica-de-privacidad">Política de Privacidad</a>
+          <a href="{{site.url}}/documentos/politica-de-privacidad">Política de Privacidad</a>
         </p>
       </div>
       <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -118,7 +119,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
               </div>
               <div class="ml-3 text-sm">
                 <label for="cartaorganica" class="font-medium text-gray-700 dark:text-gray-300">Me comprometo a respetar y defender la Carta orgánica</label>
-                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="/documentos/carta-organica">aquí</a>.</p>
+                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/carta-organica">aquí</a>.</p>
               </div>
             </div>
             <div class="relative flex items-start">
@@ -127,7 +128,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
               </div>
               <div class="ml-3 text-sm">
                 <label for="programadeprincipios" class="font-medium text-gray-700 dark:text-gray-300">Me comprometo a respetar y defender la Programa de Principios</label>
-                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="/documentos/programa-de-principios">aquí</a>.</p>
+                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/programa-de-principios">aquí</a>.</p>
               </div>
             </div>
           </div>

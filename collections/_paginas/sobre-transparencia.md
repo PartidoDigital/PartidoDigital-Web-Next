@@ -22,7 +22,7 @@ Tener transparencia es una de las bases para poder desarrollar un Uruguay modern
 <br>
 
 <br>
-<a target="_blank" href="/assets/docs/rendicion_cuentas_internas_PD2019.pdf" class="w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline">
+<a target="_blank" href="{{site.url}}/assets/docs/rendicion_cuentas_internas_PD2019.pdf" class="w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline">
     Rendición de cuentas 2019
 </a>
 <br><br>
