@@ -1,80 +1,319 @@
 ---
 title: Sumate
+subtitulo1: ¿Querés participar en política y hacer algo por lo que te preocupa sin los vicios de la vieja política? ¡Estás en el lugar indicado! Sumate a aportar tu tiempo cuando puedas a un equipo dinámico y con ganas de solucionar los problemas del país pensando y haciendo diferente. El Partido Digital es por y para todos. Quien quiera trabajar por mejorar nuestro país y crea que entre todos vamos a encontrar mejores soluciones, aquí tiene su lugar.
 breadcrumbs: ["sobre-participacion"]
 ---
 
-<div class="encabezado">
-    <div class="col-md-9">
-      <p>Hay una nueva forma de participar en política. Con el Partido Digital queremos actualizar nuestra democracia aportando participación y transparencia basándonos en tecnologias de la información y comunicación. Esta innovación se traslada también a la forma de hacer política.</p>
-      <p>Ya no tendrás que adaptarte a las estructuras partidarias para hacer algo por tu país. El Partido Digital se adapta a vos, a tu tiempo disponible, tus habilidades y al punto del país en el que te encuentres.</p>
+<form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700 border border-transparent lg:border-gray-300 lg:dark:border-gray-700 p-4 rounded-lg">
+  <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700">
+    <div>
+      <div>
+        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+          Datos personales
+        </h3>
+        <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
+          Tus datos estan protegidos bajo nuestra 
+          <a href="{{site.url}}/documentos/politica-de-privacidad">Política de Privacidad</a>
+        </p>
+      </div>
+      <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+        <div class="sm:col-span-3">
+          <label for="primernombre" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Primer nombre
+          </label>
+          <div class="mt-1">
+            <input type="text" name="primernombre" id="primernombre" autocomplete="given-name" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+          </div>
+        </div>
+        <div class="sm:col-span-3">
+          <label for="apellido" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Primer apellido
+          </label>
+          <div class="mt-1">
+            <input type="text" name="apellido" id="apellido" autocomplete="family-name" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+          </div>
+        </div>
+        <div class="sm:col-span-4">
+          <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Correo electrónico
+          </label>
+          <div class="mt-1">
+            <input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="fechanacimiento" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Fecha de nacimiento
+          </label>
+          <div class="mt-1">
+            <input type="date" name="fechanacimiento" id="fechanacimiento" autocomplete="bday" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+          </div>
+        </div>
+        <div class="sm:col-span-3">
+          <label for="celular" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Celular
+          </label>
+          <div class="mt-1">
+            <input type="text" name="celular" id="celular" autocomplete="tel" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+          </div>
+        </div>
+        <div class="sm:col-span-3">
+          <label for="ciudad" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Ciudad
+          </label>
+          <div class="mt-1">
+            <input type="text" name="ciudad" id="ciudad" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-3">
-        <img src="assets/img/acciones.png" class="img-fluid">
+    <div class="pt-8">
+      <div>
+        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+          Detalles de como podes sumarte
+        </h3>
+        <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
+          Conociendo como puedes ayudar al Partido Digital vamos a poder involucrarte de mejor manera
+        </p>
+      </div>
+      <div class="mt-4">
+        <fieldset>
+          <legend class="text-base font-medium text-gray-900 dark:text-gray-100">
+            ¿En qué area crees que puedes ayudar más?
+          </legend>
+          <div class="mt-4 space-y-4">
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-1" name="ayudar" value="organizar-actividades" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-1" class="font-medium text-gray-700 dark:text-gray-300">
+                    Organizar actividades
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-2" name="ayudar" value="investigar-mejorar-propuestas" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-2" class="font-medium text-gray-700 dark:text-gray-300">
+                    Investigar y mejorar propuestas que están publicadas en nuestra plataforma
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-3" name="ayudar" value="asesorar-area-expertise" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-3" class="font-medium text-gray-700 dark:text-gray-300">
+                    Asesorar en mi área de expertise
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-4" name="ayudar" value="comunicacion" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-4" class="font-medium text-gray-700 dark:text-gray-300">
+                    Comunicación
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-5" name="ayudar" value="diseno" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-6" class="font-medium text-gray-700 dark:text-gray-300">
+                    Diseño
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-7" name="ayudar" value="programacion" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-7" class="font-medium text-gray-700 dark:text-gray-300">
+                    Programación
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-8" name="ayudar" value="difundir-contenido" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-8" class="font-medium text-gray-700 dark:text-gray-300">
+                    Difundir contenido
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-9" name="ayudar" value="conseguir-fondos" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-9" class="font-medium text-gray-700 dark:text-gray-300">
+                    Conseguir fondos
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-10" name="ayudar" value="administracion" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-10" class="font-medium text-gray-700 dark:text-gray-300">
+                    Administración
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-11" name="ayudar" value="finanzas" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-11" class="font-medium text-gray-700 dark:text-gray-300">
+                    Finanzas
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-12" name="ayudar" value="ejecucion-proyectos" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-12" class="font-medium text-gray-700 dark:text-gray-300">
+                    Ejecución de proyectos
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="ayudar-13" name="ayudar" value="ayudar" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="ayudar-13" class="font-medium text-gray-700 dark:text-gray-300">
+                    ¡En lo que pueda ayudar!
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="mt-4">
+        <fieldset>
+          <legend class="text-base font-medium text-gray-900 dark:text-gray-100">
+            ¿Cuánto tiempo le puedes dedicar por semana al Partido Digital?
+          </legend>
+          <div class="mt-4 space-y-4">
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="tiempo-1" name="tiempo" value="15m" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="tiempo-1" class="font-medium text-gray-700 dark:text-gray-300">
+                    15 minutos
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="tiempo-2" name="tiempo" value="30m" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="tiempo-2" class="font-medium text-gray-700 dark:text-gray-300">
+                    30 minutos
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="tiempo-3" name="tiempo" value="1h" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="tiempo-3" class="font-medium text-gray-700 dark:text-gray-300">
+                    1 hora
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="tiempo-4" name="tiempo" value="+1h" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="tiempo-4" class="font-medium text-gray-700 dark:text-gray-300">
+                    Más de 1 hora
+                </label>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="tiempo-5" name="tiempo" value="nada" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="tiempo-5" class="font-medium text-gray-700 dark:text-gray-300">
+                    No tengo ni 15 minutos
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
     </div>
-</div>
-
-<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="//partidodigital.us14.list-manage.com/subscribe/post?u=8e16f7903de2c0600985cf9e2&amp;id=f1023a95d1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-<div class="indicates-required">Los campos con <span class="asterisk">*</span> son requeridos</div>
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Email  <span class="asterisk">*</span>
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-	<label for="mce-FNAME">Nombre  <span class="asterisk">*</span>
-</label>
-	<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-	<label for="mce-LNAME">Apellido  <span class="asterisk">*</span>
-</label>
-	<input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
-</div>
-<div class="mc-field-group">
-	<label for="mce-MMERGE3">Ciudad  <span class="asterisk">*</span>
-</label>
-	<input type="text" value="" name="MMERGE3" class="required" id="mce-MMERGE3">
-</div>
-<div class="mc-field-group size1of2">
-	<label for="mce-MMERGE4">Celular </label>
-	<input type="tel" name="MMERGE4" class="" value="" id="mce-MMERGE4">
-</div>
-<div class="mc-field-group input-group">
-    <strong>¿En qué area crees que puedes ayudar más? </strong>
-    <ul><li><input type="checkbox" value="1" name="group[4709][1]" id="mce-group[4709]-4709-0"><label for="mce-group[4709]-4709-0">Organizar actividades</label></li>
-<li><input type="checkbox" value="2" name="group[4709][2]" id="mce-group[4709]-4709-1"><label for="mce-group[4709]-4709-1">Investigar y mejorar propuestas que están publicadas en nuestra plataforma</label></li>
-<li><input type="checkbox" value="4" name="group[4709][4]" id="mce-group[4709]-4709-2"><label for="mce-group[4709]-4709-2">Asesorar en mi área de expertise</label></li>
-<li><input type="checkbox" value="8" name="group[4709][8]" id="mce-group[4709]-4709-3"><label for="mce-group[4709]-4709-3">Comunicación</label></li>
-<li><input type="checkbox" value="16" name="group[4709][16]" id="mce-group[4709]-4709-4"><label for="mce-group[4709]-4709-4">Diseño</label></li>
-<li><input type="checkbox" value="32" name="group[4709][32]" id="mce-group[4709]-4709-5"><label for="mce-group[4709]-4709-5">Programación</label></li>
-<li><input type="checkbox" value="64" name="group[4709][64]" id="mce-group[4709]-4709-6"><label for="mce-group[4709]-4709-6">Difundir contenido</label></li>
-<li><input type="checkbox" value="128" name="group[4709][128]" id="mce-group[4709]-4709-7"><label for="mce-group[4709]-4709-7">Conseguir fondos</label></li>
-<li><input type="checkbox" value="256" name="group[4709][256]" id="mce-group[4709]-4709-8"><label for="mce-group[4709]-4709-8">Administración</label></li>
-<li><input type="checkbox" value="512" name="group[4709][512]" id="mce-group[4709]-4709-9"><label for="mce-group[4709]-4709-9">Finanzas</label></li>
-<li><input type="checkbox" value="1024" name="group[4709][1024]" id="mce-group[4709]-4709-10"><label for="mce-group[4709]-4709-10">Ejecución de proyectos</label></li>
-<li><input type="checkbox" value="2048" name="group[4709][2048]" id="mce-group[4709]-4709-11"><label for="mce-group[4709]-4709-11">¡En lo que pueda ayudar!</label></li>
-</ul>
-</div>
-<div class="mc-field-group input-group">
-    <strong>¿Cuánto tiempo le puedes dedicar por semana al Partido Digital?</strong>
-    <ul><li><input type="radio" value="4096" name="group[4713]" id="mce-group[4713]-4713-0"><label for="mce-group[4713]-4713-0">15 minutos</label></li>
-<li><input type="radio" value="8192" name="group[4713]" id="mce-group[4713]-4713-1"><label for="mce-group[4713]-4713-1">30 minutos</label></li>
-<li><input type="radio" value="16384" name="group[4713]" id="mce-group[4713]-4713-2"><label for="mce-group[4713]-4713-2">1 hora</label></li>
-<li><input type="radio" value="32768" name="group[4713]" id="mce-group[4713]-4713-3"><label for="mce-group[4713]-4713-3">+ de 1 hora</label></li>
-<li><input type="radio" value="65536" name="group[4713]" id="mce-group[4713]-4713-4"><label for="mce-group[4713]-4713-4">No tengo ni 15 minutos</label></li>
-</ul>
-</div>
-	<div id="mce-responses" class="clear">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8e16f7903de2c0600985cf9e2_f1023a95d1" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribirme" name="subscribe" id="mc-embedded-subscribe" class="action btn"></div>
+    <div class="pt-8">
+      <div>
+        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+          Compromiso
+        </h3>
+        <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
+          Necesitamos saber que estás comprometido con nuestros ideales y nuestra forma de trabajar.
+        </p>
+      </div>
+      <div class="mt-4">
+        <fieldset>
+          <legend class="text-base font-medium text-gray-900 dark:text-gray-100">
+            Documentos
+          </legend>
+          <div class="mt-4 space-y-4">
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="cartaorganica" name="documento" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="cartaorganica" class="font-medium text-gray-700 dark:text-gray-300">Me comprometo a respetar y defender la Carta orgánica</label>
+                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/carta-organica">aquí</a>.</p>
+              </div>
+            </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="programadeprincipios" name="documento" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="programadeprincipios" class="font-medium text-gray-700 dark:text-gray-300">Me comprometo a respetar y defender la Programa de Principios</label>
+                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/programa-de-principios">aquí</a>.</p>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
     </div>
+  </div>
+  <div class="pt-5">
+    <div class="flex justify-end">
+      <p class="mb-0 text-gray-600 leading-9 dark:text-gray-400" id="mensaje"></p>
+      <button type="button" id="sumarme" class="opacity-50 disabled:opacity-50 ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+        Enviar datos
+      </button>
+    </div>
+  </div>
 </form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/localization/messages_es_AR.js"></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="{{site.url}}/assets/scripts/jquery.ajaxchimp.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.langs.js"></script>
+<script type='text/javascript' src='{{site.url}}/assets/scripts/sumate.js'></script>

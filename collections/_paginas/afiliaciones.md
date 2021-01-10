@@ -139,7 +139,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
   <div class="pt-5">
     <div class="flex justify-end">
       <p class="mb-0 text-gray-600 leading-9 dark:text-gray-400" id="mensaje"></p>
-      <button type="submit" id="afiliarme" class="opacity-50 disabled:opacity-50 ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+      <button type="button" id="afiliarme" class="opacity-50 disabled:opacity-50 ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
         Enviar datos
       </button>
     </div>
