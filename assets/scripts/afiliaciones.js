@@ -1,8 +1,8 @@
 jQuery(function () {
-	var ok = { cartaorganica: false, programadeprincipios: false};
+	var ok = { cartaorganica: false, programadeprincipios: false, leypartidospoliticos: false};
 	$("[type='checkbox']").bind("click", function () {
 		ok[this.id] = this.checked;
-		if(ok.cartaorganica && ok.programadeprincipios) {
+		if(ok.cartaorganica && ok.programadeprincipios && ok.leypartidospoliticos) {
 			$("#afiliarme").removeClass("opacity-50");
 			document.querySelector('#mensaje').innerHTML = "";
 		} else {
