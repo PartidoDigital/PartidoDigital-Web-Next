@@ -3,7 +3,7 @@ title: Afiliaciones
 breadcrumbs: ["sobre-participacion"]
 ---
 
-Los afiliados son parte oficial del Partido Digital y tiene poder de decisión sobre cuestiones partidarias como establece la [Carta Orgánica](/documentos/carta-organica). La cuota mensual de afiliación es de $200. En caso de no poder abonar este dinero puede solicituar una exoneración de la cuota a [contacto@partidodigital.org.uy](mailto:contacto@partidodigital.org.uy){:target="_blank"}.
+Los afiliados son parte oficial del Partido Digital y tiene poder de decisión sobre cuestiones partidarias como establece la [Carta Orgánica](/documentos/carta-organica). La cuota mensual de afiliación es de $200. En caso de no poder abonar este dinero puede solicitar una exoneración de la cuota a [contacto@partidodigital.org.uy](mailto:contacto@partidodigital.org.uy){:target="_blank"}.
 
 **Aclaración: Para proponer ideas y votar en [MiVoz](https://mivoz.uy), la participación es totalmente gratuita. Más información en ["Sobre participación"](/sobre-participacion)**
 
@@ -131,6 +131,15 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
                 <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/programa-de-principios">aquí</a>.</p>
               </div>
             </div>
+            <div class="relative flex items-start">
+              <div class="flex items-center h-5">
+                <input id="leypartidospoliticos" name="leypartidospoliticos" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="leypartidospoliticos" class="font-medium text-gray-700 dark:text-gray-300">Declaro haber leído el Articulo 45 de la Ley 18.485 y no pertenecer a ninguno de los ítems que se detallan en la misma ley</label>
+                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto de ese artículo <a target="_blank" href="https://www.impo.com.uy/bases/leyes/18485-2009/45">aquí</a>.</p>
+              </div>
+            </div>
           </div>
         </fieldset>
       </div>
@@ -146,7 +155,6 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
   </div>
 </form>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="{{site.url}}/assets/scripts/jquery.ajaxchimp.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxchimp/1.3.0/jquery.ajaxchimp.langs.js"></script>
 <script type='text/javascript' src='{{site.url}}/assets/scripts/afiliaciones.js'></script>

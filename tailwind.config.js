@@ -4,9 +4,10 @@ module.exports = {
   darkMode: 'class',
   purge: [
     "_includes/**/*.html",
-    "!_includes/recursos",
+    "!_includes/recursos/**",
     "_layouts/**/*.html",
-    "_collections/**/*.md"
+    "collections/**/*.md",
+    "assets/scripts/*.js"
   ],
   variants: {
     extend: {

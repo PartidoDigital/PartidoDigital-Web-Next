@@ -46,8 +46,6 @@ title: Preguntas frecuentes
     </div>
 </div>
 
-
-
 <div class="panel panel-default {% if forloop.last == false %} mb-3 {% endif %}">
     <div class="panel-heading" role="tab" id="pregunta-{{ pregunta.identificador }}">
         <h3 data-toggle="collapse" href="" data-target="#respuesta-{{ pregunta.identificador }}" aria-expanded="true" aria-controls="{{ pregunta.identificador }}">
@@ -62,3 +60,4 @@ title: Preguntas frecuentes
     </div>
 </div>
 
+{% include layouts/default/_modal.html %}

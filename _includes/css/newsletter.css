@@ -49,6 +49,11 @@
     color: var(--input-placeholder);
 }
 
+.newsletter-form input:focus {
+    border: 0;
+    box-shadow: none;
+}
+
 .newsletter-form button {
     --text-opacity: 1;
     --success-x: -12px;
@@ -92,8 +97,7 @@
     --right-body-third-x: 100%;
     --right-body-third-y: 100%;
     position: relative;
-    padding: 8px 0;
-    min-width: 100px;
+    padding: 8px 4px;
     text-align: center;
     font-weight: 600;
     opacity: var(--button-opacity, 0.5);

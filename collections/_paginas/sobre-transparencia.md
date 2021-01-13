@@ -2,7 +2,7 @@
 title: Sobre transparencia
 ---
 
-El Partido Digital es un partido político que quiera traer **ideas** e **innovación** al sistema político para beneficio de todos los uruguayos. Nuestros gastos e ingresos del Partido Digital se podrán visualizar en cualquier momento de manera online.
+El Partido Digital es un partido político que quiere traer **ideas** e **innovación** al sistema político para beneficio de todos los uruguayos. Nuestros gastos e ingresos del Partido Digital se podrán visualizar en cualquier momento de manera online.
 
 Esto pasa en Uruguay hoy respecto al tema:
 

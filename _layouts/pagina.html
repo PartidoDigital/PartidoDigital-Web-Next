@@ -71,6 +71,7 @@ layout: default
                 {% endif %}
                 <div class="content text-left">
                     {% if page.collection == 'documentos' or page.anchoring == true %}
+                        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
                         {% capture anchor %}
                             <span class="sr-only">Link a "%heading%"</span>
                             <svg class="w-4 h-4 inline text-gray-300 dark:text-gray-600 align-middle" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
