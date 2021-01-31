@@ -79,7 +79,7 @@ breadcrumbs: ["sobre-participacion"]
       <div class="mt-4">
         <fieldset>
           <legend class="text-base font-medium text-gray-900 dark:text-gray-100">
-            ¿En qué area crees que puedes ayudar más?
+            ¿En qué area creés que podés ayudar más?
           </legend>
           <div class="mt-4 space-y-4">
             <div class="relative flex items-start">
@@ -108,7 +108,7 @@ breadcrumbs: ["sobre-participacion"]
               </div>
               <div class="ml-3 text-sm">
                 <label for="ayudar-3" class="font-medium text-gray-700 dark:text-gray-300">
-                    Asesorar en mi área de expertise
+                    Asesorar en mi área
                 </label>
               </div>
             </div>
