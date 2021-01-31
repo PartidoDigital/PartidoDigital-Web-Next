@@ -4,7 +4,7 @@ anchoring: true
 ---
 
 ## Simpatizantes: Sumate al Partido Digital
-¿Querés participar en política y hacer algo por lo que te preocupa sin los vicios de la vieja política? ¡Estás en el lugar indicado! Sumate a aportar tu tiempo cuando puedas a un equipo dinámico y con ganas de solucionar los problemas del país pensando y haciendo diferente. El Partido Digital es por y para todos. Quien quiera trabajar por mejorar nuestro país y crea que entre todos vamos a encontrar mejores soluciones, aquí tiene su lugar.
+¿Querés participar en política y hacer algo por lo que te preocupa sin los vicios de la vieja política? ¡Estás en el lugar indicado! Sumate a aportar tu tiempo cuando puedas a un equipo dinámico y con ganas de solucionar los problemas del país pensando y haciendo las cosas diferente. El Partido Digital es por y para todos. Quien quiera trabajar por mejorar nuestro país y crea que entre todos vamos a encontrar mejores soluciones, aquí tiene su lugar.
 
 <br>
 <a href="{{site.url}}/sumate" class="w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
