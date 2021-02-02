@@ -2,7 +2,7 @@
 title: Programa de Gobierno 2019
 ---
 
-El Programa de Gobierno del Partido Digital se creó de forma colaborativa y participativa haciendo un llamado a todos los ciudadanos, sin discriminar por partido político, a que publicaran sus ideas en la Plataforma Mi Voz, plataforma que el Partido Digital mantiene a disposición de todos los uruguayos, habilitados para votar, para una fluida interacción.
+El Programa de Gobierno del Partido Digital se creó de forma colaborativa y participativa haciendo un llamado a todos los ciudadanos, sin discriminar por partido político, a que publicaran sus ideas en la Plataforma MiVoz, plataforma que el Partido Digital mantiene a disposición de todos los uruguayos, habilitados para votar, para una fluida interacción.
 
 ## Metodología para la creación del Programa de Gobierno
 

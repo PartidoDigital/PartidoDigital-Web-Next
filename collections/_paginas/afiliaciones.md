@@ -5,7 +5,7 @@ breadcrumbs: ["sobre-participacion"]
 
 Los afiliados son parte oficial del Partido Digital y tiene poder de decisión sobre cuestiones partidarias como establece la [Carta Orgánica](/documentos/carta-organica). La cuota mensual de afiliación es de $200. En caso de no poder abonar este dinero puede solicitar una exoneración de la cuota a [contacto@partidodigital.org.uy](mailto:contacto@partidodigital.org.uy){:target="_blank"}.
 
-**Aclaración: Para proponer ideas y votar en [Mi Voz](https://mivoz.uy), la participación es totalmente gratuita. Más información en ["Sobre participación"](/sobre-participacion)**
+**Aclaración: Para proponer ideas y votar en [MiVoz](https://mivoz.uy), la participación es totalmente gratuita. Más información en ["Sobre participación"](/sobre-participacion)**
 
 Completá el formulario debajo para afiliarte al Partido Digital. Todos los campos son obligatorios.
 
