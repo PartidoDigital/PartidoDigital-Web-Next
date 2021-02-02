@@ -6,7 +6,7 @@ anchoring: true
 ## Todos los ciudadanos: Hacé tu propuesta para mejorar Uruguay
 Desde el Partido Digital impulsamos tus ideas en cada oportunidad que tengamos. Ya sea haciéndoselas llegar a los representantes actuales en el Legislativo y Ejecutivo, o incorporándolas a nuestro próximo plan de gobierno para impulsarlas con nuestros reprensentantes en la próxima legislatura.
 
-Para que tu idea sea impulsada por el Partido Digital ingresá ahora a Mi Voz, publicala y mejorala con otras personas que les preocupa lo mismo que a vos. Capaz la solución que necesitamos sea tu próxima idea, sos importante y acá podés hacerte escuchar.
+Para que tu idea sea impulsada por el Partido Digital ingresá ahora a MiVoz, publicala y mejorala con otras personas que les preocupa lo mismo que a vos. Capaz la solución que necesitamos sea tu próxima idea, sos importante y acá podés hacerte escuchar.
 
 También podés ver las ideas de otros y comentar. Muchas formas de participar, empezá ahora.
 
