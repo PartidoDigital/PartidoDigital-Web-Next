@@ -1,1 +1,1 @@
-Sitemap: https://partidodigital.github.io/PartidoDigital-Web-Next/sitemap.xml
+Sitemap: https://partidodigital.org.uy/sitemap.xml
