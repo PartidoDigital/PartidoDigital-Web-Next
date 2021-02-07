@@ -55,7 +55,6 @@ algolia:
     attributeForDistinct: collection 
 
 exclude:
-  - CNAME
   - Gemfile
   - Gemfile.lock
   - README.md
