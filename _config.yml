@@ -2,6 +2,7 @@ permalink: /blog/:categories/:year/:month/:day/:title
 
 github_url: https://github.com/partidodigital
 planilla_gastos: https://docs.google.com/spreadsheets/d/1ECohuUeBik_2rxvppS3sBHqm_gXpuNbOOYqRoMGans0/edit?usp=sharing
+tagmanager: GTM-WPDQFCR
 
 excerpt_separator: "<!--more-->"
 
