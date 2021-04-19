@@ -19,6 +19,27 @@ module.exports = {
       '28': '7rem'
      },
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'h1,h2,h3,h4,h5': {
+              'margin-top' : '1em',
+            },
+            p: {
+              'margin-top': '1em'
+            },
+            'a:not(.text-white)': {
+              color: theme('colors.orange.500'),
+              '&:hover': {
+                color: theme('colors.orange.700'),
+              },
+            },
+            'a.text-white': {
+              color: theme('colors.white')
+            },
+          },
+        },
+      }),
       colors: {
         orange: {
           "100": "#ffd8a7",
@@ -35,6 +56,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/ui'),
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')
   ]
 }
