@@ -35,3 +35,11 @@ body.dark {
     border-radius: 50%;
     transition: transform .3s;
 }
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5 {
+    @apply text-gray-400;
+}

@@ -3,7 +3,7 @@ title: Blog
 subtitulo1: Últimas noticias sobre acontencimientos del Partido Digital
 ---
 
-<div class="bg-white px-4 sm:px-6 lg:px-8">
+<div class="px-4 sm:px-6 lg:px-8">
     <div class="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
         {% for post in site.posts %}
         {% assign months = "Ene|Feb|Mar|Abr|May|Jun|Jul|Ago|Sep|Oct|Nov|Dic" | split: "|" %}
@@ -21,10 +21,10 @@ subtitulo1: Últimas noticias sobre acontencimientos del Partido Digital
                     </a>
                 </div>
                 <a href="{{ post.url }}" class="block mt-4">
-                    <p class="text-xl font-semibold text-gray-900">
+                    <p class="text-xl font-semibold text-gray-900 dark:text-gray-200">
                         {{ post.title }}
                     </p>
-                    <p class="mt-3 text-base text-gray-500">
+                    <p class="mt-3 text-base text-gray-500 dark:text-gray-100">
                         {{ post.excerpt | markdownify | strip_html }}
                     </p>
                 </a>
@@ -35,7 +35,7 @@ subtitulo1: Últimas noticias sobre acontencimientos del Partido Digital
                         <img class="h-10 w-10 rounded-full" src="{{author.img | default: 'https://recursos.partidodigital.org.uy/assets/img/logo_at_naranja.png'}}" alt="">
                     </div>
                     <div class="ml-3">
-                        <p class="text-sm font-medium text-gray-900">
+                        <p class="text-sm font-medium text-gray-900 dark:text-gray-200">
                             {{ post.author | default: 'Partido Digital' }}
                         </p>
                         <div class="flex space-x-1 text-sm text-gray-500">
