@@ -32,5 +32,9 @@
   "bugs": {
     "url": "https://github.com/PartidoDigital/PartidoDigital-Web-Next/issues"
   },
-  "homepage": "https://github.com/PartidoDigital/PartidoDigital-Web-Next#readme"
+  "homepage": "https://github.com/PartidoDigital/PartidoDigital-Web-Next#readme",
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/typography": "^0.4.0"
+  }
 }
