@@ -1,0 +1,4 @@
+.auth0-lock.auth0-lock .auth0-lock-cred-pane {
+    height: inherit !important;
+    min-height: inherit !important;
+}
