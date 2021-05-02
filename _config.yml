@@ -36,6 +36,7 @@ collections:
 exclude_prose:
   - _paginas/blog.md
   - _paginas/documentacion.md
+  - _paginas/formularios/encuesta-satisfaccion.md
 
 defaults:
   - scope:
