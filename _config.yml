@@ -1,7 +1,7 @@
 permalink: /blog/:year/:month/:day/:title
 
 github_url: https://github.com/partidodigital
-planilla_gastos: https://docs.google.com/spreadsheets/d/1ECohuUeBik_2rxvppS3sBHqm_gXpuNbOOYqRoMGans0/edit?usp=sharing
+planilla_gastos_id: 1ECohuUeBik_2rxvppS3sBHqm_gXpuNbOOYqRoMGans0
 tagmanager: GTM-WPDQFCR
 ga: UA-64073239-3
 
@@ -19,7 +19,7 @@ css_dir: "/assets/style/"
 
 # jekyll-seo-tag configuration
 author: "Leo Giovanetti"
-url: https://partidodigital.org.uy
+url: 
 title: "Partido Digital de Uruguay"
 description: "Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?"
 twitter:
