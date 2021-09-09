@@ -28,6 +28,7 @@ jobs:
         env:
           NODE_ENV: production
           JEKYLL_ENV: production
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         with:
           enable_cache: false
       - name: 🔍 run Algolia indexing
