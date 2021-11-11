@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% include index/_header.html %}
+{% include index/_header2.html %}
 
-{% include index/_programa.html %}
+{% include index/_movimientos.html %}
 
 {% include index/_participacion.html %}
 

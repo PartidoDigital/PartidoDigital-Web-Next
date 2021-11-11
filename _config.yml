@@ -19,7 +19,7 @@ css_dir: "/assets/style/"
 
 # jekyll-seo-tag configuration
 author: "Leo Giovanetti"
-url: https://partidodigital.org.uy
+url: #https://partidodigital.org.uy
 title: "Partido Digital de Uruguay"
 image: https://partidodigital.org.uy/assets/img/duotone.jpg
 description: "Somos un partido político que trabaja por un Uruguay moderno, innovador y participativo. Queremos que tu opinión sea tenida en cuenta todos los días, no solo cuando vienen las elecciones. ¿Te sumás?"
