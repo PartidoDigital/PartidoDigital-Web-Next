@@ -6,12 +6,12 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/ui": "^0.7.2",
-    "autoprefixer": "^10.1.0",
-    "cssnano": "^4.1.10",
-    "postcss": "^8.2.2",
-    "postcss-import": "^14.0.0",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^4.1.11",
+    "postcss": "^8.3.11",
+    "postcss-import": "^14.0.2",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.2.19"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/PartidoDigital/PartidoDigital-Web-Next#readme",
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/typography": "^0.4.0"
+    "@tailwindcss/aspect-ratio": "^0.2.2",
+    "@tailwindcss/typography": "^0.4.1"
   }
 }

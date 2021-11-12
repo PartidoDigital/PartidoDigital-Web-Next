@@ -8,3 +8,7 @@ $("textarea").keyup(function () {
     current.addClass("text-green-600");
   }
 });
+
+$("#logo").change(function () {
+  alert('Selected file: ' + this.value);
+})

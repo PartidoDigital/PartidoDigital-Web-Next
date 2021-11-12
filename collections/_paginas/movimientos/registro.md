@@ -89,7 +89,16 @@ Por cualquier duda puedes escribir a [contacto@partidodigital.org.uy](mailto:con
                         Logo
                     </label>
                     <div class="mt-1">
-                        <input id="logo" name="logo" type="file" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+                        <div class="overflow-hidden relative w-full">
+                            <input class="peer cursor-pointer absolute block py-2¡1 px-4 w-full opacity-0 right-0 top-0" type="file" name="logo" accept="image/*" id="logo"/>
+                            <button class="bg-orange-500 text-white font-bold py-1 px-4 w-full inline-flex items-center rounded-lg justify-center border border-orange-500 peer-hover:bg-orange-700 peer-hover:border-orange-700">
+                                <svg class="fill-current text-white w-5" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                                </svg>
+                                <span class="ml-2">Subir un logo</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="sm:col-span-3">

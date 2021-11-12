@@ -16,6 +16,8 @@ plugins:
   - jekyll-sitemap
 
 css_dir: "/assets/style/"
+postcss:
+  cache: false
 
 # jekyll-seo-tag configuration
 author: "Leo Giovanetti"
