@@ -1,1 +1,1 @@
-Sitemap: https://partidodigital.org.uy/sitemap.xml
+Sitemap: /sitemap.xml
