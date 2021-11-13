@@ -30,15 +30,6 @@ module.exports = {
             p: {
               'margin-top': '1em'
             },
-            'a:not(.text-white)': {
-              color: theme('colors.orange.500'),
-              '&:hover': {
-                color: theme('colors.orange.700'),
-              },
-            },
-            'a.text-white': {
-              color: theme('colors.white')
-            },
           },
         },
       }),

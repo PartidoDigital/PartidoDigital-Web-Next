@@ -1,0 +1,7 @@
+.prose a.text-white {
+    @apply text-white;
+}
+
+.prose a {
+    @apply text-orange-500;
+}
