@@ -25,7 +25,7 @@ La reglamentación para la creación de estos movimientos políticos y los deber
 ## Participación en elecciones
 1. Hay un programa de gobierno partidario común. Es un programa de gobierno partidario a entregar en septiembre a la Corte por ley. El mismo estará incluido por las propuestas aprobadas a nivel partidario hasta 15 días antes del límite final establecido por la Corte Electoral para presentar el programa de gobierno.
 2. El programa de gobierno final del PD, se terminará de conformar según los votos de los distintos grupos en Octubre. Serán los lineamientos para los siguientes años de gobierno. Adicionalmente se presentarán todas sus propuestas en el parlamento en el primer mes de actuación.
-3. Cada movimiento tiene tiempo para presentar su programa de gobierno final hasta el 15 de Octubre.
+3. Cada movimiento tiene tiempo para presentar su programa de gobierno final hasta el hasta el 15 de octubre del año de las elecciones.
 4. Cada movimiento presenta 5 valores pilares para la elección. Cada movimiento que obtenga representación legislativa, gana el derecho de incorporar directamente sus 5 pilares en su Programa de Gobierno final y es movimiento no podrá votar en contra de los mismos por el período en que esté activo el programa de gobierno, aunque sea decidido en Mi Voz.
 5. Como está establecido por ley, el candidato a Presidente por el Partido Digital será definido en las elecciones internas abiertas que se realizan en el mes de junio.
 6. Cada movimiento podrá concurrir con su lista propia a las elecciones nacionales y departamentales y en la misma aspirar a los puestos que estén en decisión en el ejecutivo y legislativo.
