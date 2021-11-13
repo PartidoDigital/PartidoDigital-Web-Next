@@ -4,6 +4,7 @@ module.exports = {
   mode: 'jit',
   darkMode: 'class',
   purge: [
+    "_data/equipo.yml",
     "_includes/**/*.html",
     "!_includes/recursos/**",
     "_layouts/**/*.html",

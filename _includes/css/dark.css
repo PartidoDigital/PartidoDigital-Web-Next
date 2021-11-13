@@ -43,3 +43,11 @@ body.dark {
 .dark .prose h5 {
     @apply text-gray-400;
 }
+
+.dark .prose p {
+    @apply text-gray-200;
+}
+
+.dark .prose strong {
+    @apply text-white;
+}
