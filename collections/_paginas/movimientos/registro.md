@@ -24,7 +24,7 @@ breadcrumbs: ["movimientos"]
   </div>
 </div>
 
-Complete el formulario a continuación para comenzar con el registro del movimiento político. Los campos marcados con \* son necesarios al momento del registro inicial. El resto deben completarse con la presentación de las firmas.
+Complete el formulario a continuación para comenzar con el registro del movimiento político. Los campos marcados con <b class="text-red-600 font-bold">*</b> son necesarios al momento del registro inicial. El resto deben completarse con la presentación de las firmas.
 
 Mientras el movimiento político se encuentra en una etapa de pre-aprobado, se publicará el Nombre Completo de la persona que realiza el registro inicial y el email proporcionado en el formulario.
 
@@ -48,7 +48,7 @@ Por cualquier duda puedes escribir a [contacto@partidodigital.org.uy](mailto:con
                 </h3>
                 <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
                     Tus datos estan protegidos bajo nuestra 
-                    <a class="text-orange-500" href="{{site.url}}/documentos/politica-de-privacidad">Política de Privacidad</a>. Los campos marcados con un asterisco <b class="text-red-600 font-bold">*</b> son obligatorias.
+                    <a class="text-orange-500" href="{{site.url}}/documentos/politica-de-privacidad">Política de Privacidad</a>. Los campos marcados con un asterisco <b class="text-red-600 font-bold">*</b> son obligatorios.
                 </p>
             </div>
             <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -92,7 +92,7 @@ Por cualquier duda puedes escribir a [contacto@partidodigital.org.uy](mailto:con
                     Datos del nuevo movimiento político
                 </h3>
                 <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
-                    Parte de la evaluación de esta postulación implica que no hayan nombres repetidos.
+                    Parte de la evaluación de esta postulación implica que no haya nombres repetidos.
                 </p>
             </div>
             <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
@@ -152,7 +152,7 @@ Por cualquier duda puedes escribir a [contacto@partidodigital.org.uy](mailto:con
                                     <path d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
                                 </svg>
-                                <span class="ml-2 overflow-hidden truncate w-auto" id="logo_text">Subir imágen</span>
+                                <span class="ml-2 overflow-hidden truncate w-auto" id="logo_text">Subir imagen</span>
                             </button>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ Por cualquier duda puedes escribir a [contacto@partidodigital.org.uy](mailto:con
                                     <path d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
                                 </svg>
-                                <span class="ml-2 overflow-hidden truncate w-auto" id="firmas_text">Subir imágen</span>
+                                <span class="ml-2 overflow-hidden truncate w-auto" id="firmas_text">Subir imagen</span>
                             </button>
                         </div>
                     </div>
