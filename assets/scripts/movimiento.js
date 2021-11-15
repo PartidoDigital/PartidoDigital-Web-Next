@@ -36,16 +36,21 @@ jQuery(function () {
       $("#firmas_text").text("Subir imágen");
     }    
   });
-
-	$("#registro_movimiento").bind("click", function () {
-		if($("textarea").val().length >= 500) {
-      $('#mensaje').text("");
-      $("#registro_movimiento").attr("disabled", true);
-      return true;
-		} else {
-      $('#mensaje').text("Debes al menos ingresar una idea con 500 caracteres.");
-			return false;
-		}
-	});
+  
+  $("#registro_movimiento").bind("click", function () {
+    if($("#mauticform_movimientospoliticos")[0].checkValidity && $("#mauticform_movimientospoliticos")[0].checkValidity()) {
+      if($("textarea").val().length >= 500) {
+        $('#mensaje').text("");
+        $("#registro_movimiento").text("Enviando...");
+        $("#registro_movimiento").attr("disabled", true);
+        $("#mauticform_movimientospoliticos").submit();
+      } else {
+        $('#mensaje').text("Debes al menos ingresar una idea con 500 caracteres.");
+        return false;
+      }
+    } else {
+      $('#mensaje').text("Alguno de los campos obligatorios está vacío.");
+    }
+  });
 });
 
