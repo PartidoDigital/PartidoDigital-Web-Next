@@ -17,7 +17,7 @@ Queremos **impulsar la transparencia** en todo el sistema político, y no lo hac
 Tener transparencia es una de las bases para poder desarrollar un Uruguay moderno y al servicio de todos. Si no tenemos transparencia, damos lugar a que se desarrolle la corrupción, y si hay corrupción el dinero de todos está en el bolsillo de los corruptos y no en dónde beneficia al Uruguay.
 
 <br>
-<a target="_blank" href="ttps://docs.google.com/spreadsheets/d/1ECohuUeBik_2rxvppS3sBHqm_gXpuNbOOYqRoMGans0/edit?usp=sharing" class="w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline">
+<a target="_blank" href="https://docs.google.com/spreadsheets/d/1ECohuUeBik_2rxvppS3sBHqm_gXpuNbOOYqRoMGans0/edit?usp=sharing" class="w-full text-center rounded-lg border border-orange-500 bg-white dark:bg-black px-6 py-3 text-base leading-6 font-medium text-orange-500 hover:bg-orange-100 focus:outline-none focus:shadow-outline">
     Ver Gastos e Ingresos
 </a>
 <br><br>
