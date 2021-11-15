@@ -12,7 +12,7 @@ breadcrumbs: ["movimientos"]
       </svg>
     </div>
     <div class="ml-3">
-      <h3 class="text-sm font-medium text-green-800 !m-0 !p-0 !dark:text-green-900" style="line-height: 1 !important;">
+      <h3 class="text-sm font-medium text-green-800 !m-0 !p-0 dark:!text-gray-200" style="line-height: 1 !important;">
         Formulario enviado
       </h3>
       <div class="mt-2 text-sm text-green-700 dark:text-white">

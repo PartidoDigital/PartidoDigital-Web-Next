@@ -1,12 +1,11 @@
-const nodeEnv = process.env.NODE_ENV || "development";
-
 module.exports = {
+  parser: 'postcss-scss',
   plugins: [
-    require("postcss-import"),
+    require('postcss-import'),
     require('tailwindcss'),
-    require('autoprefixer'),
-    ...(nodeEnv !== "development" ? [
-      require("cssnano")({ preset: "default" })
-    ] : [])
+    require("autoprefixer"),
+    ...(process.env.JEKYLL_ENV == "production"
+      ? [require("cssnano")({ preset: "default" })]
+      : [])
   ]
-}
+};

@@ -3,14 +3,17 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
-  purge: [
-    "_data/equipo.yml",
-    "_includes/**/*.html",
-    "!_includes/recursos/**",
-    "_layouts/**/*.html",
-    "collections/**/*.md",
-    "assets/scripts/*.js"
-  ],
+  purge: { 
+    enabled: process.env.JEKYLL_ENV == "production",
+    content: [
+      "_data/equipo.yml",
+      "_includes/**/*.html",
+      "!_includes/recursos/**",
+      "_layouts/**/*.html",
+      "collections/**/*.md",
+      "assets/scripts/*.js"
+    ]
+  },
   variants: {
     extend: {
       opacity: ['disabled'],
