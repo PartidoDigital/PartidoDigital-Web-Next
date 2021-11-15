@@ -4,7 +4,7 @@ breadcrumb_title: Registro
 breadcrumbs: ["movimientos"]
 ---
 
-<div class="rounded-md bg-green-50 p-4 mb-8 hidden" id="mensaje_ok">
+<div class="rounded-md bg-green-50 dark:bg-green-800 p-4 mb-8 hidden" id="mensaje_ok">
   <div class="flex">
     <div class="flex-shrink-0">
       <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -12,10 +12,10 @@ breadcrumbs: ["movimientos"]
       </svg>
     </div>
     <div class="ml-3">
-      <h3 class="text-sm font-medium text-green-800 !m-0 !p-0" style="line-height: 1 !important;">
+      <h3 class="text-sm font-medium text-green-800 !m-0 !p-0 !dark:text-green-900" style="line-height: 1 !important;">
         Formulario enviado
       </h3>
-      <div class="mt-2 text-sm text-green-700">
+      <div class="mt-2 text-sm text-green-700 dark:text-white">
         <p class="!m-0 !p-0 !mt-3">
           Hemos recibido su registro con éxito. El Directorio del Partido Digital tiene hasta 30 días para revisar su registro. Dentro de ese plazo se contactará con usted a través del correo electrónico proporcionado. Muchas gracias.
         </p>

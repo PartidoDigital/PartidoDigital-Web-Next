@@ -59,3 +59,7 @@ body.dark {
 .dark .prose a.text-white {
     @apply !text-white;
 }
+
+.dark .prose blockquote {
+    @apply text-gray-300;
+}

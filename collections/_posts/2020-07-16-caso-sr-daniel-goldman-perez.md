@@ -5,7 +5,7 @@ tags: goldman
 breadcrumbs: ["blog"]
 ---
 
-El Directorio del Partido Digital comunica la expulsión del Sr. Daniel Goldman Pérez debido al incumplimiento de uno de los pilares básicos de nuestro Partido, como lo es el principio de Responsabilidad, consagrado en nuestro [Código de Ética](/documentos/codigo-de-etica){:target="_blank"}.
+El Directorio del Partido Digital comunica la expulsión del Sr. Daniel Goldman Pérez debido al incumplimiento de uno de los pilares básicos de nuestro Partido, como lo es el principio de Responsabilidad, consagrado en nuestro [Código de Ética]({{site.url}}/documentos/codigo-de-etica){:target="_blank"}.
 
 <!--more-->
 
@@ -16,7 +16,7 @@ El Directorio del Partido Digital comunica la expulsión del Sr. Daniel Goldman 
 En defensa de la Participación y Transparencia -ideología fundacional del PD- publicamos una cronología de los hechos que llevaron a tal resolución:
 
 #### Octubre 2019
- - Día 26. Dado que la Ley de Financiamiento de Partidos establece que el dinero de los votos de las elecciones se transfiere a las cuentas personales de los candidatos a presidente, al senado y a diputados. El Equipo de Finanzas y Transparencia (de ahora en más “EFYT”) elabora un contrato ([link al mismo]{:target="_blank"}), el cual es firmado por los candidatos, donde se comprometen a ceder al Partido Digital todo el dinero que por tal concepto entre a sus cuentas. 
+ - Día 26. Dado que la Ley de Financiamiento de Partidos establece que el dinero de los votos de las elecciones se transfiere a las cuentas personales de los candidatos a presidente, al senado y a diputados. El Equipo de Finanzas y Transparencia (de ahora en más “EFYT”) elabora un contrato ([link al mismo]({{site.url}}/assets/docs/ContratoDanielGoldman-PartidoDigital.pdf){:target="_blank"}), el cual es firmado por los candidatos, donde se comprometen a ceder al Partido Digital todo el dinero que por tal concepto entre a sus cuentas. 
 
 #### Diciembre 2019
  - Día 4. La Corte Electoral realiza transferencia de fondos. El total transferido al Sr. Daniel Goldman Pérez es de $1.145.541, $763.694 por Candidato a Senador más $381.847 por Candidato a Presidente. Se pagaron deudas contraídas en la campaña por un total de $861.247 , quedando un saldo de $284.293 para transferir a la cuenta del Partido Digital en el momento en que el BROU la habilitara. 
@@ -75,3 +75,11 @@ El Partido Digital se fundó para hacer una nueva política marcada por la parti
 Ningún miembro del Partido ha cobrado nunca dinero proveniente de donaciones al Partido o proveniente de la Corte electoral, por contrario cada uruguayo que cree en el Partido Digital ha trabajado entendiendo que ésta opción democrática fortalecerá el futuro del Uruguay poniendo horas y esfuerzo con la única retribución de creer que hace bien a su país.
 
 Nos embarcamos en esta misión con el objetivo de que la política sea mejor para poder mejorar nuestro Uruguay, lo estamos haciendo dando el ejemplo y así seguiremos, firmes en nuestras convicciones.
+
+#### Noviembre 2021
+El Sr. Daniel Goldman Pérez devolvió la totalidad del dinero y se comunica lo siguiente:
+> Llegamos a un acuerdo el Partido Digital y Daniel Goldman donde se entienden las diferencias y se limaron las asperezas para aprovechar esta experiencia de aprendizaje para el futuro del Partido Digital y Goldman.
+
+[link al mismo]: {{site.url}}/assets/docs/ContratoDanielGoldman-PartidoDigital.pdf
+[Carta Orgánica]: {{site.url}}/documentos/carta-organica
+[Código de Ética]: {{site.url}}/documentos/codigo-de-etica
