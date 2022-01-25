@@ -49,6 +49,11 @@ jQuery(function () {
 				},
 				success: function () {
 					ga("send", "event", "Formulario", "Enviado", "Sumarme");
+					document.querySelector('#mensaje').innerHTML = "Datos enviados. Nos pondremos en contacto.";
+					document.forms[0].reset();
+					setTimeout(function () {
+						document.querySelector('#mensaje').innerHTML = "";
+					}, 5000);
 				},
 				error: function (jqXHR, textStatus, errorThrown) {
 					ga("send", "event", "Formulario", "Error", "Sumarme: " + $("[name=email]").val() + " | " + $("[name=primernombre]").val() + " | " + $("[name=apellido]").val());
