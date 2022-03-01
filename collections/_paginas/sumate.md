@@ -62,7 +62,7 @@ breadcrumbs: ["sobre-participacion"]
             Ciudad
           </label>
           <div class="mt-1">
-            <input type="text" name="ciudad" id="ciudad" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+            <input type="text" name="ciudad" autocomplete="home city" id="ciudad" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
           </div>
         </div>
       </div>

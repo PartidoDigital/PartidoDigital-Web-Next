@@ -1,0 +1,80 @@
+<div class="py-12 bg-gray-100 dark:bg-black" style="scroll-margin-top: 2.5em;" id="sumate">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:text-center">
+        <h2 class="text-lg leading-6 font-semibold text-gray-700 uppercase tracking-wider dark:text-gray-200">
+          Sumate como simpatizante
+        </h2>
+        <p
+          class="mt-2 text-3xl leading-9 font-extrabold bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none pb-3">
+          Sumate al Partido Digital como simpatizante y forma parte de la comunidad naranja.
+        </p>
+        <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-gray-500 sm:mt-5 sm:text-2xl sm:leading-8 dark:text-gray-200">
+          El presente y futuro del partido más innovador se define entre todos.
+        </p>
+      </div>
+  
+      <div class="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700 border border-transparent lg:border-gray-300 lg:dark:border-gray-700 p-4 rounded-lg bg-white dark:bg-black">
+            <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700">
+              <div>
+                <div>
+                  <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+                    Datos personales
+                  </h3>
+                  <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Tus datos estan protegidos bajo nuestra 
+                    <a href="{{site.url}}/documentos/politica-de-privacidad" class="font-medium text-orange-500 hover:text-orange-700">Política de Privacidad</a>
+                  </p>
+                </div>
+                <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+                  <div class="sm:col-span-3">
+                    <label for="nombre" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Nombre
+                    </label>
+                    <div class="mt-1">
+                      <input type="text" name="nombre" id="nombre" autocomplete="given-name" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+                    </div>
+                  </div>
+                  <div class="sm:col-span-3">
+                    <label for="apellido" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Apellido
+                    </label>
+                    <div class="mt-1">
+                      <input type="text" name="apellido" id="apellido" autocomplete="family-name" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+                    </div>
+                  </div>
+                  <div class="sm:col-span-3">
+                    <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Correo electrónico
+                    </label>
+                    <div class="mt-1">
+                      <input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+                    </div>
+                  </div>
+                  <div class="sm:col-span-3">
+                    <label for="ciudad" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Ciudad
+                    </label>
+                    <div class="mt-1">
+                      <input type="text" name="ciudad" autocomplete="home city" id="ciudad" class="shadow-sm focus:ring-orange-500 focus:border-orange-500 block w-full sm:text-sm border-gray-300 rounded-md dark:bg-black dark:text-gray-200">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-5">
+              <p class="mb-5 mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Al completar el formulario se te redireccionará al Slack del Partido Digital para que puedas ingresar y conectar con más simpatizantes y miembros. Te esperamos ahí.
+              </p>
+              <div class="flex flex-col">
+                <button type="button" id="sumarme" class="self-center disabled:opacity-50 ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+                  Enviar datos
+                </button>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="{{site.url}}/assets/scripts/sumate_home.js" defer></script>
