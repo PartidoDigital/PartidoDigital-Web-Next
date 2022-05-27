@@ -4,6 +4,19 @@ breadcrumbs: ["sobre-participacion"]
 anchoring: true
 ---
 
+## Movimientos aprobados
+Estos movimiento están ya aprobados por el Directorio del Partido Digital y en funcionamiento.
+
+{% include movimientos/_listado.html estado="aprobado" %}
+
+## Movimientos pre-aprobados
+Estos movimientos están pre-aprobados por el Directorio del Partido Digital. Les faltan completar trámites para ser aprobados oficialmente por el partido y la Corte Electoral.
+
+{% include movimientos/_listado.html estado="pre-aprobado" %}
+
+---
+# Información sobre la participación de movimientos políticos del Partido Digital
+
 Siguiendo los principios de participación y transparencia el Partido Digital recibe la inscripción de movimientos políticos que aporten soluciones a los problemas de Uruguay desde diversas áreas y puntos de vista.
 
 La reglamentación para la creación de estos movimientos políticos y los deberes y derechos que surgen de tal creación se detallan a continuación.

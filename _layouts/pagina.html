@@ -70,7 +70,7 @@ layout: default
                 </p>
                 {% endif %}
                 <div class="content text-left {% unless site.exclude_prose contains page.path %}prose proxe-lg max-w-none{% endunless %}">
-                    {% if page.collection == 'documentos' or page.anchoring == true %}
+                    {% if page.collection == 'documentos' or page.collection == 'movimientos' or page.anchoring == true %}
                         <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
                         {% capture anchor %}
                             <span class="sr-only">Link a "%heading%"</span>

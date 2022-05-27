@@ -31,6 +31,8 @@ twitter:
 logo: "https://recursos.partidodigital.org.uy/assets/img/presentacion.jpg"
 
 collections:
+  movimientos:
+    output: true
   documentos:
     output: true
   paginas:
@@ -43,6 +45,11 @@ exclude_prose:
   - _paginas/formularios/encuesta-satisfaccion.md
 
 defaults:
+  - scope:
+      path: ""
+      type: movimientos
+    values:
+      layout: pagina
   - scope:
       path: ""
       type: documentos
