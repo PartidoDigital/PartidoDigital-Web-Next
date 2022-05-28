@@ -55,7 +55,7 @@ layout: default
             </nav>
             <div class="bg-white dark:bg-black sticky top-0 mb-4 z-20">
                 <h2 class="pb-2 text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl bg-gradient-to-r from-orange-300 text-transparent bg-clip-text to-orange-700 via-orange-500 text-center inline-block">
-                    {{ page.title }}
+                    {{ page.title | newline_to_br }}
                 </h2>
             </div>
             <div class="md:space-y-8 sm:mx-auto sm:max-w-xl space-y-4 lg:max-w-5xl">
