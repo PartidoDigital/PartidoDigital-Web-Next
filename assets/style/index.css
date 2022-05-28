@@ -8,5 +8,6 @@
 @import "_includes/css/dark";
 @import "_includes/css/newsletter";
 @import "_includes/css/pagina";
+@import "_includes/css/darkmode";
 
 @tailwind utilities;

@@ -4,6 +4,19 @@ breadcrumbs: ["sobre-participacion"]
 anchoring: true
 ---
 
+## Movimientos aprobados
+Estos movimiento están ya aprobados por el Directorio del Partido Digital y en funcionamiento.
+
+{% include movimientos/_listado.html estado="aprobado" %}
+
+## Movimientos pre-aprobados
+Estos movimientos están pre-aprobados por el Directorio del Partido Digital. Les faltan completar trámites para ser aprobados oficialmente por el partido y la Corte Electoral.
+
+{% include movimientos/_listado.html estado="pre-aprobado" %}
+
+---
+# Información sobre la participación de movimientos políticos del Partido Digital
+
 Siguiendo los principios de participación y transparencia el Partido Digital recibe la inscripción de movimientos políticos que aporten soluciones a los problemas de Uruguay desde diversas áreas y puntos de vista.
 
 La reglamentación para la creación de estos movimientos políticos y los deberes y derechos que surgen de tal creación se detallan a continuación.
@@ -65,7 +78,8 @@ La reglamentación para la creación de estos movimientos políticos y los deber
 13. El PD recibe las finanzas de todas los movimientos políticos de forma centralizada y pone a disposición de cada movimiento el 85% de lo recaudado por la misma, previa aprobación de los gastos.
 14. Debe regirse por el Programa de Principios y Carta Orgánica del Partido Digital, así como reglamentación aprobada por su Convención Nacional y/o Directorio.
 
-<h3>Si reúne todas las condiciones expuestas y se compromete con lo establecido en este documento, proceda a registrar su movimiento político:<h3>
-<a href="registro" class="w-full text-center rounded-lg bg-orange-500 px-6 py-3 text-base leading-6 font-medium text-white hover:bg-orange-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+<h3>Si reúne todas las condiciones expuestas y se compromete con lo establecido en este documento, proceda a registrar su movimiento político:</h3>
+
+<a href="registro" class="w-full text-center rounded-lg bg-orange-500 px-6 py-3 text-base leading-6 font-medium text-white hover:bg-orange-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150 !no-underline">
     Registrar movimiento
 </a>
