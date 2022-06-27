@@ -31,7 +31,7 @@ $("#sumarme").bind("click", function () {
         },
         success: function () {
             ga("send", "event", "Formulario", "Enviado", "Sumarme");
-            $("#sumarme").html("Datos enviados. Redireccionando a Slack...");
+            $("#sumarme").html("Datos enviados. Redireccionando al grupo de WhatsApp...");
             document.forms[0].reset();
             setTimeout(function () {
                 document.location = "https://chat.whatsapp.com/FIBfYxaNItY04LR1R0BAwf"
