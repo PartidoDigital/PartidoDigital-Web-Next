@@ -37,7 +37,7 @@ $("#sumarme").bind("click", function () {
             $("#sumarme").html("Datos enviados. Redireccionando a Slack...");
             document.forms[0].reset();
             setTimeout(function () {
-                document.location = "{{site.slack_join}}"
+                document.location = "{{site.whatsapp_group}}"
             }, 3000);
         },
         error: function (jqXHR, textStatus, errorThrown) {
