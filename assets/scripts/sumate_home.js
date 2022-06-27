@@ -34,7 +34,7 @@ $("#sumarme").bind("click", function () {
             $("#sumarme").html("Datos enviados. Redireccionando a Slack...");
             document.forms[0].reset();
             setTimeout(function () {
-                document.location = "https://join.slack.com/t/pdigitaluy/shared_invite/zt-13dz20d81-4~JFkqMHPMKYDicgK2YlDw"
+                document.location = "https://chat.whatsapp.com/FIBfYxaNItY04LR1R0BAwf"
             }, 3000);
         },
         error: function (jqXHR, textStatus, errorThrown) {
