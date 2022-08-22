@@ -109,15 +109,16 @@
             descr1.innerHTML = "Esta página necesita un contexto para poder continuar.";
             var descr2 = document.getElementById("descr2");
             descr2.innerHTML = "Si tienes alguna duda por favor escríbenos a <a href='mailto:contacto@partidodigital.org.uy'>contacto@partidodigital.org.uy</a>.";
-        }
-		try {
+        } else {
+            try {
 			var userInfo = jwt_decode(query.token);
 			var avatar = document.getElementById("user_avatar");
 			avatar.setAttribute("src", userInfo.avatar);
 			var avatar_blur = document.getElementById("user_avatar_blur");
 			avatar_blur.setAttribute("style", "background-image: url(" + userInfo.avatar + ");");
-		} catch(e) {
-            console.log(e);
+            } catch(e) {
+                console.log(e);
+            }
         }
     </script>
 </body>
