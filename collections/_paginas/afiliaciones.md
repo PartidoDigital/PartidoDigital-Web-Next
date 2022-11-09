@@ -9,7 +9,7 @@ Los afiliados son parte oficial del Partido Digital y tiene poder de decisión s
 
 Completá el formulario debajo para afiliarte al Partido Digital. Todos los campos son obligatorios.
 
-Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el pago. Para pagar la afiliación de manera mensual seleccioná 12 cuotas.
+Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el pago.
 
 <form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700 border border-transparent lg:border-gray-300 lg:dark:border-gray-700 p-4 rounded-lg">
   <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700">
