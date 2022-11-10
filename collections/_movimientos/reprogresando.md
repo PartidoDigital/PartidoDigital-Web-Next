@@ -8,6 +8,11 @@ estado: pre-aprobado
 Registrado por: Matheo Casco<br>
 Contacto: [reprogresando@gmail.com](mailto:reprogresando@gmail.com)
 
+### Autoridades
+ - **Presidente del movimiento**: Matheo Casco
+ - **Tesorera del movimiento**: Mónica Cardozo
+ - **Secretario del movimiento**: Enrique Sosa
+
 ## Ideas
 ReProgresando es una nueva forma de plantear el progresismo en Uruguay, afirmando bases sólidas a partir de la socialdemocracia y planteando los cambios necesarios a esta.
 
