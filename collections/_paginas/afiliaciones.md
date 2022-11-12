@@ -3,7 +3,7 @@ title: Afiliaciones
 breadcrumbs: ["sobre-participacion"]
 ---
 
-Los afiliados son parte oficial del Partido Digital y tiene poder de decisión sobre cuestiones partidarias como establece la [Carta Orgánica](/documentos/carta-organica). La cuota mensual de afiliación es de $200. En caso de no poder abonar este dinero puede solicitar una exoneración de la cuota a [contacto@partidodigital.org.uy](mailto:contacto@partidodigital.org.uy){:target="_blank"}.
+Los afiliados son parte oficial del Partido Digital y tiene poder de decisión sobre cuestiones partidarias como establece la [Carta Orgánica](/documentos/carta-organica). La cuota mensual de afiliación es de $200. En caso de no poder abonar este dinero puede solicitar una exoneración de la cuota a [contacto@partidodigital.org.uy](mailto:contacto@partidodigital.org.uy){:target="\_blank"}.
 
 **Aclaración: Para proponer ideas y votar en [MiVoz](https://mivoz.uy), la participación es totalmente gratuita. Más información en ["Sobre participación"](/sobre-participacion)**
 
@@ -15,7 +15,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
   <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700">
     <div>
       <div>
-        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+        <h3 class="text-lg mb-0 leading-6 font-medium text-gray-900 dark:text-gray-100">
           Datos personales
         </h3>
         <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
@@ -100,7 +100,35 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
     </div>
     <div class="pt-8">
       <div>
-        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+        <h3 class="text-lg m-0 leading-6 font-medium text-gray-900 dark:text-gray-100">
+          Movimientos
+        </h3>
+        <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
+          Dejanos saber tu preferencia en caso que la tengas. Para saber más sobre movimientos <a href="/movimientos" target="_blank">click acá</a>.
+        </p>
+      </div>
+      <div class="">
+        <fieldset>
+          <div class="mt-4 space-y-4">
+            {% assign sorted = site.movimientos | sort: 'date' | reverse %}
+            {% for movimiento in sorted %}
+              <div class="relative flex items-start">
+                <div class="flex items-center h-5">
+                  <input value="{{ movimiento.title }}" name="movimientos" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+                </div>
+                <div class="ml-3 text-sm">
+                  <label for="cartaorganica" class="font-medium text-gray-700 dark:text-gray-300">{{ movimiento.title }}</label>
+                  <p class="m-0 text-gray-500 dark:text-gray-400">Puedes acceder a la descripción del movimiento <a href="{{movimiento.url | replace: '.html', ''}}" target="_blank">aquí</a>.</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="pt-8">
+      <div>
+        <h3 class="text-lg m-0 leading-6 font-medium text-gray-900 dark:text-gray-100">
           Compromiso
         </h3>
         <p class="mb-0 mt-1 text-sm text-gray-500 dark:text-gray-400">
@@ -119,7 +147,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
               </div>
               <div class="ml-3 text-sm">
                 <label for="cartaorganica" class="font-medium text-gray-700 dark:text-gray-300">Me comprometo a respetar y defender la Carta orgánica</label>
-                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/carta-organica">aquí</a>.</p>
+                <p class="m-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/carta-organica">aquí</a>.</p>
               </div>
             </div>
             <div class="relative flex items-start">
@@ -128,7 +156,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
               </div>
               <div class="ml-3 text-sm">
                 <label for="programadeprincipios" class="font-medium text-gray-700 dark:text-gray-300">Me comprometo a respetar y defender la Programa de Principios</label>
-                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/programa-de-principios">aquí</a>.</p>
+                <p class="m-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto <a target="_blank" href="{{site.url}}/documentos/programa-de-principios">aquí</a>.</p>
               </div>
             </div>
             <div class="relative flex items-start">
@@ -137,7 +165,7 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
               </div>
               <div class="ml-3 text-sm">
                 <label for="leypartidospoliticos" class="font-medium text-gray-700 dark:text-gray-300">Declaro haber leído el Articulo 45 de la Ley 18.485 y no pertenecer a ninguno de los ítems que se detallan en la misma ley</label>
-                <p class="mb-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto de ese artículo <a target="_blank" href="https://www.impo.com.uy/bases/leyes/18485-2009/45">aquí</a>.</p>
+                <p class="m-0 text-gray-500 dark:text-gray-400">Puedes acceder al texto de ese artículo <a target="_blank" href="https://www.impo.com.uy/bases/leyes/18485-2009/45">aquí</a>.</p>
               </div>
             </div>
           </div>

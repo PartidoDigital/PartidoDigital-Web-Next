@@ -1,13 +1,12 @@
 :root {
-    --bg-planet-bright: #F2C94C;
-    --bg-planet-shadow: #828894;
-    --bg-planet-lightshadow: #D7D7D820;
-    --dot-size: 0.25rem;
+  --bg-planet-bright: #f2c94c;
+  --bg-planet-shadow: #828894;
+  --bg-planet-lightshadow: #d7d7d820;
+  --dot-size: 0.25rem;
 }
 
 label {
   cursor: pointer;
-  padding: 1rem;
   position: relative;
   /* To make outline on mobile invisible */
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -74,29 +73,29 @@ label .elements svg circle {
 }
 
 label .elements svg:first-child {
-    transform: translate(1.6em, 0.35em);
-  }
-  label .elements svg:nth-child(2) {
-    transform: translate(2.4em, 0.7em);
-  }
-  label .elements svg:nth-child(3) {
-    transform: translate(2.8em, 1.5em);
-  }
-  label .elements svg:nth-child(4) {
-    transform: translate(2.4em, 2.4em);
-  }
-  label .elements svg:nth-child(5) {
-    transform: translate(1.6em, 2.7em);
-  }
-  label .elements svg:nth-child(6) {
-    transform: translate(0.7em, 2.4em);
-  }
-  label .elements svg:nth-child(7) {
-    transform: translate(0.35em, 1.5em);
-  }
-  label .elements svg:nth-child(8) {
-    transform: translate(0.7em, 0.7em);
-  }
+  transform: translate(1.6em, 0.35em);
+}
+label .elements svg:nth-child(2) {
+  transform: translate(2.4em, 0.7em);
+}
+label .elements svg:nth-child(3) {
+  transform: translate(2.8em, 1.5em);
+}
+label .elements svg:nth-child(4) {
+  transform: translate(2.4em, 2.4em);
+}
+label .elements svg:nth-child(5) {
+  transform: translate(1.6em, 2.7em);
+}
+label .elements svg:nth-child(6) {
+  transform: translate(0.7em, 2.4em);
+}
+label .elements svg:nth-child(7) {
+  transform: translate(0.35em, 1.5em);
+}
+label .elements svg:nth-child(8) {
+  transform: translate(0.7em, 0.7em);
+}
 
 label input:checked + .planet {
   --bg-planet-bright: #d7d7d8;

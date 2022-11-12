@@ -4,7 +4,7 @@
   "description": "Nueva web del Partido Digital de Uruguay",
   "main": "index.md",
   "devDependencies": {
-    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.0",
     "cssnano": "^5.1.12",
     "postcss": "^8.3.11",
@@ -12,7 +12,9 @@
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.8",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^3.2.4",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -35,9 +37,5 @@
   "bugs": {
     "url": "https://github.com/PartidoDigital/PartidoDigital-Web-Next/issues"
   },
-  "homepage": "https://github.com/PartidoDigital/PartidoDigital-Web-Next#readme",
-  "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.2",
-    "@tailwindcss/typography": "^0.4.1"
-  }
+  "homepage": "https://github.com/PartidoDigital/PartidoDigital-Web-Next#readme"
 }
