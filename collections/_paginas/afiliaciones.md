@@ -114,14 +114,22 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
             {% for movimiento in sorted %}
               <div class="relative flex items-start">
                 <div class="flex items-center h-5">
-                  <input value="{{ movimiento.title }}" name="movimientos" type="checkbox" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+                  <input value="{{ movimiento.title }}" name="movimientos" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="cartaorganica" class="font-medium text-gray-700 dark:text-gray-300">{{ movimiento.title }}</label>
+                  <label for="movimientos" class="font-medium text-gray-700 dark:text-gray-300">{{ movimiento.title }}</label>
                   <p class="m-0 text-gray-500 dark:text-gray-400">Puedes acceder a la descripción del movimiento <a href="{{movimiento.url | replace: '.html', ''}}" target="_blank">aquí</a>.</p>
                 </div>
               </div>
             {% endfor %}
+              <div class="relative flex items-start">
+                <div class="flex items-center h-5">
+                  <input value="No apoyo a ningún movimiento en particular" name="movimientos" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+                </div>
+                <div class="ml-3 text-sm">
+                  <label for="movimientos" class="font-medium text-gray-700 dark:text-gray-300">No apoyo a ningún movimiento en particular</label>
+                </div>
+              </div>
           </div>
         </fieldset>
       </div>
