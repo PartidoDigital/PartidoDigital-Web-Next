@@ -37,13 +37,13 @@ jobs:
         with:
           enable_cache: false
       - uses: rossjrw/pr-preview-action@v1
-        if: contains(['opened', 'reopened', 'synchronize'], github.event.action)
+        if: contains(fromJson('["opened", "reopened", "synchronize"]'), github.event.action)
         with:
           source-dir: ./_site
           umbrella-dir: demo
           action: deploy
       - uses: rossjrw/pr-preview-action@v1
-        if: github.event.action == "closed" && !github.event.pull_request.merged
+        if: github.event.action == 'closed' && !github.event.pull_request.merged
         with:
           source-dir: ./_site
           umbrella-dir: demo
