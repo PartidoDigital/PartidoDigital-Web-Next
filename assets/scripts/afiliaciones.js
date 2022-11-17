@@ -10,12 +10,7 @@ jQuery(function () {
 		}
 	});
 
-	$("#afiliarme").bind("click", function () {
-		var movimientos = [];
-		$("input:checkbox[name=movimientos]:checked").each(function() {
-			movimientos.push($(this).val());
-		});
-		
+	$("#afiliarme").bind("click", function () {		
 		if($(this).hasClass("opacity-50")) {
 			document.querySelector('#mensaje').innerHTML = "Debes marcar todas las opciones de la sección compromiso";
 		} else {
@@ -34,7 +29,7 @@ jQuery(function () {
 					"mauticform[domicilio]": $("[name=domicilio]").val(),
 					"mauticform[cedula]": $("[name=cedula]").val(),
 					"mauticform[fechanacimiento]": $("[name=fechanacimiento]").val(),
-					"mauticform[movimientos]": movimientos.join(", "),
+					"mauticform[movimientos]": $("[name=movimientos]:checked").val(),
 					"mauticform[submit]": 1,
 					"mauticform[formId]": 3,
 					"mauticform[formName]": "afiliacion",
