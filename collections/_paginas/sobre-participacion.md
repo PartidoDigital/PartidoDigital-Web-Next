@@ -10,7 +10,7 @@ Para que tu idea sea impulsada por el Partido Digital ingresá ahora a MiVoz, pu
 
 También podés ver las ideas de otros y comentar. Muchas formas de participar, empezá ahora.
 
-<a href="https://mivoz.uy" class="w-full text-center rounded-lg bg-orange-500 px-6 py-3 text-base leading-6 font-medium text-white hover:bg-orange-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
+<a href="https://mivoz.uy" class="w-full text-center rounded-lg bg-orange-500 px-6 py-3 text-base leading-6 font-medium !text-white hover:bg-orange-700 focus:outline-none focus:shadow-outline transition ease-in-out duration-150">
     Participar
 </a>
 <br><br>
