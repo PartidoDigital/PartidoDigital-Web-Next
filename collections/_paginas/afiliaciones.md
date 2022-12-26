@@ -124,10 +124,10 @@ Una vez envíes tus datos, se te direccionará a Mercado Pago para efectuar el p
             {% endfor %}
               <div class="relative flex items-start">
                 <div class="flex items-center h-5">
-                  <input value="No apoyo a ningún movimiento en particular" name="movimientos" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
+                  <input value="No apoyo a ningún movimiento" name="movimientos" type="radio" class="focus:ring-orange-500 h-4 w-4 text-orange-500 border-gray-300 rounded dark:bg-black">
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="movimientos" class="font-medium text-gray-700 dark:text-gray-300">No apoyo a ningún movimiento en particular</label>
+                  <label for="movimientos" class="font-medium text-gray-700 dark:text-gray-300">No apoyo a ningún movimiento</label>
                 </div>
               </div>
           </div>
