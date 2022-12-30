@@ -1,8 +1,8 @@
 ---
 title: "ESNUY: Espacio Social Nacional Uruguay"
-date: 2022-10-31
+date: 2022-12-30
 breadcrumbs: ["movimientos"]
-estado: pre-aprobado
+estado: aprobado
 ---
 
 Registrado por: Daniel Moragues<br>
