@@ -16,7 +16,7 @@ jQuery(function () {
 		} else {
 			$.ajax({
 				method: "post",
-				url: "https://info.partidodigital.org.uy/form/submit?ajax=true",
+				url: "https://crm.partidodigital.org.uy/form/submit?ajax=true",
 				headers: { 'X-Requested-With': 'XMLHttpRequest' },
 				dataType: "json",
 				data: $.param({

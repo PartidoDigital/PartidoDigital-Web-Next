@@ -39,7 +39,7 @@ Si no ha visto la información y requisitos para los movimientos políticos, pue
 
 Por cualquier duda puedes escribir a [contacto@partidodigital.org.uy](mailto:contacto@partidodigital.org.uy)
 
-<form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700 border border-transparent lg:border-gray-300 lg:dark:border-gray-700 px-4 pb-4 rounded-lg" role="form" method="post" action="https://info.partidodigital.org.uy/form/submit?formId=9" id="mauticform_movimientospoliticos" enctype="multipart/form-data">
+<form class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700 border border-transparent lg:border-gray-300 lg:dark:border-gray-700 px-4 pb-4 rounded-lg" role="form" method="post" action="https://crm.partidodigital.org.uy/form/submit?formId=9" id="mauticform_movimientospoliticos" enctype="multipart/form-data">
     <div class="space-y-8 divide-y divide-gray-200 dark:divide-gray-700">
         <div>
             <div>
