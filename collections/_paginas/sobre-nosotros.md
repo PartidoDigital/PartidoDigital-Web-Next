@@ -4,7 +4,7 @@ subtitulo1: Al Partido Digital lo hacemos personas que creemos que es necesaria 
 subtitulo2: Todos quienes aportamos nuestros tiempo y ganas para este emprendimiento político tenemos distintas ideas y orígenes ideológicos, algunos con experiencia político partidaria y otros debutando ahora, pero a todos nos une el respeto por las ideas del otro y las ganas de luchar porque cada idea tenga su lugar en un debate público transparente y moderno.
 ---
 <p class="text-2xl text-center my-5"><b>¡Hay nuevas autoridades!</b> Luego de las elecciones internas celebradas del 13 al 17 de Marzo, nuevas personas confirman las autoridades del Partido Digital. Próximamente toda su información aquí.</p>
-<div class="list-none mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl text-center mt-15" style="display:none">
+<div class="list-none mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl text-center mt-15 !hidden">
     {% for persona in site.data.equipo %}
     <div>
     <div class="space-y-6">
