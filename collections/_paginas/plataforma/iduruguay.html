@@ -111,15 +111,23 @@
             descr2.innerHTML = "Si tienes alguna duda por favor escríbenos a <a href='mailto:contacto@partidodigital.org.uy'>contacto@partidodigital.org.uy</a>.";
         } else {
             try {
-			var userInfo = jwt_decode(query.token);
-			var avatar = document.getElementById("user_avatar");
-			avatar.setAttribute("src", userInfo.avatar);
-			var avatar_blur = document.getElementById("user_avatar_blur");
-			avatar_blur.setAttribute("style", "background-image: url(" + userInfo.avatar + ");");
-            var boton = document.getElementById("iduruguay");
-            boton.setAttribute("href", boton.getAttribute("href") + "&state=" + query.token);
+		var userInfo = jwt_decode(query.token);
+		var avatar = document.getElementById("user_avatar");
+		avatar.setAttribute("src", userInfo.avatar);
+		var avatar_blur = document.getElementById("user_avatar_blur");
+		avatar_blur.setAttribute("style", "background-image: url(" + userInfo.avatar + ");");
+            	var boton = document.getElementById("iduruguay");
+            	boton.setAttribute("href", boton.getAttribute("href") + "&state=" + query.token);
             } catch(e) {
-                console.log(e);
+		document.getElementById("form_container").remove();
+		document.getElementById("submit_form").remove();
+		document.getElementById("mas_info").remove();
+	        document.getElementById("descr2").remove();
+		var msj = document.getElementById("descr1");
+		msj.innerHTML = "No es posible utilizar esta página sin un contexto. Escribinos a <a href='mailto:mivoz@partidodigital.org.uy'>mivoz@partidodigital.org.uy</a> <br>si tienes alguna duda.";
+		msj.setAttribute("style", "margin: 0; text-align: center;");
+		var avatar = document.getElementById("user_avatar");
+		avatar.setAttribute("src", "https://recursos.partidodigital.org.uy/assets/img/halt.png");
             }
         }
     </script>
