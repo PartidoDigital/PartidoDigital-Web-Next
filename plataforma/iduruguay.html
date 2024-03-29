@@ -129,12 +129,16 @@
                     var boton = document.getElementById("iduruguay");
                     boton.setAttribute("href", boton.getAttribute("href") + "&state=" + query.token);
                 } catch (e) {
-                    document.getElementById("descr2").remove();
-                    var descr1 = document.getElementById("descr1");
-                    descr1.innerHTML = "No es posible utilizar esta página sin un contexto. Escribinos a <a href='mailto:mivoz@partidodigital.org.uy'>mivoz@partidodigital.org.uy</a> <br>si tienes alguna duda.";
-                    descr1.setAttribute("style", "margin: 0; text-align: center;");
                     var avatar = document.getElementById("user_avatar");
                     avatar.setAttribute("src", "https://recursos.partidodigital.org.uy/assets/img/halt.png");
+                    var titulo = document.getElementsByClassName("auth0-lock-firstname")[0];
+                    titulo.innerHTML = "Ups, algo no está bien";
+                    var boton = document.getElementsByClassName("auth0-lock-form")[0];
+                    boton.style.display = "none";
+                    var descr1 = document.getElementById("descr1");
+                    descr1.innerHTML = "Esta página necesita un contexto para poder continuar.";
+                    var descr2 = document.getElementById("descr2");
+                    descr2.innerHTML = "Si tienes alguna duda por favor escríbenos a <a href='mailto:contacto@partidodigital.org.uy'>contacto@partidodigital.org.uy</a>.";
                 }
             }
         </script>
