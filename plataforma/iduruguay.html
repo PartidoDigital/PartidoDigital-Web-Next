@@ -127,7 +127,7 @@
                     var avatar_blur = document.getElementById("user_avatar_blur");
                     avatar_blur.setAttribute("style", "background-image: url(" + userInfo.avatar + ");");
                     var boton = document.getElementById("iduruguay");
-                    boton.setAttribute("href", `${boton.getAttribute("href")}&state=${query.state}-${encodeURIComponent(query.ext)}`);
+                    boton.setAttribute("href", `${boton.getAttribute("href")}&state=${query.state}`);
                 } catch (e) {
                     var avatar = document.getElementById("user_avatar");
                     avatar.setAttribute("src", "https://recursos.partidodigital.org.uy/assets/img/halt.png");
