@@ -21,7 +21,7 @@ Siguiendo los principios de participación y transparencia el Partido Digital re
 
 La reglamentación para la creación de estos movimientos políticos y los deberes y derechos que surgen de tal creación se detallan a continuación.
 
-## Qué prooverá el Partido Digital a cada movimiento político
+## Qué proveerá el Partido Digital a cada movimiento político
 1. Participación activa en la dirección del Partido Digital.
 2. Infraestructura tecnológica para asegurar la participación interna de sus afiliados.
 3. Formación para la comunicación de las campañas.
