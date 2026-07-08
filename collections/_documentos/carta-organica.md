@@ -259,7 +259,9 @@ La Mesa Ejecutiva Departamental debe reunirse como mínimo diez (10) veces al a�
 
 ##### Artículo 51 {#articulo-51}
 La Mesa Ejecutiva Nacional organizará la acción partidaria en áreas de trabajo a nivel nacional y/o departamental.
-Artículo­­ 52.- En cada área de las mencionadas en el Artículo 51, se podrán establecer múltiples programas según la disposición de los afiliados y los requerimientos del partido. Los afiliados tendrán siempre la más amplia libertad para proponer programas de trabajo y definir la forma de realizarlo.
+
+##### Artículo­­ 52 {#articulo-52}
+En cada área de las mencionadas en el Artículo 51, se podrán establecer múltiples programas según la disposición de los afiliados y los requerimientos del partido. Los afiliados tendrán siempre la más amplia libertad para proponer programas de trabajo y definir la forma de realizarlo.
 
 ##### Artículo 53 {#articulo-53}
 Podrán organizarse en unidades de trabajo, grupos o comisiones de integración limitada o abierta, de duración transitoria o permanente.
@@ -486,7 +488,8 @@ El Legislador Digital podrá emitir su opinión en la Plataforma sobre un proyec
 
 ##### Artículo 112 {#articulo-112}
 El Legislador Digital deberá estar disponible de manera online una hora semanal como mínimo, para responder preguntas de los afiliados. Esta hora deberá comunicarse por los medios de comunicación disponibles por el Partido Digital con un mínimo de cuarenta y ocho horas de anticipación.
-De la votación de las leyes
+
+##### De la votación de las leyes
 
 ##### Artículo 113 {#articulo-113}
 La herramienta online perteneciente a la Plataforma en la que se puede votar los proyectos de Ley y determinar la actuación de los representantes legislativos deberá ser accesible a todos los uruguayos habilitados para votar.
@@ -501,7 +504,7 @@ Todo el material compartido en la Plataforma desde el Partido Digital será neut
 Todos los uruguayos habilitados para votar, podrán proponer iniciativas que tengan como fin ser presentadas al órgano correspondiente en la misma herramienta online utilizada para generar el Programa de Gobierno, siguiendo los mismos pasos para la presentación de propuestas que lo integren.
 
 ##### Artículo 117 {#articulo-117}
- Estas iniciativas deberán cumplir con los requisitos para que sean ejecutables en el período de gobierno actual.
+Estas iniciativas deberán cumplir con los requisitos para que sean ejecutables en el período de gobierno actual.
 
 ##### Artículo 118 {#articulo-118}
 Si cumplen con estos requisitos, los proyectos de Ley serán presentados en la herramienta online de votación y difundidos para toda la comunidad del Partido Digital.
@@ -511,7 +514,8 @@ Si el proyecto de Ley obtiene más de dos tercios de los votos de los usuarios r
 
 ##### Artículo 120 {#articulo-120}
 Todos los Legisladores Digitales votarán a favor del proyecto de Ley cuando se presente.
-De la actuación de los representantes electos del Partido Digital en el Poder Ejecutivo
+
+##### De la actuación de los representantes electos del Partido Digital en el Poder Ejecutivo
 
 ##### Artículo 121 {#articulo-121}
 El/Los representantes del Partido Digital en cualquier órgano ejecutivo (de ahora en más “Ejecutivo(s) Digital(es)”) deberán trabajar para implementar las ideas del Programa de Gobierno. En caso de llegar a la Presidencia, el objetivo será implementar todas las ideas y en caso de Ministerios, Organismos Públicos y Entes Descentralizados, las ideas correspondientes a su área.
@@ -584,10 +588,12 @@ Las herramientas a utilizar serán elegidas por la Mesa Ejecutiva Nacional tenie
 Todas las elecciones de herramientas online que integren la Plataforma con sus correspondientes justificaciones e información estará disponible en el sitio web del Partido Digital en la sección Plataforma.
 
 ##### Artículo 141 {#articulo-141}
-Si el Equipo Técnico identifica que para resolver una necesidad técnica del Partido Digital debemos recurrir a una herramienta de terceros para optimizar recursos o cubrir una necesidad de mejor manera que haciéndolo con los recursos existentes internamente, el Equipo Técnico evaluará la mejor opción y presentará su sugerencia que deberá ser discutida y aprobada por mayoría simple por la Mesa Ejecutiva Nacional De la seguridad
+Si el Equipo Técnico identifica que para resolver una necesidad técnica del Partido Digital debemos recurrir a una herramienta de terceros para optimizar recursos o cubrir una necesidad de mejor manera que haciéndolo con los recursos existentes internamente, el Equipo Técnico evaluará la mejor opción y presentará su sugerencia que deberá ser discutida y aprobada por mayoría simple por la Mesa Ejecutiva Nacional 
+
+##### De la seguridad
 
 ##### Artículo 142 {#articulo-142}
-El Equipo Técnico evaluará la solución según aquellos criterios que aseguren que funciona de acuerdo a las prácticas que fomentamos desde el Partido Digital: software de código abierto, manejo seguro de la información y privacidad de los datos. De forma periódica se harán análisis para constatar que la herramienta mantenga sus estándares analizados al momento de su elección. Se realizarán acciones de hacking ético por lo menos una vez al año para asegurar que el maneja de la información cumple con los más altos estándares de seguridad.
+El Equipo Técnico evaluará la solución según aquellos criterios que aseguren que funciona de acuerdo a las prácticas que fomentamos desde el Partido Digital: software de código abierto, manejo seguro de la información y privacidad de los datos. De forma periódica se harán análisis para constatar que la herramienta mantenga sus estándares analizados al momento de su elección. Se realizarán acciones de hacking ético por lo menos una vez al año para asegurar que el manejo de la información cumple con los más altos estándares de seguridad.
 
 ##### Artículo 143 {#articulo-143}
 Se implementarán todas las medidas disponibles para asegurar la información vertida por las personas participantes de las distintas instancias del Partido Digital.
